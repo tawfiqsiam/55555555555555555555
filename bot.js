@@ -7452,12 +7452,6 @@ hours = 12;
 
 
 
-client.on("ready", () => {
-  function lol() {
-    client.guilds.get('499213116941533184').roles.find("name", "Spammer  10k Credit 1 DAY").setColor("RANDOM");
-  };
-  setInterval(lol, 10099);
-});
 
 client.on("ready", () => {
   function lol() {
