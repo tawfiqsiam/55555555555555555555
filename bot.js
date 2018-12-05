@@ -4822,7 +4822,7 @@ client.on('message', message => {
                                    message.member.addRole(message.guild.roles.find("name", "• Mal »Top"));
                                    message.member.removeRole(message.guild.roles.find("name", "0"));
                                    msg.delete();
-                                   message.channel.send(`**•Done.**`).then(msg => ());
+                                   message.channel.send(`**•Done.**`).then(d => d.send(1));
 
                                    })
                                    })
