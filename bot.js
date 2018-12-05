@@ -4788,7 +4788,7 @@ client.on('message', message => {
                                    message.member.addRole(message.guild.roles.find("name", "• Mal »Top"));
                                    message.member.removeRole(message.guild.roles.find("name", "0"));
                                    msg.delete();
-                                   message.channel.send(`**•Done.**`).then(b => {
+                                   message.channel.send(`**•Done.**`).then(d => d.delete(100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000));
 
                                    })
                                    })
@@ -4822,7 +4822,7 @@ client.on('message', message => {
                                    message.member.addRole(message.guild.roles.find("name", "• Mal »Top"));
                                    message.member.removeRole(message.guild.roles.find("name", "0"));
                                    msg.delete();
-                                   message.channel.send(`**•Done.**`).then(b => {
+                                   message.channel.send(`**•Done.**`).then(d => d.delete(10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000));
 
                                    })
                                    })
