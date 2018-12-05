@@ -176,6 +176,9 @@ client.on('message', async message => {
 client.on('guildMemberAdd', member=> {
     member.addRole(member.guild.roles.find("name","»MâL"));
     });
+client.on('guildMemberAdd', member=> {
+    member.addRole(member.guild.roles.find("name","『Members』"));
+    });
 
 
 ////By 
@@ -4752,9 +4755,9 @@ member.addRole(member.guild.roles.find('name', 'Member'));
  
 client.on('message', message => {                      
     if(!message.channel.guild) return;
-       if(message.content.startsWith(prefix + 'BlackSquad')) {       
+       if(message.content.startsWith(prefix + 'Mal Top')) {       
        if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-       message.channel.sendMessage(` BlackSquad Click Right to Get a Rank  `).then(msg => {
+       message.channel.sendMessage(`** Click Right to Get a Rank  • Mal »Top **`).then(msg => {
        
        
         msg.react('✅')
@@ -4768,10 +4771,10 @@ client.on('message', message => {
      
                                                        
                                active.on("collect", r => {
-                                   message.member.addRole(message.guild.roles.find("name", "BlackSquad"));
+                                   message.member.addRole(message.guild.roles.find("name", "• Mal »Top"));
                                    message.member.removeRole(message.guild.roles.find("name", "0"));
                                    msg.delete();
-                                   message.channel.send(`**You Have been Activated.**`).then(m => m.delete(1000));  
+                                   message.channel.send(`**•Done.**`).then(m => m.delete(1000));  
 
                                    })
                                    })
