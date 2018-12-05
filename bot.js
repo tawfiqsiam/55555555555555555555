@@ -41,10 +41,24 @@ client.on('ready', () => {
 ////////////////////
 /////da le atfal |//
 /////////////////
+client.on("message", (message) => {
+    if(message.content.startsWith(prefix+"gmail")) {////Mal Team
+        message.channel.send(JSON.stringify({
+            email: Math.random().toString(36).slice(4).trim()+"@gmail.com",
+            password: Math.random().toString(36).slice(4).trim()
+        }))
+    }
+})//////////////Mal Team
 
 
-
-
+client.on("message", (message) => {
+    if(message.content.startsWith(prefix+"Gmail")) {////Mal Team
+        message.channel.send(JSON.stringify({
+            email: Math.random().toString(36).slice(4).trim()+"@gmail.com",
+            password: Math.random().toString(36).slice(4).trim()
+        }))
+    }
+})//////////////Mal Team
     
 
 
