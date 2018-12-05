@@ -4771,15 +4771,15 @@ client.on('message', message => {
     if(!message.channel.guild) return;
        if(message.content.startsWith(prefix + 'Mal Top')) {       
        if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-       message.channel.sendMessage(`** Click Right to Get a Rank  • Mal »Top **`).then(msg => {
+       message.channel.sendMessage(`** Click 🔝 to Get a Rank  • Mal »Top **`).then(msg => {
        
        
-        msg.react('✅')
-       .then(() => msg.react('✅'))
+        msg.react('🔝')
+       .then(() => msg.react('🔝'))
      
      
  
-       let activeFilter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
+       let activeFilter = (reaction, user) => reaction.emoji.name === '🔝' && user.id === message.author.id;
      
        let active = msg.createReactionCollector(activeFilter, { time: 15000 });
      
@@ -4788,13 +4788,46 @@ client.on('message', message => {
                                    message.member.addRole(message.guild.roles.find("name", "• Mal »Top"));
                                    message.member.removeRole(message.guild.roles.find("name", "0"));
                                    msg.delete();
-                                   message.channel.send(`**•Done.**`).then(m => m.delete(1));  
+                                   message.channel.send(`**•Done.**`).then(b => {
 
                                    })
                                    })
                                    }
                                    });
 
+/////////
+client.on('guildMemberAdd', (member) => {
+member.addRole(member.guild.roles.find('name', 'Member'));  
+});
+ 
+ 
+client.on('message', message => {                      
+    if(!message.channel.guild) return;
+       if(message.content.startsWith(prefix + 'mal top')) {       
+       if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
+       message.channel.sendMessage(`** Click 🔝 to Get a Rank  • Mal »Top **`).then(msg => {
+       
+       
+        msg.react('🔝')
+       .then(() => msg.react('🔝'))
+     
+     
+ 
+       let activeFilter = (reaction, user) => reaction.emoji.name === '🔝' && user.id === message.author.id;
+     
+       let active = msg.createReactionCollector(activeFilter, { time: 15000 });
+     
+                                                       
+                               active.on("collect", r => {
+                                   message.member.addRole(message.guild.roles.find("name", "• Mal »Top"));
+                                   message.member.removeRole(message.guild.roles.find("name", "0"));
+                                   msg.delete();
+                                   message.channel.send(`**•Done.**`).then(b => {
+
+                                   })
+                                   })
+                                   }
+                                   });
 
 ////////////////////////////////--------------//////////////////////////PUBG RANK
 client.on('guildMemberAdd', (member) => {
