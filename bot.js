@@ -53,7 +53,7 @@ client.on('ready', () => {
 
 client.on('ready', function(){    
     var ms = 5000 ;    
-    var setGame = [`تم اضافة رينبو و لبوت`,"عرفة المزيد عن رينبو و","g!help-R,","لدعوه البوت ","g!invite","BY:Mal Mahmoud-QuaStyle","g!help"];    
+    var setGame = [`بوت تحت الصيانة`,"Update Music","Update رينبو","Update All :'D","g!invite","By:Mal Mahmoud-QuaStyle","g!help","Waiting Please ♥"];    
     var i = -1;    
     var j = 0;    
     setInterval(function (){    
@@ -64,7 +64,7 @@ j = 1;
             j = -1;    
       }    
        i = i+j;    
-        client.user.setGame(setGame[i],`http://twitch.tv/quastyle11`);    
+        client.user.setGame(setGame[i],`WATCHINGA`);    
 }, ms);    
     
 });
