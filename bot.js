@@ -561,10 +561,10 @@ client.on("message", message => {
 🔐 Orders Admin- Type:  **__g!help-Admin__** To Get Orders Admin
 🎶 Orders Music- Type:  **__g!help-music__**  To Get Orders Music
 🎲 Orders Games- Type:  **__g!help-games__** To Get Orders GAMES
-📬 Orders BroadCast- Type: **__g!help-bc__** To Get Orders BroadCast
-♕ Orders Rank-Typ **__g!help-Rank__** To Get Orders Rank 
-♻ Orders important **__g!help-imt__** To Get Orders important
-🖌 Orders Colors-Typ **__g!help-colors__** To Get Orders Colors
+📬 Orders BroadCast: Type: **__g!help-bc__** To Get Orders BroadCast
+♕ Orders Rank-Type: **__g!help-Rank__** To Get Orders Rank 
+♻ Orders important Type: **__g!help-imt__** To Get Orders important
+🖌 Orders Colors-Type: **__g!help-colors__** To Get Orders Colors
 🌈 Orders Rainbow- Type:  **__g!help-R__** To Get Orders Rainbow
 
 **By:#- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼#5661**
@@ -818,9 +818,9 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
-***¯−ـ‗ऊ» اوامر الموسقي «ऊ‗ـ−¯***
+***¯ـ‗ऊ» اوامر الموسقي «ऊ‗ـ−¯***
 ***╔[❖════════════❖]╗
-•
+
 g!play ~لتشغيل اغنية
 g!join ~ دخول رومك الصوتي
 g!stop ~ الخروج من رومك الصوتي
