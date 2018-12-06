@@ -794,7 +794,8 @@ client.on("message", message => {
 :video_game: g!لو خيروك بطريقة حلوة ~ لو خيروك
 :video_game: g!عبة مريم ~ مريم
 :video_game: g!فوائد ونصائح  ~ هل تعلم
-:video_game: g!لك عقاب قاسية ~ عقاب `)
+:video_game: g!لك عقاب قاسية ~ عقاب
+10% تحت الصيانة `)
 
    message.author.sendEmbed(embed)
     
@@ -900,7 +901,7 @@ client.on("message", message => {
 //////////////////////HELP 
 client.on("message", message => {
     if (message.author.bot) return;
-     if (message.content === prefix + "help-important") {
+     if (message.content === prefix + "help-imt") {
   const embedss2 = new Discord.RichEmbed() 
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL)
