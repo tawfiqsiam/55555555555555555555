@@ -555,13 +555,13 @@ client.on("message", message => {
       .setColor("#000000") 
       .setDescription(`
 	
-          ***¯−ـ‗ऊ_»Help Mal Shop«_ऊ‗ـ−¯***
+          ***¯−»Help Bot Mal Shop«−¯***
          
 🔔 Orders Public- Type: **__g!help-public__** To Get Orders Public
 🔐 Orders Admin- Type:  **__g!help-Admin__** To Get Orders Admin
 🎶 Orders Music- Type:  **__g!help-music__**  To Get Orders Music
 🎲 Orders Games- Type:  **__g!help-games__** To Get Orders GAMES
-📬 Orders BoradCast- Type: **__g!help-bc__** To Get Orders BroadCast
+📬 Orders BroadCast- Type: **__g!help-bc__** To Get Orders BroadCast
 ♕ Orders Rank-Typ **__g!help-Rank__** To Get Orders Rank 
 ♻ Orders important **__g!help-imt__** To Get Orders important
 🖌 Orders Colors-Typ **__g!help-colors__** To Get Orders Colors
@@ -4061,6 +4061,25 @@ client.on('message', msg => {
     msg.reply('***Welcome To Server*** :sparkles: ');
   }
 });
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+client.on('message', msg => {
+  if (msg.content === 'g!help-R') {
+    msg.reply('***تحت التجديد*** :sparkles: ');
+  }
+});
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+client.on('message', msg => {
+  if (msg.content === 'g!help-game') {
+    msg.reply('***10% من العاب تحت الصيانة** :sparkles: ');
+  }
+});
+
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
