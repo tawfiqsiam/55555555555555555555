@@ -555,33 +555,33 @@ client.on("message", message => {
       .setColor("#000000") 
       .setDescription(`
 	
-          ***¯−ـ‗ऊ_»Please Chose«_ऊ‗ـ−¯***
+          ***¯−ـ‗ऊ_»Help Mal Shop«_ऊ‗ـ−¯***
          
-***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋•  Welçome ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
-:small_blue_diamond:${prefix}***help-public*** →→ ***『اوامر عامة』*** :bell:  
+🔔 Orders Public- Type: **__g!help-public__** To Get Orders Public
+🔐 Orders Admin- Type:  **__g!help-Admin__** To Get Orders Admin
+🎶 Orders Music- Type:  **__g!help-music__**  To Get Orders Music
+🎲 Orders Games- Type:  **__g!help-games__** To Get Orders GAMES
+📬 Orders BoradCast- Type: **__g!help-bc__** To Get Orders BroadCast
+♕ Orders Rank-Typ **__g!help-Rank__** To Get Orders Rank 
+♻ Orders important **__g!help-imt__** To Get Orders important
+🖌 Orders Colors-Typ **__g!help-colors__** To Get Orders Colors
+🌈 Orders Rainbow- Type:  **__g!help-R__** To Get Orders Rainbow
 
-:small_orange_diamond:${prefix}***help-admin***  →→***『اوامر ادارة السيرفر』*** :ok_hand: 
-			 
-:small_blue_diamond:${prefix}***help-games*** →→ ***『اوامر الالعاب』*** :video_game:
+**By:#- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼#5661**
 
-:small_orange_diamond:${prefix}***help-music***  →→ ***『اوامر الموسيقى』*** :loud_sound: 
-
-:small_blue_diamond:${prefix}***help-colors*** →→ ***『اوامر اللوان』***  :traffic_light: 
-      
-:small_orange_diamond:${prefix}***help-important*** →→ ***『اوامر هامة』*** :loudspeaker:
-
-:small_blue_diamond:${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
-
-:small_orange_diamond:${prefix}***help-Rank*** →→  ***『اوامر الرتب المتوفره حاليا』*** :boom:
- 
-:small_blue_diamond:${prefix}***help-R***→→***『Rainbow تغير الوان الرتبة تلقائي』***  🌈
-***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋•  @Mal Shop #6133 ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
           `)
    message.channel.sendEmbed(embed)
     
    }
    }); 
   
+
+
+
+
+
+
+
 
 
 
