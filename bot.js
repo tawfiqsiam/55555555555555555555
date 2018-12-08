@@ -882,10 +882,11 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
-  :e_mail:      g!bc | لأرسال برود كاست للكل
-  :e_mail:     g!obc  |  	لأرسال برود كاست للأونلاين
-  :e_mail:      g!invite |  لدعوة البوت الي سيرفرك
-  :e_mail:      g!support | سيرفر السبورت** `)
+  :e_mail: g!bc | لأرسال برود كاست للكل
+  :e_mail: g!obc  |  لأرسال برود كاست للأونلاين
+  :e_mail: g!bc اكتب الرسالة عادي<by> اسم البعت الرسالة   <server> اسم السرفر <user> اسم الشخص       
+  :e_mail: g!invite |  لدعوة البوت الي سيرفرك
+  :e_mail: g!support | سيرفر السبورت** `)
    message.author.sendEmbed(embed)
    
    }
