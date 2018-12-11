@@ -1119,7 +1119,7 @@ client.on("message", (message) => {
                 SEND_MESSAGES: true,
                 READ_MESSAGES: true
             });
-            message.channel.send(`:white_check_mark: **Your Ticket Has Been Created**,<{message.author.id}>`);
+            message.channel.send(`:white_check_mark: **Your Ticket Has Been Created**,<${args}>`);
             const embed = new Discord.RichEmbed()
                 .setColor(0xCF40FA)
                 .addField(`Hey ${message.author.username}!`, `Please try explain why you opened this ticket with as much detail as possible. Our **Support Staff** will be here soon to help.`)
@@ -1176,7 +1176,7 @@ client.on("message", (message) => {
                 SEND_MESSAGES: true,
                 READ_MESSAGES: true
             });
-            message.channel.send('And your lucky number is...', `${LuckNumber}!`);
+            message.channel.send('And your lucky number is..., ${LuckNumber}!`);
             const embed = new Discord.RichEmbed()
                 .setColor(0xCF40FA)
                 .addField(`Hey ${message.author.username}!`, `Please try explain why you opened this ticket with as much detail as possible. Our **Support Staff** will be here soon to help.`)
@@ -1598,38 +1598,6 @@ client.on('message', message => {
 
 client.on('message', msg => {//msg
     if (msg.content === 'g!rules') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png"})
-    }
-  });;
-client.on('message', msg => {//msg
-    if (msg.content === 'g!Rules') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png"})
-    }
-  });;
-client.on('message', msg => {//msg
-    if (msg.content === 'قوانين') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png"})
-    }
-  });;
-client.on('message', msg => {//msg
-    if (msg.content === 'g!قواعد') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png"})
-    }
-  });;
-client.on('message', msg => {//msg
-    if (msg.content === 'rules') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png"})
-    }
-  });;
-
-client.on('message', msg => {//msg
-    if (msg.content === 'Rules') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png"})
-    }
-  });;
-
-client.on('message', msg => {//msg
-    if (msg.content === 'قواعد') {
       msg.channel.send({file : "https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png"})
     }
   });;
