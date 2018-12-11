@@ -1062,7 +1062,7 @@ client.on("message", (message) => {
                 SEND_MESSAGES: true,
                 READ_MESSAGES: true
             });
-            message.channel.send(`:white_check_mark: Your ticket has been created, <#${msg.author.id}>`);
+            message.channel.send(`:white_check_mark: Your ticket has been created..,#{c.name}.`);
             const embed = new Discord.RichEmbed()
                 .setColor(0xCF40FA)
                 .addField(`Hey ${message.author.username}!`, `Please try explain why you opened this ticket with as much detail as possible. Our **Support Staff** will be here soon to help.`)
@@ -1584,7 +1584,7 @@ let PREFIX = 'g!'
 client.on('message', message => {
             if (message.content.startsWith("g!rules")) {
      let embed = new Discord.RichEmbed()
-.setImage('https://cdn.discordapp.com/attachments/520589884096774145/520591451571093506/Untitled2311111.png')
+.setImage('https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png')
 .addField('**By:@༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 ** ')
 .setColor('#7d2dbe')
   message.channel.sendEmbed(embed);
