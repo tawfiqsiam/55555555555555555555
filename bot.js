@@ -7524,23 +7524,7 @@ hours = 12;
 /////////////////////////////////////////////
 ///////SERVER Wings
 
-
-
-
-client.on("ready", () => {
-  function lol() {
-    client.guilds.get('521985606008569857').roles.find("name", "○").setColor("RANDOM");
-  };
-  setInterval(lol, 10099);
-});
-
-client.on("ready", () => {
-  function lol() {
-    client.guilds.get('521985606008569857').roles.find("name", "♕").setColor("RANDOM");
-  };
-  setInterval(lol, 10099);
-});
-
+    
 
 
 
