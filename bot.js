@@ -1119,7 +1119,7 @@ client.on("message", (message) => {
                 SEND_MESSAGES: true,
                 READ_MESSAGES: true
             });
-            message.channel.send(`:white_check_mark: **Your Ticket Has Been Created**,<#${c.name}.>`);
+            message.channel.send(`:white_check_mark: **Your Ticket Has Been Created**,<#message.author.id>`);
             const embed = new Discord.RichEmbed()
                 .setColor(0xCF40FA)
                 .addField(`Hey ${message.author.username}!`, `Please try explain why you opened this ticket with as much detail as possible. Our **Support Staff** will be here soon to help.`)
@@ -1585,17 +1585,10 @@ client.on('message', message => {
             if (message.content.startsWith("g!rules")) {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
-.addField('     **:warning:  اولا** ' ,' **ممنوع السب** ')
-.addField('     **:warning:  ثانيا** ' ,' **لا تسوي سبام ** ')
-.addField('     **:warning:  ثالثا** ' ,' **لا تزعج الاخرين** ')
-.addField('    **:warning:  رابعا**' ,' **ممنوع الاعلانات** ')
-.addField('    **:warning:  خامسا**' ,' **احترم الاخرين** ')
-.addField('    **:warning:  سادسا**' ,' **لا تنشر في الشات او بل خاص** ')
-.addField('    **:warning:  سابعا**' ,' **لا تنشر روابط!** ')
-.addField('    **:warning:  ثامنا**' ,' **لا تسوي سبام ايموجي** ')
-.addField('    **:warning:  تاسعا**' ,' **لا تطلب رتبه الاداره!** ')
+.addField('https://cdn.discordapp.com/attachments/520589884096774145/520591451571093506/Untitled2311111.png')
+.addField('https://cdn.discordapp.com/attachments/522011430589825024/522014558735433728/Doneemojirules.png')
+.addField('https://cdn.discordapp.com/attachments/520589884096774145/520591451571093506/Untitled2311111.png')
 .addField('    **By:@༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 ** ')
-
 .setColor('#7d2dbe')
   message.channel.sendEmbed(embed);
     }
