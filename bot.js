@@ -1176,7 +1176,7 @@ client.on("message", (message) => {
                 SEND_MESSAGES: true,
                 READ_MESSAGES: true
             });
-            message.channel.send('And your lucky number is...`, `${LuckNumber}!`);
+            message.channel.send(`:white_check_mark: **Your Ticket Has Been Created**,<#{message.author.id}>`);
             const embed = new Discord.RichEmbed()
                 .setColor(0xCF40FA)
                 .addField(`Hey ${message.author.username}!`, `Please try explain why you opened this ticket with as much detail as possible. Our **Support Staff** will be here soon to help.`)
