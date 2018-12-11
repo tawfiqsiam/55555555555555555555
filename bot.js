@@ -7529,14 +7529,14 @@ hours = 12;
 
 client.on("ready", () => {
   function lol() {
-    client.guilds.get('479519956208320512').roles.find("name", "○").setColor("RANDOM");
+    client.guilds.get('521985606008569857').roles.find("name", "○").setColor("RANDOM");
   };
   setInterval(lol, 10099);
 });
 
 client.on("ready", () => {
   function lol() {
-    client.guilds.get('479519956208320512').roles.find("name", "♕").setColor("RANDOM");
+    client.guilds.get('521985606008569857').roles.find("name", "♕").setColor("RANDOM");
   };
   setInterval(lol, 10099);
 });
@@ -7550,7 +7550,7 @@ client.on('guildMemberAdd', member => {
     const ei = invites[member.guild.id];
     const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
     const inviter = client.users.get(invite.inviter.id);
-    const stewart = member.guild.channels.find("name", "↗wèlcòmèヅ");
+    const stewart = member.guild.channels.find("Welcome", "↗wèlcòmèヅ");
      stewart.send(`<@${member.user.id}> Invite By: <@${inviter.id}>`);
    // stewart.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
   }); 
