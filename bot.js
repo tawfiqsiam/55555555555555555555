@@ -1607,6 +1607,11 @@ client.on('message', msg => {//msg
     }
   });;
 client.on('message', msg => {//msg
+    if (msg.content === 'قوانين') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png"})
+    }
+  });;
+client.on('message', msg => {//msg
     if (msg.content === 'g!قواعد') {
       msg.channel.send({file : "https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png"})
     }
