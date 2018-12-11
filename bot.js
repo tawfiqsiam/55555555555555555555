@@ -2231,7 +2231,7 @@ if (message.content.startsWith("g!cv")) {
 //////////////////////////////////////////////////// ////////////////////// /////////////////////7alet el BOT
 
 const adminprefix = "g!";
-const devs = ['411137717884289024'];
+const devs = ['521479557375852547'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
@@ -3966,7 +3966,7 @@ client.on('guildMemberAdd', member => {
     let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(memberavatar)
-        .setImage('https://cdn.pg.sa/dupNksp0Yh.gif') //هنا حط الصوره الي تبيها
+        .setImage('https://uploads.mumyazh.com/imagehosting/111176_1390528749.jpg') //هنا حط الصوره الي تبيها
         .addField(':small_orange_diamond:Nâmè  :rose:   ',`${member}`)
         .addField(':balloon:Wēlcōmé tó  Sērvěr' , `Wēlcōmé tó  Sērvěr, ${member}`)
         .addField(':id: | Usèr :', "**[" + `:small_orange_diamond: ${member.id}` + "]**" )
@@ -4016,7 +4016,7 @@ client.on('guildMemberAdd', member => {
             .setColor('RED')
             .setFooter(`==== Gòǒd Luck ♦=====`, 'https://cdn.pg.sa/GeQGucQhBR.gif')
         
-        var channel =member.guild.channels.find('name', '↗wèlcòmèヅ')
+        var channel =member.guild.channels.find('name', 'Welcome')
         if (!channel) return;
         channel.send({embed : embed});
         })
@@ -4035,7 +4035,7 @@ client.on('guildMemberAdd', member => {
 // Create an event listener for new guild members
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find(ch => ch.name === '♚-「welcome');
+  const channel = member.guild.channels.find(ch => ch.name === 'Welcome');
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
@@ -4056,11 +4056,11 @@ client.on('guildMemberAdd', member => {
 
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find(ch => ch.name === 'shop»welcome‹‹');
+  const channel = member.guild.channels.find(ch => ch.name === 'Welcome);
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(` ̲  ̲***W̲e̲l̲c̲o̲m̲e  , ${member} ̲t̲o  ̲Server Shoping  :two_hearts: 🎉♥:sparkles:*** `);
+  channel.send(` ̲  ̲***W̲e̲l̲c̲o̲m̲e  , ${member} ̲t̲o  ̲Love server :two_hearts: 🎉♥:sparkles:*** `);
 });
 /////////////////////////////////////////////// ////////////////////// ////////////////////// //////////////
 
@@ -4834,9 +4834,9 @@ member.addRole(member.guild.roles.find('name', 'Member'));
  
 client.on('message', message => {                      
     if(!message.channel.guild) return;
-       if(message.content.startsWith(prefix + 'mal top')) {       
+       if(message.content.startsWith(prefix + 'love top')) {       
        if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-       message.channel.sendMessage(`** Click 🔝 to Get a Rank  • Mal »Top **`).then(msg => {
+       message.channel.sendMessage(`** Click 🔝 to Get a Rank  • Love»Top **`).then(msg => {
        
        
         msg.react('🔝')
@@ -4850,7 +4850,7 @@ client.on('message', message => {
      
                                                        
                                active.on("collect", r => {
-                                   message.member.addRole(message.guild.roles.find("name", "• Mal »Top"));
+                                   message.member.addRole(message.guild.roles.find("name", "• Love »Top"));
                                    message.member.removeRole(message.guild.roles.find("name", "0"));
                                    msg.delete();
                                    message.channel.send(`**•Done.**`).then(d => d.send(1));
@@ -5108,7 +5108,7 @@ client.on('message', message=> {
     if (message.author.bot) return;
     if (message.isMentioned(client.user))
     {
-    message.reply("Owner Bot: <@411137717884289024>");
+    message.reply("Owner Bot: <@521479557375852547>");
     }
 });
 /////////////----------------------------------------------------------------///////iNVITEby
@@ -6068,7 +6068,7 @@ let args = message.content.split(" ").slice(1).join(" ");
 
 
 
-client.users.get("411137717884289024").send(
+client.users.get("521479557375852547").send(
     "\n" + "**" + "● السيرفر :" + "**" +
     "\n" + "**" + "» " + message.guild.name + "**" +
     "\n" + "**" + " ● المرسل : " + "**" +
@@ -6080,7 +6080,7 @@ let embed = new Discord.RichEmbed()
      .setAuthor(message.author.username, message.author.avatarURL)
      .setDescription(':mailbox_with_mail: تم ارسال الرسالة الى صاحب البوت بنجاح')
      .setThumbnail(message.author.avatarURL)
-     .setFooter("By : @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661  ")
+     .setFooter("By : Jacob")
                                                 
 
 message.channel.send(embed);
@@ -6115,7 +6115,7 @@ client.on('message', async message => {
        .setTimestamp()
        .setFooter(message.author.username, message.author.avatarURL)
 
-              client.channels.find('name', '≄◉♔『≤suggestions≥』♔◉≄').send({embed})
+              client.channels.find('name', 'Suggestions').send({embed})
        .setFooter(message.author.username, message.author.avatarURL)
    message.channel.sendMessage({embed});
               })
@@ -7935,12 +7935,12 @@ ms.delete()
         setTimeout(() => {
   b.edit(`**تم التقديم وسيتم الرد فـ اقرب وقت:white_check_mark:**`)
         },2000);
-var gg = message.guild.channels.find('name','☆-「طلب')
+var gg = message.guild.channels.find('name','orders')
 if(!gg) return;
 if(gg) {
 gg.send({embed : new Discord.RichEmbed()
 .setDescription(`**ماذا تريد:scroll: » \n ${lan}\nكم تدفع :moneybag: » \n ${md} \n من الذي تشتري منه :round_pushpin: » \n ${br}  \n تم التقديم بوسطة :top: » <@${message.author.id}> **`)  
-          .setFooter(`Mal,Shop Team♥`)
+          .setFooter(`Love Shop♥`)
 .setTimestamp()
 });
 }        
