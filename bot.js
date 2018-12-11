@@ -419,8 +419,8 @@ client.on("guildMemberAdd", msg => {
 .setTitle(`
 Wèlcome to Sèrver 
 `)
-.addField("Mal Shop  ", `${msg.user.tag}`, true)
-.addField(`↓↓↓Link Server↓↓↓ `,`https://discord.gg/7vAcGGX`, true)
+.addField("Welcome to our server❤  ", `${msg.user.tag}`, true)
+.addField(`↓↓↓Link Server↓↓↓ `,`https://discord.gg/FmPM6haq`, true)
  .setFooter(msg.user.tag, msg.user.avatarURL, true)
 msg.user.sendMessage(AlphaE);
 });
@@ -432,7 +432,7 @@ msg.user.sendMessage(AlphaE);
 client.on('message', DEL => {//By Mahmoud-QuaStyle
 if(DEL.content === 'g!bot-owner') {
 var embed = new Discord.RichEmbed()
-.addField('صاْنع البوت : - Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼ ', `${client.user.tag}`, true)
+.addField('صاْنع البوت : - Jacob❤', `${client.user.tag}`, true)
 .setColor("RANDOM")
 DEL.channel.sendEmbed(embed);
 
@@ -567,7 +567,7 @@ client.on("message", message => {
 🖌 Orders Colors-Type: **__g!help-colors__** To Get Orders Colors
 🌈 Orders Rainbow- Type:  **__g!help-R__** To Get Orders Rainbow
 
-**By:#- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼#5661**
+**By:#- Jacob❤**
 
           `)
    message.channel.sendEmbed(embed)
@@ -1217,8 +1217,8 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" **:small_orange_diamond: Link Server Support︾**" , "  **https://discord.gg/4uUcper**")
-  .addField(" **:small_blue_diamond: Link Mal Shop︾ **" , "  **https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot**")     
+  .addField(" **:small_orange_diamond: Link Server Support︾**" , "  **https://discord.gg/FmPM6haq**")
+  .addField(" **:small_blue_diamond: Link  **" , "  **https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot**")     
      
   message.channel.sendEmbed(embed);
     }
@@ -1229,8 +1229,8 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" **:small_orange_diamond: Link Server Support︾**" , "  **https://discord.gg/4uUcper**")
-  .addField(" **:small_blue_diamond: Link Mal Shop︾ **" , "  **https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot**")     
+  .addField(" **:small_orange_diamond: Link Server Support︾**" , "  **https://discord.gg/FmPM6haq**")
+  .addField(" **:small_blue_diamond: Link ︾ **" , "  **https://discordapp.com/api/oauth2/authorize?client_id=521985606008569857&permissions=2146958839&scope=bot**")     
      
   message.channel.sendEmbed(embed);
     }
@@ -1242,7 +1242,7 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/4uUcper**")
+  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/FmPM6haq**")
      
      
   message.channel.sendEmbed(embed);
@@ -1255,7 +1255,7 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/4uUcper**")
+  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/FmPM6haq**")
      
      
   message.channel.sendEmbed(embed);
@@ -1585,7 +1585,14 @@ client.on('message', message => {
             if (message.content.startsWith("g!rules")) {
      let embed = new Discord.RichEmbed()
 .setImage('https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png')
-.addField('**By:@༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 ** ')
+.addField('**By:Jacob❤** ')
+.setDescription(`**
+    ممنوع نشر سير فرات بالخاص او بالعام
+ممنوع الكلمات المسيئة (السب/الشتم)
+ممنوع السبام
+ممنوع طلب الرتب
+ممنوع الزعل
+     **`)
 .setColor('#7d2dbe')
   message.channel.sendEmbed(embed);
     }
