@@ -1582,17 +1582,56 @@ let PREFIX = 'g!'
 
 
 client.on('message', message => {
-            if (message.content.startsWith("g!rules")) {
+            if (message.content.startsWith("g!rRRRules")) {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setImage('https://cdn.discordapp.com/attachments/520589884096774145/520591451571093506/Untitled2311111.png') //هنا حط الصوره الي تبيها
-.setImage('https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png')
+.setImage('')
 .setImage('https://cdn.discordapp.com/attachments/520589884096774145/520591451571093506/Untitled2311111.png')
 .addField('**By:@༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 ** ')
 .setColor('#7d2dbe')
   message.channel.sendEmbed(embed);
     }
 });
+
+
+
+client.on('message', msg => {//msg
+    if (msg.content === 'g!rules') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png"})
+    }
+  });;
+client.on('message', msg => {//msg
+    if (msg.content === 'g!Rules') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png"})
+    }
+  });;
+client.on('message', msg => {//msg
+    if (msg.content === 'g!قواعد') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png"})
+    }
+  });;
+client.on('message', msg => {//msg
+    if (msg.content === 'rules') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png"})
+    }
+  });;
+
+client.on('message', msg => {//msg
+    if (msg.content === 'Rules') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png"})
+    }
+  });;
+
+client.on('message', msg => {//msg
+    if (msg.content === 'قواعد') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png"})
+    }
+  });;
+
+
+
+
 ////////////----------------//////////////////////////////////// ////////////////////// ////////////////////////////BC
 
 
