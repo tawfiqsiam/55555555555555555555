@@ -1119,7 +1119,7 @@ client.on("message", (message) => {
                 SEND_MESSAGES: true,
                 READ_MESSAGES: true
             });
-            message.channel.send(`:white_check_mark: **Your Ticket Has Been Created**,<#${c.number}>`);
+            message.channel.send(`:white_check_mark: **Your Ticket Has Been Created**,<{message.author.id}>`);
             const embed = new Discord.RichEmbed()
                 .setColor(0xCF40FA)
                 .addField(`Hey ${message.author.username}!`, `Please try explain why you opened this ticket with as much detail as possible. Our **Support Staff** will be here soon to help.`)
@@ -1585,10 +1585,10 @@ client.on('message', message => {
             if (message.content.startsWith("g!rules")) {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
-.addField('https://cdn.discordapp.com/attachments/520589884096774145/520591451571093506/Untitled2311111.png')
-.addField('https://cdn.discordapp.com/attachments/522011430589825024/522014558735433728/Doneemojirules.png')
-.addField('https://cdn.discordapp.com/attachments/520589884096774145/520591451571093506/Untitled2311111.png')
-.addField('    **By:@༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 ** ')
+.setImage('https://cdn.discordapp.com/attachments/520589884096774145/520591451571093506/Untitled2311111.png') //هنا حط الصوره الي تبيها
+.setImage('https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png')
+.setImage('https://cdn.discordapp.com/attachments/520589884096774145/520591451571093506/Untitled2311111.png')
+.addField('**By:@༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 ** ')
 .setColor('#7d2dbe')
   message.channel.sendEmbed(embed);
     }
@@ -3973,7 +3973,7 @@ client.on('guildMemberAdd', member => {
     let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(memberavatar)
-        .setImage('https://cdn.pg.sa/dupNksp0Yh.gif') //هنا حط الصوره الي تبيها
+        .setImage('https://cdn.discordapp.com/attachments/488387162803404821/520768902188367872/aaa.png') //هنا حط الصوره الي تبيها
         .addField(':small_orange_diamond:Nâmè  :rose:   ',`${member}`)
         .addField(':balloon:Wēlcōmé tó  Sērvěr' , `Wēlcōmé tó  Sērvěr, ${member}`)
         .addField(':id: | Usèr :', "**[" + `:small_orange_diamond: ${member.id}` + "]**" )
