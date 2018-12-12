@@ -2,6 +2,6 @@
   "token" : "NTIxOTg1NjA2MDA4NTY5ODU3.DvEYow.ODLx1n4j12BTyCAgYP6WHl3rhso", هنا يعني
   "ms" : 1500,
   "roleToDisco" : ["disco"], 
-  "prefix" : "g!",
+  "prefix" : "!",
   "allowedUsers" : ["470602554611597315", "411137717884289024"] 
 }
