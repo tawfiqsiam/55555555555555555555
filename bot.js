@@ -8706,16 +8706,6 @@ client.on('message', async message => {
 })
     })
 }})             
-client.on('message', async message => {
-   if(message.content === reply[message.guild.id].msg) {
-       message.channel.send(reply[message.guild.id].reply)
-   }}
-)
-
-
-
-  }, 3000);
-})
 
 ////set////////////By:Mal-Mahmoud-QuaStyle////////////By:Mal-Mahmoud-QuaStyle
 client.on('message', message => {
