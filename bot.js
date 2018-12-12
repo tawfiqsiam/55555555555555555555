@@ -8713,28 +8713,6 @@ client.on('message', async message => {
 )
 
 
-/////////////////////Mal Shop
-client.on("ready", async  => {
-setInterval(function(){
-client.channels.find('id', '522054124037079040').setName("W");
-client.channels.find('id', '522054124037079040').setName("We");
-client.channels.find('id', '522054124037079040').setName("Wel");
-client.channels.find('id', '522054124037079040').setName("Welc");
-client.channels.find('id', '522054124037079040').setName("Welco");
-client.channels.find('id', '522054124037079040').setName("Welcom");
-client.channels.find('id', '522054124037079040').setName("Welcome");
-client.channels.find('id', '522054124037079040').setName("Welcome T");
-client.channels.find('id', '522054124037079040').setName("Welcome To");
-client.channels.find('id', '522054124037079040').setName("Welcome To L");
-client.channels.find('id', '522054124037079040').setName("Welcome To Lo");
-client.channels.find('id', '522054124037079040').setName("Welcome To Lov");
-client.channels.find('id', '522054124037079040').setName("Welcome To Love");
-client.channels.find('id', '522054124037079040').setName("Welcome To Love ");
-client.channels.find('id', '522054124037079040').setName("Welcome To Love Server");
-client.channels.find('id', '522054124037079040').setName("Welcome To Love Server❤");
-client.channels.find('id', '522054124037079040').setName("Welcome To Love Server❤❤");
-
-
 
   }, 3000);
 });
