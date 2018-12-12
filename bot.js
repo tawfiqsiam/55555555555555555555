@@ -49,7 +49,7 @@ const Discord = require('discord.js');
 	        }))
 	    }
 	})//////////////Mal Team
-	
+	client.on("message", (message) => {
 		if(message.content.startsWith(prefix + "kiss")) {
 			let member = message.mentions.members.first()
 			if(!member) message.reply("auto-kiss ?")
@@ -67,6 +67,7 @@ const Discord = require('discord.js');
 					message.channel.send({embed});
 			}
 			}
+		client.on("message", (message) => {
 		if(message.content.startsWith(prefix + "nut")) {
 				let member = message.mentions.members.first()
 				if(!member) message.reply("auto-kick-in-the-nuts ?")
@@ -84,6 +85,7 @@ const Discord = require('discord.js');
 						message.channel.send({embed});
 				}
 				}
+			client.on("message", (message) => {
 				if(message.content.startsWith(prefix + "hug")) {
 					let member = message.mentions.members.first()
 					if(!member) message.reply("auto-hug ?")
@@ -101,6 +103,7 @@ const Discord = require('discord.js');
 							message.channel.send({embed});
 					}
 					}
+				client.on("message", (message) => {
 					if(message.content.startsWith(prefix + "facepalm")) {
 							const embed = new Discord.RichEmbed()
 							var rdmgif =["https://media1.tenor.com/images/0f78af841f453545a036b6cceb3620cc/tenor.gif", "https://media1.tenor.com/images/06655070b3cc8faaff4824eee848adc0/tenor.gif", "https://media1.tenor.com/images/fa7be96565d6a62208b61497b92576b7/tenor.gif", "https://media1.tenor.com/images/943c9749155767d167660c6a8e45357c/tenor.gif", "https://media1.tenor.com/images/662a736b3f807c6265b79981f115fd87/tenor.gif", "https://media1.tenor.com/images/0111c62d35b8e0ad45a24ee6c01e9279/tenor.gif", "https://media1.tenor.com/images/a4ffc23c3537fc4eb8c076c4fb072f32/tenor.gif", "https://media1.tenor.com/images/f758feb1edaa0718d9cfe2fd7701a8dd/tenor.gif"];
@@ -114,6 +117,7 @@ const Discord = require('discord.js');
 								embed.setTimestamp()
 								message.channel.send({embed});
 						}
+					client.on("message", (message) => {
 						if(message.content.startsWith(prefix + "dawae")) {
 							const embed = new Discord.RichEmbed()
 							var rdmgif =["https://media1.tenor.com/images/96d8a6e5daebe9d1ac5ea47f39e74fa6/tenor.gif", "https://media1.tenor.com/images/478711ecd6da7f70165fe3c0f89f0387/tenor.gif", "https://media1.tenor.com/images/dc3997030a482257e718b36aed35a360/tenor.gif", "https://media1.tenor.com/images/4263bc7bd673f742919bd69eaeccae77/tenor.gif", "https://media1.tenor.com/images/f0cf485fcf480561d42f6f19fb2b7e33/tenor.gif", "https://media1.tenor.com/images/63da1c7225c52c7184dfb89d2cdd8280/tenor.gif"];
