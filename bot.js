@@ -8715,7 +8715,7 @@ client.on('message', async message => {
 
 
   }, 3000);
-});
+})
 
 ////set////////////By:Mal-Mahmoud-QuaStyle////////////By:Mal-Mahmoud-QuaStyle
 client.on('message', message => {
