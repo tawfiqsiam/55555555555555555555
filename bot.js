@@ -3,7 +3,6 @@ const Discord = require('discord.js');
 const tpoints = {};
 const vpoints = {};
 const dateFormat = require('dateformat');
-const fs = require("fs"); 
 let profile = JSON.parse(fs.readFileSync("profile.json", "utf8"))
 const Canvas = require("canvas"); //npm i canvas
 const jimp = require("jimp");
