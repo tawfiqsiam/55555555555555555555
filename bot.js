@@ -50,6 +50,83 @@ const Discord = require('discord.js');
 	    }
 	})//////////////Mal Team
 	
+		if(message.content.startsWith(prefix + "kiss")) {
+			let member = message.mentions.members.first()
+			if(!member) message.reply("auto-kiss ?")
+			else {
+				const embed = new Discord.RichEmbed()
+				var rdmgif =["https://media1.tenor.com/images/8438e6772a148e62f4c64332ea7da9e8/tenor.gif", "https://media1.tenor.com/images/2fc5b4ed1a312bbbc240a29d2e587b31/tenor.gif", "https://media1.tenor.com/images/45298a29826f3ec1f29885b9f862ea57/tenor.gif", "https://media1.tenor.com/images/0df97f6253419235268ca1a2efdb8e6a/tenor.gif"];
+				var rdmgif2 = Math.floor(Math.random()*rdmgif.length);
+					embed.setTitle(message.author.username + " kiss " + member.user.username)
+					embed.setAuthor(bot.user.username, bot.user.avatarURL)
+					embed.setColor(0x00AE86)
+					embed.setFooter(bot.user.username, bot.user.avatarURL);
+					embed.setImage(rdmgif[rdmgif2])
+					embed.addField("Love is beautiful", ":)")
+					embed.setTimestamp()
+					message.channel.send({embed});
+			}
+			}
+		if(message.content.startsWith(prefix + "nut")) {
+				let member = message.mentions.members.first()
+				if(!member) message.reply("auto-kick-in-the-nuts ?")
+				else {
+					const embed = new Discord.RichEmbed()
+					var rdmgif =["https://media1.tenor.com/images/348eae99cbaf68283903d74ee85e67ce/tenor.gif", "https://media1.tenor.com/images/e98b912ad0f5e74e53efc1c20aea59be/tenor.gif", "https://media1.tenor.com/images/f03ec2fc5f712b344f5b35d644140236/tenor.gif", "https://media1.tenor.com/images/cc5bc86ee3be2219b0976d320ecf5276/tenor.gif", "https://media1.tenor.com/images/9982265fa4c53204c66ea7fc9997aee0/tenor.gif"];
+					var rdmgif2 = Math.floor(Math.random()*rdmgif.length);
+						embed.setTitle(message.author.username + " kick the nuts of " + member.user.username)
+						embed.setAuthor(bot.user.username, bot.user.avatarURL)
+						embed.setColor(0x00AE86)
+						embed.setFooter(bot.user.username, bot.user.avatarURL);
+						embed.setImage(rdmgif[rdmgif2])
+						embed.addField("Rip the nuts of " + member.user.username, "¯\_(ツ)_/¯")
+						embed.setTimestamp()
+						message.channel.send({embed});
+				}
+				}
+				if(message.content.startsWith(prefix + "hug")) {
+					let member = message.mentions.members.first()
+					if(!member) message.reply("auto-hug ?")
+					else {
+						const embed = new Discord.RichEmbed()
+						var rdmgif =["https://media1.tenor.com/images/d7529f6003b20f3b21f1c992dffb8617/tenor.gif", "https://media1.tenor.com/images/87ce1545bd99ccb269005e3ad706f6d8/tenor.gif", "https://media1.tenor.com/images/24ac13447f9409d41c1aecb923aedf81/tenor.gif", "https://media1.tenor.com/images/ce9dc4b7e715cea12604f8dbdb49141b/tenor.gif", "https://media1.tenor.com/images/0febed6df8b2f8aa52d885054782be15/tenor.gif"];
+						var rdmgif2 = Math.floor(Math.random()*rdmgif.length);
+							embed.setTitle(message.author.username + " hug " + member.user.username)
+							embed.setAuthor(bot.user.username, bot.user.avatarURL)
+							embed.setColor(0x00AE86)
+							embed.setFooter(bot.user.username, bot.user.avatarURL);
+							embed.setImage(rdmgif[rdmgif2])
+							embed.addField("Love is beautiful", ":)")
+							embed.setTimestamp()
+							message.channel.send({embed});
+					}
+					}
+					if(message.content.startsWith(prefix + "facepalm")) {
+							const embed = new Discord.RichEmbed()
+							var rdmgif =["https://media1.tenor.com/images/0f78af841f453545a036b6cceb3620cc/tenor.gif", "https://media1.tenor.com/images/06655070b3cc8faaff4824eee848adc0/tenor.gif", "https://media1.tenor.com/images/fa7be96565d6a62208b61497b92576b7/tenor.gif", "https://media1.tenor.com/images/943c9749155767d167660c6a8e45357c/tenor.gif", "https://media1.tenor.com/images/662a736b3f807c6265b79981f115fd87/tenor.gif", "https://media1.tenor.com/images/0111c62d35b8e0ad45a24ee6c01e9279/tenor.gif", "https://media1.tenor.com/images/a4ffc23c3537fc4eb8c076c4fb072f32/tenor.gif", "https://media1.tenor.com/images/f758feb1edaa0718d9cfe2fd7701a8dd/tenor.gif"];
+							var rdmgif2 = Math.floor(Math.random()*rdmgif.length);
+								embed.setTitle(message.author.username + " facepalm")
+								embed.setAuthor(bot.user.username, bot.user.avatarURL)
+								embed.setColor(0x00AE86)
+								embed.setFooter(bot.user.username, bot.user.avatarURL);
+								embed.setImage(rdmgif[rdmgif2])
+								embed.addField("Facepalmed", "¯\_(ツ)_/¯")
+								embed.setTimestamp()
+								message.channel.send({embed});
+						}
+						if(message.content.startsWith(prefix + "dawae")) {
+							const embed = new Discord.RichEmbed()
+							var rdmgif =["https://media1.tenor.com/images/96d8a6e5daebe9d1ac5ea47f39e74fa6/tenor.gif", "https://media1.tenor.com/images/478711ecd6da7f70165fe3c0f89f0387/tenor.gif", "https://media1.tenor.com/images/dc3997030a482257e718b36aed35a360/tenor.gif", "https://media1.tenor.com/images/4263bc7bd673f742919bd69eaeccae77/tenor.gif", "https://media1.tenor.com/images/f0cf485fcf480561d42f6f19fb2b7e33/tenor.gif", "https://media1.tenor.com/images/63da1c7225c52c7184dfb89d2cdd8280/tenor.gif"];
+							var rdmgif2 = Math.floor(Math.random()*rdmgif.length);
+								embed.setTitle("DO KNOW DA WAE ?")
+								embed.setAuthor(bot.user.username, bot.user.avatarURL)
+								embed.setColor(0x00AE86)
+								embed.setFooter(bot.user.username, bot.user.avatarURL);
+								embed.setImage(rdmgif[rdmgif2])
+								embed.addField("DO YOU KNOW DA WAE !!", "DA WAEEEEEE !")
+								embed.setTimestamp()
+								message.channel.send({embed});
+						}
 	
 	client.on("message", (message) => {
 	    if(message.content.startsWith(prefix+"Gmail")) {////Mal Team
