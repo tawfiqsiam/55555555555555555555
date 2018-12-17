@@ -1282,24 +1282,22 @@ m.sendMessage(args)
 	
 	
 	
-	
-	
-	client.on("message", message => {
-	    if (message.author.bot) return;
-	     if (message.content === prefix + "help-public"){
-	  const embedss2 = new Discord.RichEmbed() 
-	      .setColor("RANDOM")
-	      .setThumbnail(message.author.avatarURL)
-	      .setDescription(`**
-	    
-	     Check Your DM**`)
-	
-			 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
-	  const embed = new Discord.RichEmbed() 
-	      .setColor("RANDOM")
-	      .setThumbnail(message.author.avatarURL)
-	      .setDescription(`
-	***¯−ـ‗ऊ»public commands«ऊ‗ـ−¯***                                                           
+client.on("message", message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "help-public"){
+  const embedss2 = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`**
+    
+     Check Your DM**`)
+
+		 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
+  const embed = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`
+***¯−ـ‗ऊ»puplic commands«ऊ‗ـ−¯***                                                                         
 	***:pushpin:!allbots
 	∟ the bot will show you all the bots in this server
 	:pushpin:!server 
