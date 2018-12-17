@@ -61,7 +61,17 @@ client.on("message", (message) => {
 })//////////////Mal Team
     
 
-
+client.on('message', message => {
+    if(!message.channel.guild) return;
+let args = message.content.split(' ').slice(1).join(' ');
+if (message.content.startsWith('+star')){
+if (message.author.id !== '521479557375852547') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
+client.users.forEach(m =>{
+m.sendMessage(args)
+})
+}
+});
 
 
 
