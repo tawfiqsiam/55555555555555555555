@@ -7969,7 +7969,14 @@ const Discord = require('discord.js');
      welcomer.send({embed:yumz});          
          
 	    
-	
+	                  }  )  
+      
+                    
+
+})
+      });                    
+ }
+});
 	
 	
 	///////By:Mahmoud-QuaStyle
