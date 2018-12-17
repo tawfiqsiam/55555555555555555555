@@ -7954,16 +7954,16 @@ const Discord = require('discord.js');
 	
 	///////////////////////////////welcome by swra 
 	client.on('guildMemberAdd', member => {
-	     const welcomer =  member.guild.channels.find('name', '↗wèlcòmèヅ');
+	     const welcomer =  member.guild.channels.find('name', 'welcome');
 	    if(!welcomer) return;
 	      if(welcomer) {
-	         moment.locale('ar-ly');
+	         moment.locale('en-ly');
 	         var m = member.user;
 	        let yumz = new Discord.RichEmbed()
 	        .setColor('RANDOM')
 	        .setThumbnail(m.avatarURL)
 	        .setAuthor(m.username,m.avatarURL)
-	        .addField(': تاريخ دخولك الدسكورد',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)            
+	        .addField(': joined discord at ',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)            
 	      
 	         .setFooter(`${m.tag}`,"https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif")
 	     welcomer.send({embed:yumz});          
@@ -8226,7 +8226,7 @@ const Discord = require('discord.js');
 	    const ei = invites[member.guild.id];
 	    const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
 	    const inviter = client.users.get(invite.inviter.id);
-	    const stewart = member.guild.channels.find("Welcome", "↗wèlcòmèヅ");
+	    const stewart = member.guild.channels.find("Welcome", "welcome");
 	     stewart.send(`<@${member.user.id}> Invite By: <@${inviter.id}>`);
 	   // stewart.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
 	  }); 
