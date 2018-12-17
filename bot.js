@@ -136,7 +136,7 @@ const Discord = require('discord.js');
 	//                                        //
 	//         
 	client.on('message', message => {
-		    if (message.content.startsWith("رابط")) {
+		    if (message.content.startsWith("link")) {
 		
 		  message.channel.createInvite({
 		        thing: true,
@@ -145,10 +145,9 @@ const Discord = require('discord.js');
 		    }).then(invite =>
 		      message.author.sendMessage(invite.url)
 		    )
-		  message.channel.send("**:link:.تم ارسال الرابط برسالة خاصة**")
+		  message.channel.send("**:link:.its in your dms **")
 		
-		message.author.send(`**مدة الرابط : يـوم
-		عدد استخدامات الرابط : 5**`)
+		message.author.send(`**You can invite 5 members by using this link **`)
 		
 		
 		    }
@@ -1135,11 +1134,11 @@ const Discord = require('discord.js');
 	    if (message.content === "!help") {
 	     const embed = new Discord.RichEmbed() 
 	         .setColor("#00FF00")
-	         .setDescription(`**❓❔❗️❕وش مميزات البوت❗️❕❓❔**
-	        **__1-__:books:🧐 Mal Shop  🧐:books:
-	         __2-__:white_check_mark: :part_alternation_mark:️ استخدامه جدا سهل:part_alternation_mark:️:white_check_mark: 
-	         __3-__:gear:️صيانه كل يوم:gear:️
-	         __4-__:money_with_wings: مجاني :money_with_wings:**`)
+	         .setDescription(`**❓❔❗️❕Send us your love!❗️❕❓❔**
+	        **__1-__:books:🧐 Love bot join our server here https://discord.gg/spWYAfZ  🧐:books:
+	         __2-__:white_check_mark: :part_alternation_mark:️ easy to use :part_alternation_mark:️:white_check_mark: 
+	         __3-__:gear:️We will update the bot every day:gear:️
+	         __4-__:money_with_wings: its free! :money_with_wings:**`)
 	   message.author.sendEmbed(embed)
 	   
 	   }
@@ -1167,15 +1166,14 @@ const Discord = require('discord.js');
 	      .setThumbnail(message.author.avatarURL)
 	      .setColor("#000000")
 	         .setDescription(`**❓❔❗️❕Add-Rank❗️❕❓❔**
-	        **:ok_hand: !CrossFire|Create Rank <CrossFire> ~ اعمل رتبة بي اسم CrossFire 
-	:ok_hand: !Fortnite|Create Rank <Fortnite> ~ اعمل رتبة بي اسم Fortnite
-	:ok_hand: !Minecraft|Create Rank <Minecraft> ~ اعمل رتبة بي اسم Minecraft
-	:ok_hand: !BlackSquad|Create Rank <BlackSquad> ~ اعمل رتبة بي اسم BlackSquad
-	:ok_hand: !PUBG|Create Rank <PUBG> ~ اعمل رتبة بي اسم PUBG 
-	:ok_hand: !Brawlhalla| Create Rank <Brawlhalla>  اعمل رتبة بي اسم Brawlhalla
+	        **:ok_hand: !CrossFire|Create Rank <CrossFire> ~ create a role with this name CrossFire 
+	:ok_hand: !Fortnite|Create Rank <Fortnite> ~  Fortnite
+	:ok_hand: !Minecraft|Create Rank <Minecraft> ~ create a role with this name Minecraft
+	:ok_hand: !BlackSquad|Create Rank <BlackSquad> ~ create a role with this name BlackSquad
+	:ok_hand: !PUBG|Create Rank <PUBG> ~ create a role with this name PUBG 
+	:ok_hand: !Brawlhalla| Create Rank <Brawlhalla> create a role with this name Brawlhalla
 	:ok_hand: !Leagueoflegends|Create Rank <Leagueoflegends> 
-	 وي بعديها اكتب اي امر من دول 
-	وي اليكتب امر من دول يحصل علي الرتلقائي
+	 then you can type the role anbd the bot will give it to you
 	:boom: ___Ranks In GAME'S___:boom: 
 	__to Add Rank:  CrossFire  
 	Type: !CrossFire
@@ -1199,8 +1197,8 @@ const Discord = require('discord.js');
 	Type: !Brawlhalla__
 	---------------------------**
 	═══════════════════════════════════════════════════════════════════════
-	!Build Rr »***البوت يعمل لك رتب بي الاسم دا بي الزخرفة*** 
-	          ↘↙ بي الشكل دا
+	!Build Rr »***the bot will build your server!*** 
+	          ↘↙ Like this
 	***1-Name: Owner
 	2- Name: Co-owner
 	3-Name:Leader
@@ -1290,25 +1288,25 @@ const Discord = require('discord.js');
 	      .setColor("RANDOM")
 	      .setThumbnail(message.author.avatarURL)
 	      .setDescription(`
-	***¯−ـ‗ऊ»اوامر عامة«ऊ‗ـ−¯***                                                           
+	***¯−ـ‗ऊ»public commands«ऊ‗ـ−¯***                                                           
 	***:pushpin:!allbots
-	∟ لعرض جميع البوتات الي بالسيرفر
+	∟ the bot will show you all the bots in this server
 	:pushpin:!server 
-	∟ يعرض لك معلومات عن السيرفر
+	∟ info about the server
 	:pushpin:!bot 
-	∟ يعرض لك كل معلومات البوت
+	∟ some info about love bot
 	:pushpin:!count
-	يعرض لك عدد الاشخاص بالسيرفر بدون بوتات
+	the bot will show you the real members count
 	:pushpin:!invites
-	∟يعرض لك  عدد انفايتاتك بالسيرفر
+	∟the bot will show you how many members you have invited to the server
 	:pushpin:!invite-codes 
-	∟ يعرض لك روابط الانفايتات حكك في السيرفر
+	∟ the bot will show you all of your invte codes
 	:pushpin:!cal 
-	∟ اله حاسبة
+	∟ 2+2=?
 	:pushpin:!trans <language> <any thing> 
-	∟ يترجم لك الي تبيه من اي لغة
+	∟ translate any language
 	:pushpin:!short 
-	∟ يختصر لك رابط كبير الى رابط صغير
+	∟ short any link you want
 	:pushpin:!tag 
 	∟ يكتب لك الكلمة بشكل جميل وكبير
 	:pushpin:!google 
