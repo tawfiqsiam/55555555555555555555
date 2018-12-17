@@ -1902,7 +1902,7 @@ const Discord = require('discord.js');
 	     let embed = new Discord.RichEmbed()
 	  .setAuthor(message.author.username)
 	  .setColor("#9B59B6")
-	  .addField(" **:small_orange_diamond: Link Server Support︾**" , "  **https://discord.gg/FmPM6haq**")
+	  .addField(" **:small_orange_diamond: Link Server Support︾**" , "  **https://discord.gg/spWYAfZ**")
 	  .addField(" **:small_blue_diamond: Link  **" , "  **https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot**")     
 	     
 	  message.channel.sendEmbed(embed);
@@ -1914,7 +1914,7 @@ const Discord = require('discord.js');
 	     let embed = new Discord.RichEmbed()
 	  .setAuthor(message.author.username)
 	  .setColor("#9B59B6")
-	  .addField(" **:small_orange_diamond: Link Server Support︾**" , "  **https://discord.gg/FmPM6haq**")
+	  .addField(" **:small_orange_diamond: Link Server Support︾**" , "  **https://discord.gg/spWYAfZ**")
 	  .addField(" **:small_blue_diamond: Link ︾ **" , "  **https://discordapp.com/api/oauth2/authorize?client_id=521985606008569857&permissions=2146958839&scope=bot**")     
 	     
 	  message.channel.sendEmbed(embed);
@@ -1927,7 +1927,7 @@ const Discord = require('discord.js');
 	     let embed = new Discord.RichEmbed()
 	  .setAuthor(message.author.username)
 	  .setColor("#9B59B6")
-	  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/FmPM6haq**")
+	  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/spWYAfZ**")
 	     
 	     
 	  message.channel.sendEmbed(embed);
@@ -1940,7 +1940,7 @@ const Discord = require('discord.js');
 	     let embed = new Discord.RichEmbed()
 	  .setAuthor(message.author.username)
 	  .setColor("#9B59B6")
-	  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/FmPM6haq**")
+	  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/spWYAfZ**")
 	     
 	     
 	  message.channel.sendEmbed(embed);
@@ -2319,7 +2319,7 @@ const Discord = require('discord.js');
 	   if(message.content.split(' ')[0] == '!color'){
 	           const embedd = new Discord.RichEmbed()
 	     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
-	   .setDescription(`**لا يوجد لون بهذا الأسم ** :x: `)
+	   .setDescription(`**THere is no color with this name ** :x: `)
 	   .setColor(`ff0000`)
 	 
 	    if(!isNaN(args) && args.length > 0)
@@ -2333,7 +2333,7 @@ const Discord = require('discord.js');
 	const embed = new Discord.RichEmbed()
 	                   
 	     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
-	   .setDescription(`**Done , تم تغير لونك . :white_check_mark: **`)
+	   .setDescription(`**Done , You have new color . :white_check_mark: **`)
 	 
 	   .setColor(`${a.hexColor}`)
 	  message.channel.sendEmbed(embed);
@@ -3246,7 +3246,7 @@ const Discord = require('discord.js');
 	
 	 client.on('message', msg => {//msg
 	    if (msg.content === '!colors') {
-	      msg.channel.send({file : "https://cdn.pg.sa/MFNLM5z8C8.jpg"})
+	      msg.channel.send({file : "https://media.discordapp.net/attachments/495636666619396105/524141047706812416/colors.png"})
 	    }
 	  });;
 	
