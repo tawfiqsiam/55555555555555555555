@@ -6563,7 +6563,7 @@ const Discord = require('discord.js');
 	    });
 	  setInterval(() => {
 	      var currentTime = new Date(),
-	hours = currentTime.getHours() + 3 ,
+	hours = currentTime.getHours() + 5 ,
 	minutes = currentTime.getMinutes(),
 	Seconds = currentTime.getSeconds()
 	if (minutes < 10) {
@@ -7957,7 +7957,7 @@ const Discord = require('discord.js');
 	     const welcomer =  member.guild.channels.find('name', 'welcome');
 	    if(!welcomer) return;
 	      if(welcomer) {
-	         moment.locale('en-ly');
+	         moment.locale('ar-ly');
 	         var m = member.user;
 	        let yumz = new Discord.RichEmbed()
 	        .setColor('RANDOM')
@@ -7965,6 +7965,7 @@ const Discord = require('discord.js');
 	        .setAuthor(m.username,m.avatarURL)
 	        .addField(': joined discord at ',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)            
 	      
+	         .setFooter(`${m.tag}`,"
 	         .setFooter(`${m.tag}`,"https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif")
 	     welcomer.send({embed:yumz});          
 	         
@@ -8499,7 +8500,7 @@ const Discord = require('discord.js');
 	    const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
 	    const inviter = client.users.get(invite.inviter.id);
 	    const member = member.guild.channels.find("name", "welcome");
-	     member.send(`<@${member.user.id}> تمت الدعوه من <@${inviter.id}>`);
+	     member.send(`<@${member.user.id}> invited by <@${inviter.id}>`);
 	    member.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
 	  });
 	});
