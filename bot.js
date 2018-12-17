@@ -1318,56 +1318,49 @@ m.sendMessage(args)
 	∟ translate any language
 	:pushpin:!short 
 	∟ short any link you want
-	:pushpin:!tag 
-	∟ يكتب لك الكلمة بشكل جميل وكبير
+	:pushpin:!tag
 	:pushpin:!google 
-	∟ للبحث في قوقل عن طريق الدسكورد
+	∟ google it!!
 	:pushpin:!perms 
-	∟ يعرض لك برمشناتك بالسيرفر
+	∟ show you your perms
 	:pushpin:!rooms 
-	∟ يعرض لك كل الرومات الي بالسيرفر مع عددها
+	∟ server channels
 	:pushpin:!emojilist
-	∟ يعرض لك كل الايموجيات الي بالسيرفر
+	∟ server emojis
 	:pushpin:!say 
-	∟ يكرر الكلام الي تكتبو
 	:pushpin:!image 
-	∟صورة السيرفر
+	∟server pic
 	:pushpin:!members 
-	∟ يعرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص
+	∟ mem
 	:pushpin:!id 
-	∟ معلومات عنك
+	∟ info about you
 	:pushpin:!bans 
-	∟ عدد الاشخاص المبندة 
 	∟ :pushpin: !avatar 
-	صورتك او صورة الي تمنشنو 
-	:pushpin: !embed
-	∟ يكرر الي تقولو بشكل حلو
 	:pushpin:!emoji 
-	<any things> لتحويل اي كلمه تقولها الي ايموجي
+	<any things>what you but in emojis
 	:pushpin: !inv 
-	∟لدعوة البوت الى سيرفرك
+	∟to invote the bot 
 	:pushpin: !support
-	∟ سيرفر الدعم
+	∟ server support
 	:pushpin: !contact
-	∟ ارسال اقتراح او لمراسلة صاحب البوت
+	∟ talk with the bot owner
 	:pushpin: !report
-	∟ ا حد سبك واهانك
+	∟ report someone ~ `create a channel called reports`
 	:pushpin: !owner<messange 
-	∟ ارسال رسالة لي اونر
+	∟ dm the owner using the bot
 	:pushpin: !server 
-	∟ معلومات عن السرفر
+	∟ server info
 	:pushpin: !draw
-	<messange> يحط لك الكلام في صوره
+	<messange> what you said but as a pic
 	:pushpin:!embed
-	<messange>  يحط لك الكلام في مربع
+	<messange>  What you said but in embed
 	:pushpin:!time 
-	∟ لمعرفة الوقت
+	∟ get the time
 	:pushpin:!dt 
-	∟ لمعرفة الوقت والتاريخ 
+	∟ get the date 
 	:pushpin: !credit
-	∟ لمعرفة الكرديت
 	:pushpin:!daily
-	∟ لمعرفة اليومي ***
+	
 	`)
 	   message.author.sendEmbed(embed)
 	    
@@ -1549,10 +1542,10 @@ m.sendMessage(args)
 	  const embed = new Discord.RichEmbed() 
 	      .setColor("RANDOM")
 	      .setThumbnail(message.author.avatarURL)
-	      .setDescription('👑 اوامر اللوانء👑')
-	      .addField('❖-|!colors', `👑لعرض قائمة الألوان💯`)
-	      .addField('❖-|!createcolors', `☺لأنشاء 137 لون💯`)
-	      .addField('❖-|!color<number>', `😊لتحط ايا 0ون من هول الالوان اكتب الأمر و الرقم من 1 ل137 انت اختر😉`)
+	      .setDescription('👑  colors👑')
+	      .addField('❖-|!colors', `👑colors list💯`)
+	      .addField('❖-|!createcolors', `☺لأنto create 133 color 💯`)
+	      .addField('❖-|!color<number>', `😊get the color that you like😉`)
 	  message.author.send({embed});
 	      message.channel.send("")
 	 }
@@ -1634,22 +1627,22 @@ m.sendMessage(args)
 	('log', 'text');
 	('admin-chat', 'text');
 	('▓▬▬▬ADMNS▬▬▬▓', 'voice');
-	('Owner - مالك السيرفر', 'voice');
-	('Co Owner - نائب الرئيس', 'voice');
-	('Dev - مبرمج السيرفر', 'voice');
-	('Admin - مشرف', 'voice');
-	('Mod - مود', 'voice');
+	('Owner ', 'voice');
+	('Co Owner', 'voice');
+	('Dev  ', 'voice');
+	('Admin ', 'voice');
+	('Mod ', 'voice');
 	('▓▬▬▬Other▬▬▬▓', 'voice');
 	('[ R E C ] 🎥', 'voice');
-	('YouTubers - يوتيوبرز', 'voice');
-	('VIP + - كبار الشخصيات بلس', 'voice');
-	('VIP - كبار الشخصيات', 'voice');
-	('Friends - اصدقاء', 'voice');
+	('YouTubers ', 'voice');
+	('VIP + ', 'voice');
+	('VIP ', 'voice');
+	('Friends', 'voice');
 	('▓▬▬▬WEL▬▬▬▓', 'voice');
-	('Help - مساعدة', 'voice');
-	('Ξ〖 اقـتـراحـاتـكمـ 💡 〗', 'voice');
+	('Help ', 'voice');
+	('Ξ〖ideas to share〗', 'voice');
 	('▓▬▬▬♚▬▬▬▓', 'voice');
-	('♧ Ξ〖 🎤  سواليف 📣  〗', 'voice');
+	('♧ Ξ〖 🎤  General📣  〗', 'voice');
 	('♢ Ξ〖 🎤 مواهب 🎵  〗', 'voice');
 	('❋ Ξ〖 🎈فعاليات 🏅 〗', 'voice');
 	('❋ Ξ〖  🕋 القرآن الكريم  〗', 'voice');
@@ -1689,7 +1682,7 @@ m.sendMessage(args)
 	client.on("message", msg => {
 	           var prefix = "!";
 	  if(msg.content.startsWith (prefix + "id")) {
-	    if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');
+	    if(!msg.channel.guild) return msg.reply('**:x: this command for servers only **');
 	      const embed = new Discord.RichEmbed();
 	  embed.addField("🌹Ŋame ", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
 	          .addField("🔹IĐ ", `**[ ${msg.author.id} ]**`, true)
@@ -2013,14 +2006,14 @@ m.sendMessage(args)
 	///////////////////////////////////////////////////////////////////////--------------///////////////MOVE 
 	
 	
-	
+	 
 	client.on('message', message => {
 		var prefix = "!";
 	if(!message.channel.guild) return;
 	if(message.content.startsWith(prefix + 'move')) {
 	 if (message.member.hasPermission("MOVE_MEMBERS")) {
 	 if (message.mentions.users.size === 0) {
-	 return message.channel.send("``لاستخدام الأمر اكتب هذه الأمر : " +prefix+ "move [USER]``")
+	 return message.channel.send("``To use the command say  : " +prefix+ "move [USER]``")
 	}
 	if (message.member.voiceChannel != null) {
 	 if (message.mentions.members.first().voiceChannel != null) {
@@ -2029,7 +2022,7 @@ m.sendMessage(args)
 	var embed = new Discord.RichEmbed()
 	 .setTitle("Succes!")
 	 .setColor("#000000")
-	 .setDescription(`لقد قمت بسحب <@${usermentioned}> الى الروم الصوتي الخاص بك✅ `)
+	 .setDescription(`You have moved <@${usermentioned}>To your call✅ `)
 	var embed = new Discord.RichEmbed()
 	.setTitle(`You are Moved in ${message.guild.name}`)
 	 .setColor("RANDOM")
@@ -2220,10 +2213,11 @@ m.sendMessage(args)
 	
 	//////////////////////--------------------/////////////////////////////////-----------------------/////////Clear <Number>
 	 
+	how many MESSAGES do u want to clea
 	
-	
-	
-	
+	        msg.channel.send("```php\ncleared MESSAGES: " + textxt + "\n```").then(m => m.delete(3000));
+	 
+	cleared MESSAGES
 	
 	
 	client.on('message', msg => {
@@ -2240,12 +2234,12 @@ m.sendMessage(args)
 	    if(msg.member.hasPermission("MANAGE_MESSAGES")) {
 	    if (textxt == "") {
 	        msg.delete().then
-	    msg.channel.send("***```ضع عدد الرسائل التي تريد مسحها 👌```***").then(m => m.delete(3000));
+	    msg.channel.send("***```how many MESSAGES do u want to clear 👌```***").then(m => m.delete(3000));
 	} else {
 	    msg.delete().then
 	    msg.delete().then
 	    msg.channel.bulkDelete(textxt);
-	        msg.channel.send("```php\nعدد الرسائل التي تم مسحها: " + textxt + "\n```").then(m => m.delete(3000));
+	        msg.channel.send("```php\n cleared MESSAGES: " + textxt + "\n```").then(m => m.delete(3000));
 	        }    
 	    }
 	}
@@ -2977,14 +2971,14 @@ m.sendMessage(args)
 	                   var mahmoud = new Discord.RichEmbed()
 	                      .setColor("RANDOM")
 	                        .setDescription(`
-	تم إرسآل لك رسآلة من السيرفر الخاص بك
+	you have reseved a message from your server
 	${QuaStyle.guild.name}
-	الرسآلة
+	message
 	${args}
 	        `)
-	        .setFooter(` بوآسطة ${QuaStyle.author.username}#${QuaStyle.author.discriminator}`)
-	       QuaStyle.guild.owner.send(mahmoud);
-	      QuaStyle.channel.send("**تم إرسآل الرسآلة إلى أونر السيرفر**")
+	        .setFooter(` by ${QuaStyle.author.username}#${QuaStyle.author.discriminator}`)
+	       QuaStyle.guild.owner.send(Starzz);
+	      QuaStyle.channel.send("**Done**")
 	     }
 	    }
 	  );
@@ -4775,7 +4769,7 @@ m.sendMessage(args)
 	});
 	client.on('message', msg => {
 	  if (msg.content === '!help-R') {
-	    msg.reply('***تحت التجديد*** :sparkles: ');
+	    msg.reply('***تWorking on it ....*** :sparkles: ');
 	  }
 	});
 	
