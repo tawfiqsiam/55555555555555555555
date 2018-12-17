@@ -1106,7 +1106,7 @@ const Discord = require('discord.js');
 	Wèlcome to Sèrver 
 	`)
 	.addField("Welcome to our server❤  ", `${msg.user.tag}`, true)
-	.addField(`↓↓↓Link Server↓↓↓ `,`https://discord.gg/FmPM6haq`, true)
+	.addField(`↓↓↓Link Server↓↓↓ `,`https://discord.gg/spWYAfZ`, true)
 	 .setFooter(msg.user.tag, msg.user.avatarURL, true)
 	msg.user.sendMessage(AlphaE);
 	});
