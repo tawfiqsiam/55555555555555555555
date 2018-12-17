@@ -4674,7 +4674,7 @@ const Discord = require('discord.js');
 	    let embed = new Discord.RichEmbed()
 	        .setColor('RANDOM')
 	        .setThumbnail(memberavatar)
-	        .setImage('https://cdn.discordapp.com/attachments/488387162803404821/520768902188367872/aaa.png') //هنا حط الصوره الي تبيها
+	        .setImage('https://cdn.pg.sa/dupNksp0Yh.gif') //هنا حط الصوره الي تبيها
 	        .addField(':small_orange_diamond:Nâmè  :rose:   ',`${member}`)
 	        .addField(':balloon:Wēlcōmé tó  Sērvěr' , `Wēlcōmé tó  Sērvěr, ${member}`)
 	        .addField(':id: | Usèr :', "**[" + `:small_orange_diamond: ${member.id}` + "]**" )
