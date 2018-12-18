@@ -77,7 +77,7 @@ m.sendMessage(args)
 	
 	client.on('ready', function(){    
 	    var ms = 5000 ;    
-	    var setGame = [`بوت تحت الصيانة`,"Update Music","Update رينبو","Update All :'D","!invite","By:Mal Mahmoud-QuaStyle","!help","Waiting Please ♥"];    
+	    var setGame = [`working on the bot`,"Update Music","Update rainbow soon ","Update All :'D","!invite","By:Jacob","!help","Waiting Please ♥"];    
 	    var i = -1;    
 	    var j = 0;    
 	    setInterval(function (){    
@@ -156,7 +156,7 @@ m.sendMessage(args)
 		    }).then(invite =>
 		      message.author.sendMessage(invite.url)
 		    )
-		  message.channel.send("**:link:.its in your dms **")
+		  message.channel.send("**:link:.its on your dms **")
 		
 		message.author.send(`**You can invite 5 members by using this link **`)
 		
@@ -1010,10 +1010,10 @@ m.sendMessage(args)
 	 
 	client.on('message', eyad => {
 	  if (eyad.content.startsWith('!vban')) {
-	if (!eyad.member.hasPermission("MOVE_MEMBERS")) return eyad.channel.send("❎ | **انت لا تمتلك الخاصيه المطلوبه**");
+	if (!eyad.member.hasPermission("MOVE_MEMBERS")) return eyad.channel.send("❎ | **you dont have the perms to do this command**");
 	let men = eyad.mentions.users.first()
 	let mas = eyad.author
-	if(!men) return eyad.channel.send('`⛔| ** يجب عليك المنشن اولاً **`');
+	if(!men) return eyad.channel.send('`⛔| ** plz mention the user **`');
 	eyad.guild.channels.forEach(c => {
 	c.overwritePermissions(men.id, {
 	          CONNECT: false
@@ -1024,9 +1024,9 @@ m.sendMessage(args)
 	.setDescription(`**
 	 <@${men.id}>
 	
-	لقد تم منع من دخول الرومات الصوتيه 
+	you have been banned from the voice calls  
 	
-	بواسطة : <@${eyad.author.id}> **`)
+	by : <@${eyad.author.id}> **`)
 	.setThumbnail("http://www.clker.com/cliparts/o/Y/d/G/j/1/close-hi.png")
 	          
 	client.users.get(men.id).sendEmbed(embed)
@@ -1035,9 +1035,9 @@ m.sendMessage(args)
 	.setAuthor(eyad.guild.name, eyad.guild.iconURL)
 	.setDescription(`          <@${men.id}>
 	
-	لقد تم منع من دخول الرومات الصوتيه
+	you have been banned from the voice calls  
 	
-	بواسطة : <@${eyad.author.id}> `)
+	by : <@${eyad.author.id}> `)
 	.setThumbnail("http://www.clker.com/cliparts/o/Y/d/G/j/1/close-hi.png")
 	eyad.channel.sendEmbed(Embed11).then(eyad => {eyad.delete(10000)})
 	    }
@@ -1047,11 +1047,11 @@ m.sendMessage(args)
 	  if(!msg.guild) return;
 	    if (msg.content.startsWith(prefix +'vc')) {
 	     let args = msg.content.split(" ").slice(1);
-	    if(!msg.channel.guild) return msg.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
+	    if(!msg.channel.guild) return msg.channel.send('**this command for servers only**').then(m => m.delete(5000));
 	let ra3d = new Discord.RichEmbed()
 	.setColor('RANDOM')
 	.setThumbnail(msg.author.avatarURL)
-	.setDescription(`هل انت متاكد من انشاء روم صوتي ؟\n  ✅  \n  ❌ \n  لديك 60 ثانية للاختيار`)                                                                                                                                                                       
+	.setDescription(`are you sure ? \n  ✅  \n  ❌ \n  you have 60 sec`)                                                                                                                                                                       
 	msg.channel.send(ra3d).then(message => {
 	 message.react('✅').then(r=>{
 	 message.react('❌').then(r=>{           
@@ -1071,10 +1071,10 @@ m.sendMessage(args)
 	  .setImage()
 	  .setThumbnail('https://cdn.discordapp.com/attachments/453024271560867853/455104628674134017/1500920527.jpg')
 	  .setURL('')
-	  .addField(`اسم القناة`, `${ra3deyad.name}`, true)
-	  .addField(`أيدي القناة`, `${ra3deyad.id}`, true)
-	  .addField(`نوع القناة`, `${ra3deyad.type}`, true)
-	  .addField(`متى انشأت القناة`, `${channelCreated}`)
+	  .addField(`channel name`, `${ra3deyad.name}`, true)
+	  .addField(`channel id`, `${ra3deyad.id}`, true)
+	  .addField(`channel type`, `${ra3deyad.type}`, true)
+	  .addField(`created at`, `${channelCreated}`)
 	 msg.channel.send({embed})
 	    message.delete();
 	})
@@ -1100,7 +1100,7 @@ m.sendMessage(args)
 	               let mmmmEmbed = new Discord.RichEmbed()
 	                         .setAuthor(client.user.username)
 	                         .setThumbnail(message.author.avatarURL)
-	 .addField(`:low_brightness:لقد قمت بدعوه`, ` ${inviteCount}:champagne_glass:`)
+	 .addField(`:low_brightness:you have invited`, ` ${inviteCount}:champagne_glass:`)
 	           .setFooter(`:black_small_square:»Requested By: ${message.author.tag}`);
 	           message.channel.send(mmmmEmbed)
 	});
@@ -1129,7 +1129,7 @@ m.sendMessage(args)
 	client.on('message', DEL => {//By Mahmoud-QuaStyle
 	if(DEL.content === '!bot-owner') {
 	var embed = new Discord.RichEmbed()
-	.addField('صاْنع البوت : - Jacob❤', `${client.user.tag}`, true)
+	.addField('bot creater : - Jacob❤', `${client.user.tag}`, true)
 	.setColor("RANDOM")
 	DEL.channel.sendEmbed(embed);
 	
@@ -1299,72 +1299,58 @@ m.sendMessage(args)
 	      .setColor("RANDOM")
 	      .setThumbnail(message.author.avatarURL)
 	      .setDescription(`
-	***¯−ـ‗ऊ» اوامر ادارة السيرفر«ऊ‗ـ−¯***
-	***:anger: - سوي روم اسمه welcome عشان البوت يرحب بكل الاعضاء الجديد ،:anger: ***
+	***¯−ـ‗ऊ» admins commands «ऊ‗ـ−¯***
+	***:anger: - create a channel called  `welcome` so the bot can welcome the new members ،:anger: ***
+	***:gem: create a channel called ` log` so the bot can add the server logs
 	***:gem:!move @user 
-	لسحب الشخص الى روومك  
-	:gem:!bc 
-	رسالة جماعية الى كل اعضاء السيرفر
-	:gem:!role @user <rank>
-	لأعطاء رتبة لعضو معين
+	to move someone to your call
+	:gem:!role @user <role>
+	to give someone a role
 	:gem:!roleremove @user <rank> 
-	لازالة الرتبة من شخص معين
+	to remove a role from someone
 	:gem:!role all <rank> 
-	لأعطاء رتبة للجميع
+	to give a role to everyone
 	:gem:!role humans <rank> 
-	لأعطاء رتبة للاشخاص فقط
+	to give a role to add the humans
 	:gem:!role bots <rank>
-	لأعطاء رتبة لجميع البوتات
+	to give a role too all the bots
 	:gem:!hchannel 
-	اخفاء الشات
+	to hide a channel 
 	:gem:!schannel
-	اضهار الشات المخفية
+	to show a channel
 	:gem:!clear <numbr>
-	مسح الشات بعدد
-	:gem:!clear
-	مسح الشات
+	clear the chat
 	:gem:!mute @user <reason>
-	اعطاء العضو ميوت لازم رتبة<Muted>
+	to mute a member and make sure you have a role called <Muted>
 	:gem:!unmute @user
-	لفك الميوت عن الشخص 
+	to unmute someone
 	:gem:!kick @user <reason>
-	طرد الشخص من السيرفر
+	to kick someone from the server
 	:gem:!ban @user <reason>
-	حضر الشخص من السيرفر
+	to ban someone from the server
 	:gem:!mc
-	تقفيل الشات
+	to mute a channel
 	:gem:!unmc
-	فتح الشات
+	to unmute a channel
 	:gem:!dc
-	مسح كل الرومات
+	to clear all the channels
 	:gem:!dr 
-	<مسح كل الرانكات <لازم تكون رانك البوت فوق كل الرانكات
+	to delete all the roles
 	:gem:!ct <name> 
-	انشاء شات
+	to create a text channel
 	:gem:!cv <name>
-	انشاء رووم فويس
+	to create a voice channel
 	:gem:!delet <name>
-	مسح الشات او الرووم فويس
+	to delet a channel
 	:gem:!color <number>
-	ينشا لك الوان مع كم الوان تبي
+	to change your color `make sure you created the colors !createcolors`
 	:gem: !muteall
-	لاعطاء ميوت لكل السرفر
+	to mute everone on the server
 	:gem:!deafen
-	لاعطاء دفين
+	to voice deaden someone in the call
 	:gem:!undeafen 
-	فك الدفين
-	:gem:!add-swear <SWEAR> 
-	تضيف سبه او اي كلمة تريد منعها 
-	:gem:!swears 
-	يطلع لك السبات الي ضفتها
-	:gem:!remove-swear <NUMBER> 
-	يمسح سبه اذا تبي تعرف رقم السبه اكتب !swears
-	:gem:!remove-all-swears 
-	يمسح كل السبات
-	:gem:!setdate 
-	 البوت يعمل روم فيها التاريخ
-	:gem:!settime 
-	البوت يعمل روم فيها اللوقت***
+	to voice undeaden someone in the call
+	***
 	`)
 	    message.author.sendEmbed(embed)
 	    
@@ -1946,10 +1932,10 @@ m.sendMessage(args)
 	 message.guild.members.get(usermentioned).setVoiceChannel(authorchannel).then(m => message.channel.send(embed))
 	message.guild.members.get(usermentioned).send(embed)
 	} else {
-	message.channel.send("``لا تستطيع سحب "+ message.mentions.members.first() +" `يجب ان يكون هذه العضو في روم صوتي`")
+	message.channel.send("``you cant move this member "+ message.mentions.members.first() +" `he must be in voice call`")
 	}
 	} else {
-	 message.channel.send("**``يجب ان تكون في روم صوتي لكي تقوم بسحب العضو أليك``**")
+	 message.channel.send("**`you have to be in voice call to do this command``**")
 	}
 	} else {
 	message.react("❌")
@@ -1976,10 +1962,10 @@ m.sendMessage(args)
 	  let reason = message.content.split(" ").slice(2).join(" ");
 	  /*let log = client.channels.find("name", "log");
 	  if(!b5bzlog) return message.reply("I've detected that this server doesn't have a 5bz-log text channel.");*/
-	  if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
-	  if(!reason) return message.reply ("**اكتب سبب الطرد**");
+	  if (message.mentions.users.size < 1) return message.reply("**mention the user**");
+	  if(!reason) return message.reply ("**add the reason**");
 	  if (!message.guild.member(user)
-	  .bannable) return message.reply("**لايمكنني طرد شخص اعلى من رتبتي يرجه اعطاء البوت رتبه عالي**");
+	  .bannable) return message.reply("**لi cant kick this user he have higher role than me**");
 	
 	  message.guild.member(user).ban(7, user);
 	
@@ -2007,7 +1993,7 @@ m.sendMessage(args)
 	        if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('❌|**\`ADMINISTRATOR\`لا توجد لديك رتبة`**');
 	        if(!user) return  message.channel.send(`Do this ${prefix} <@ID user> \n or \n ${prefix}unban ID user`);
 	        message.guild.unban(user);
-	        message.guild.owner.send(`لقد تم فك الباند عن الشخص \n ${user} \n By : <@${message.author.id}>`)
+	        message.guild.owner.send(`unbanned user \n ${user} \n By : <@${message.author.id}>`)
 	        var embed = new Discord.RichEmbed()
 	        .setThumbnail(message.author.avatarURl)
 	        .setColor("RANDOM")
@@ -2023,7 +2009,7 @@ m.sendMessage(args)
 	client.on('message', message => {
 	    if (message.content.startsWith("!bans")) {
 	        message.guild.fetchBans()
-	        .then(bans => message.channel.send(`${bans.size} عدد اشخاص المبندة من السيرفر `))
+	        .then(bans => message.channel.send(`${bans.size} banned members count `))
 	  .catch(console.error);
 	}
 	});
@@ -2149,12 +2135,12 @@ client.on('message', msg => {
     if(msg.member.hasPermission("MANAGE_MESSAGES")) {
     if (textxt == "") {
         msg.delete().then
-    msg.channel.send("***```ضع عدد الرسائل التي تريد مسحها 👌```***").then(m => m.delete(3000));
+    msg.channel.send("***```how many messages do u want to clear 👌```***").then(m => m.delete(3000));
 } else {
     msg.delete().then
     msg.delete().then
     msg.channel.bulkDelete(textxt);
-        msg.channel.send("```php\nعدد الرسائل التي تم مسحها: " + textxt + "\n```").then(m => m.delete(3000));
+        msg.channel.send("```php\nclear messages: " + textxt + "\n```").then(m => m.delete(3000));
         }    
     }
 }
@@ -2408,25 +2394,25 @@ client.on('message', msg => {
 	client.on('message', message => {
 	
 	    if (message.content === "!mc") {
-	                        if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
+	                        if(!message.channel.guild) return message.reply(' this command for servers only !!');
 	
-	if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
+	if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' you dont have perms to do this command ');
 	           message.channel.overwritePermissions(message.guild.id, {
 	         SEND_MESSAGES: false
 	
 	           }).then(() => {
-	               message.reply("تم تقفيل الشات ✅ ")
+	               message.reply("cloesed the channel ✅ ")
 	           });
 	             }
 	if (message.content === "!umc") {
-	    if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
+	    if(!message.channel.guild) return message.reply(' this command for servers only !!');
 	
-	if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
+	if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('you dont have perms to do this command');
 	           message.channel.overwritePermissions(message.guild.id, {
 	         SEND_MESSAGES: true
 	
 	           }).then(() => {
-	               message.reply("تم فتح الشات✅")
+	               message.reply("opend the channel✅")
 	           });
 	             }
 	
@@ -2749,7 +2735,7 @@ client.on('message', msg => {
 	
 	    const voiceChannel = message.member.voiceChannel;
 	    if (!voiceChannel) {
-	      return message.reply(`من فضلك ادخل روم صوتي `);
+	      return message.reply(`plz join a voice call `);
 	    }
 	    voiceChannel.join()
 	      .then(connnection => {
@@ -2804,7 +2790,7 @@ client.on('message', msg => {
 	            if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
 	        let args = message.content.split(" ").slice(1);
 	    message.guild.createChannel(args.join(' '), 'text');
-	message.channel.sendMessage(':ballot_box_with_check: تـم إنـشاء روم كـتابـي')
+	message.channel.sendMessage(':ballot_box_with_check: created a text channel')
 	
 	}
 	});
@@ -2815,7 +2801,7 @@ client.on('message', msg => {
 	            if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
 	        let args = message.content.split(" ").slice(1);
 	    message.guild.createChannel(args.join(' '), 'voice');
-	    message.channel.sendMessage(':white_check_mark: تـم إنـشاء روم صـوتي')
+	    message.channel.sendMessage(':white_check_mark: created a voice channel')
 	    
 	}
 	});
@@ -2827,7 +2813,7 @@ client.on('message', msg => {
 	 client.on('message' , message => {
 	
 	    if (message.content === "!inv") {
-	        if(!message.channel.guild) return message.reply('**الآمر فقط في السيرفرات**')
+	        if(!message.channel.guild) return message.reply('**this command for servers only**')
 	     const embed = new Discord.RichEmbed()
 	 .setColor("RANDOM")
 	 .setThumbnail(client.user.avatarURL)
@@ -4012,7 +3998,7 @@ client.on('message', msg => {
 	      message.delete(3500);  ////////////By:Mal-Mahmoud-QuaStyle
 	    });
 	   
-	    if(mention.hasPermission('ADMINISTRATOR')) return message.channel.send(`**:x: لا يمكن آعطاء ميوت لادارة السيرفر**`); //kinggamer حقوق الفا كودز و
+	    if(mention.hasPermission('ADMINISTRATOR')) return message.channel.send(`**:x: i cant mute server admins **`); //kinggamer حقوق الفا كودز و
 	 
 	    if(message.guild.member(mention).roles.find('name', 'Muted')) return message.channel.send(`**:information_source: ${mention.user.username} Already Muted**`);
 	 
@@ -4039,15 +4025,15 @@ client.on('message', msg => {
 	    });
 	 
 	    let reason = message.content.split(" ").slice(3).join(" ");
-	    if(!reason) reason = " [ **لم يذكر لماذا** ] ";
+	    if(!reason) reason = " [ **no reason added** ] ";
 	 
 	    let thisEmbed = new Discord.RichEmbed()
 	    .setAuthor(mention.user.username, mention.user.avatarURL)
-	    .setTitle('**تم آعطائك ميوت**')
-	    .addField('**__السيرفر__**',[ message.guild.name ]) //kinggamer حقوق الفا كودز و
-	    .addField('**__تم آعطائك ميوت بواسطة__**', [ message.author ])
-	    .addField('**__آلسبب__**',reason)
-	    .addField('**__وقت الميوت__**',duration)
+	    .setTitle('**mute**')
+	    .addField('**__server__**',[ message.guild.name ]) //kinggamer حقوق الفا كودز و
+	    .addField('**__Muted by__**', [ message.author ])
+	    .addField('**__Reason__**',reason)
+	    .addField('**__Mute time__**',duration)
 	 
 	    let role = message.guild.roles.find('name', 'Muted') || message.guild.roles.get(r => r.name === 'Muted');
 	    if(!role) try {
@@ -4187,27 +4173,27 @@ client.on('message', msg => {
 	    let command = message.content.split(" ")[0];
 	    
 	    if (command === "!mute") {
-	          if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
+	          if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** you dont have perms 'Manage Roles' **").catch(console.error);
 	    let user = message.mentions.users.first();
 	    let modlog = client.channels.find('name', 'log');
 	    let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
-	    if (!muteRole) return message.reply("** لا يوجد رتبة الميوت 'Muted' **").catch(console.error);
-	    if (message.mentions.users.size < 1) return message.reply('** يجب عليك منشنت شخص اولاً**').catch(console.error);
+	    if (!muteRole) return message.reply("** You dont have this role on your server 'Muted' **").catch(console.error);
+	    if (message.mentions.users.size < 1) return message.reply('**Mention the user**').catch(console.error);
 	    
 	    const embed = new Discord.RichEmbed()
 	      .setColor(0x00AE86)
 	      .setTimestamp()
-	      .addField('الأستعمال:', 'اسكت/احكي')
-	      .addField('تم ميوت:', `${user.username}#${user.discriminator} (${user.id})`)
-	      .addField('بواسطة:', `${message.author.username}#${message.author.discriminator}`)
+	      .addField('use:', 'mute/unmute')
+	      .addField('Muted:', `${user.username}#${user.discriminator} (${user.id})`)
+	      .addField('By:', `${message.author.username}#${message.author.discriminator}`)
 	     
 	     if (!message.guild.member(client.user).hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) return message.reply('** لا يوجد لدي برمشن Manage Roles **').catch(console.error);
 	   
 	    if (message.guild.member(user).roles.has(muteRole.id)) {
-	  return message.reply("**:white_check_mark: .. تم اعطاء العضو ميوت**").catch(console.error);
+	  return message.reply("**:white_check_mark: .. Muted the user**").catch(console.error);
 	  } else {
 	      message.guild.member(user).addRole(muteRole).then(() => {
-	  return message.reply("**:white_check_mark: .. تم اعطاء العضو ميوت كتابي**").catch(console.error);
+	  return message.reply("**:white_check_mark: .. Text Mute has been added to the user**").catch(console.error);
 	  });
 	    }
 	  
@@ -4230,26 +4216,26 @@ client.on('message', msg => {
 	    let command = message.content.split(" ")[0];
 	    
 	    if (command === "!unmute") {
-	          if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
+	          if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لyou dont have perms 'Manage Roles' **").catch(console.error);
 	    let user = message.mentions.users.first();
 	    let modlog = client.channels.find('name', 'mute-log');
 	    let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
-	    if (!muteRole) return message.reply("** لا يوجد لديك رتبه الميوت 'Muted' **").catch(console.error);
-	    if (message.mentions.users.size < 1) return message.reply('** يجب عليك منشنت شخص اولاً**').catch(console.error);
+	    if (!muteRole) return message.reply("** You dont have this role on your server 'Muted' **").catch(console.error);
+	    if (message.mentions.users.size < 1) return message.reply('**Muted the user**').catch(console.error);
 	    const embed = new Discord.RichEmbed()
 	      .setColor(0x00AE86)
 	      .setTimestamp()
-	      .addField('الأستعمال:', 'اسكت/احكي')
+	      .addField('use:', 'mute/unmute')
 	      .addField('تم فك الميوت عن:', `${user.username}#${user.discriminator} (${user.id})`)
 	      .addField('بواسطة:', `${message.author.username}#${message.author.discriminator}`)
 	  
 	    if (!message.guild.member(client.user).hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) return message.reply('** لا يوجد لدي برمشن Manage Roles **').catch(console.error);
 	  
 	    if (message.guild.member(user).removeRole(muteRole.id)) {
-	  return message.reply("**:white_check_mark: .. تم فك الميوت عن الشخص **").catch(console.error);
+	  return message.reply("**:white_check_mark: .. Unmuted the user **").catch(console.error);
 	  } else {
 	      message.guild.member(user).removeRole(muteRole).then(() => {
-	  return message.reply("**:white_check_mark: .. تم فك الميوت عن الشخص **").catch(console.error);
+	  return message.reply("**:white_check_mark: .. Tedt Mute has been removed **").catch(console.error);
 	  });
 	    }
 	  
