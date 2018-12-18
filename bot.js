@@ -2130,7 +2130,7 @@ m.sendMessage(args)
 	//////////////////////--------------------/////////////////////////////////-----------------------/////////Clear <Number>
 	 
 	
-	        msg.channel.send("```php\ncleared MESSAGES: " + textxt + "\n```").then(m => m.delete(3000));
+	    
 	 
 	
 	
