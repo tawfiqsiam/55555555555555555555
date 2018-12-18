@@ -2129,7 +2129,6 @@ m.sendMessage(args)
 	
 	//////////////////////--------------------/////////////////////////////////-----------------------/////////Clear <Number>
 	 
-	how many MESSAGES do u want to clea
 	
 	        msg.channel.send("```php\ncleared MESSAGES: " + textxt + "\n```").then(m => m.delete(3000));
 	 
