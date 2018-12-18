@@ -1298,7 +1298,7 @@ m.sendMessage(args)
 	:gem:!delet <name>
 	to delet a channel
 	:gem:!color <number>
-	to change your color `make sure you created the colors !createcolors`
+	to change your color <make sure you created the colors !createcolors>
 	:gem: !muteall
 	to mute everone on the server
 	:gem:!deafen
