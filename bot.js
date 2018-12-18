@@ -2132,7 +2132,6 @@ m.sendMessage(args)
 	
 	        msg.channel.send("```php\ncleared MESSAGES: " + textxt + "\n```").then(m => m.delete(3000));
 	 
-	cleared MESSAGES
 	
 	
 	client.on('message', msg => {
