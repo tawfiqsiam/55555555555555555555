@@ -1255,8 +1255,8 @@ m.sendMessage(args)
 	         
 	🔔 Orders Public- Type: **__!help-public__** To Get Orders Public
 	🔐 Orders Admin- Type:  **__!help-Admin__** To Get Orders Admin
-***:anger: - create a channel called  `welcome` so the bot can welcome the new members ،:anger: ***
-	***:gem: create a channel called ` log` so the bot can add the server logs
+***:anger: - create a channel called  <welcome> so the bot can welcome the new members ،:anger: ***
+	***:gem: create a channel called  <log> so the bot can add the server logs
 	***:gem:!move @user 
 	to move someone to your call
 	:gem:!role @user <role>
