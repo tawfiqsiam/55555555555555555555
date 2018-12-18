@@ -1255,52 +1255,7 @@ m.sendMessage(args)
 	         
 	🔔 Orders Public- Type: **__!help-public__** To Get Orders Public
 	🔐 Orders Admin- Type:  **__!help-Admin__** To Get Orders Admin
-	🎶 Orders Music- Type:  **__!help-music__**  To Get Orders Music
-	🎲 Orders Games- Type:  **__!help-games__** To Get Orders GAMES
-	📬 Orders BroadCast: Type: **__!help-bc__** To Get Orders BroadCast
-	♕ Orders Rank-Type: **__!help-Rank__** To Get Orders Rank 
-	♻ Orders important Type: **__!help-imt__** To Get Orders important
-	🖌 Orders Colors-Type: **__!help-colors__** To Get Orders Colors
-	🌈 Orders Rainbow- Type:  **__!help-R__** To Get Orders Rainbow
-	
-	**By:#- Jacob❤**
-	
-	          `)
-	   message.channel.sendEmbed(embed)
-	    
-	   }
-	   }); 
-	  
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
- 
-	   
-	  client.on("message", message => {
-	    if (message.author.bot) return;
-	     if (message.content === prefix + "help-admin") {
-	  const embedss2 = new Discord.RichEmbed() 
-	      .setColor("RANDOM")
-	      .setThumbnail(message.author.avatarURL)
-	      .setDescription(`**
-	    
-	     Check Your DM**`)
-	
-			 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
-	  const embed = new Discord.RichEmbed() 
-	      .setColor("RANDOM")
-	      .setThumbnail(message.author.avatarURL)
-	      .setDescription(`
-	***¯−ـ‗ऊ» admins commands «ऊ‗ـ−¯***
-	***:anger: - create a channel called  `welcome` so the bot can welcome the new members ،:anger: ***
+***:anger: - create a channel called  `welcome` so the bot can welcome the new members ،:anger: ***
 	***:gem: create a channel called ` log` so the bot can add the server logs
 	***:gem:!move @user 
 	to move someone to your call
@@ -1350,12 +1305,36 @@ m.sendMessage(args)
 	to voice deaden someone in the call
 	:gem:!undeafen 
 	to voice undeaden someone in the call
-	***
-	`)
-	    message.author.sendEmbed(embed)
+	🎶 Orders Music- Type:  **__!help-music__**  To Get Orders Music
+	🎲 Orders Games- Type:  **__!help-games__** To Get Orders GAMES
+	📬 Orders BroadCast: Type: **__!help-bc__** To Get Orders BroadCast
+	♕ Orders Rank-Type: **__!help-Rank__** To Get Orders Rank 
+	♻ Orders important Type: **__!help-imt__** To Get Orders important
+	🖌 Orders Colors-Type: **__!help-colors__** To Get Orders Colors
+	🌈 Orders Rainbow- Type:  **__!help-R__** To Get Orders Rainbow
+	
+	**By:#- Jacob❤**
+	
+	          `)
+	   message.channel.sendEmbed(embed)
 	    
 	   }
-	   });
+	   }); 
+	  
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+ 
+	   
+	 
 	
 	
 	  client.on("message", message => {
