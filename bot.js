@@ -1239,23 +1239,23 @@ m.sendMessage(args)
 	
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////Help
 	
-		
-			 
+		client.on("message", message => {
+	    if (message.author.bot) return;
+	     if (message.content === prefix + "help-admin") {
+	  const embedss2 = new Discord.RichEmbed() 
+	      .setColor("RANDOM")
+	      .setThumbnail(message.author.avatarURL)
+	      .setDescription(`**
+	    
+	     Check Your DM**`)
 	
-	
-	 
-	client.on("message", message => {
-		var prefix = "!";
-	 if (message.content === "!help") {
-	  const embed = new Discord.RichEmbed()  
-	      .setColor("#000000") 
-	      .setDescription(`
-		
-	          ***¯−»Help Love Bot«−¯***
-	         
-	🔔 Orders Public- Type: **__!help-public__** To Get Orders Public
-	🔐 Orders Admin- Type:  **__!help-Admin__** To Get Orders Admin
-***:anger: - create a channel called  <welcome> so the bot can welcome the new members ،:anger: ***
+			 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
+	  const embed = new Discord.RichEmbed() 
+	      .setColor("RANDOM")
+	      .setThumbnail(message.author.avatarURL)
+	      .setColor("#000000")
+	         .setDescription(`**❓❔❗️❕help admin❗️❕❓❔**
+	***:anger: - create a channel called  <welcome> so the bot can welcome the new members ،:anger: ***
 	***:gem: create a channel called  <log> so the bot can add the server logs
 	***:gem:!move @user 
 	to move someone to your call
@@ -1305,6 +1305,28 @@ m.sendMessage(args)
 	to voice deaden someone in the call
 	:gem:!undeafen 
 	to voice undeaden someone in the call
+	`)
+	   message.author.sendEmbed(embed)
+	   
+	   }
+	   });
+	
+	
+			 
+	
+	
+	 
+	client.on("message", message => {
+		var prefix = "!";
+	 if (message.content === "!help") {
+	  const embed = new Discord.RichEmbed()  
+	      .setColor("#000000") 
+	      .setDescription(`
+		
+	          ***¯−»Help Love Bot«−¯***
+	         
+	🔔 Orders Public- Type: **__!help-public__** To Get Orders Public
+	🔐 Orders Admin- Type:  **__!help-Admin__** To Get Orders Admin
 	🎶 Orders Music- Type:  **__!help-music__**  To Get Orders Music
 	🎲 Orders Games- Type:  **__!help-games__** To Get Orders GAMES
 	📬 Orders BroadCast: Type: **__!help-bc__** To Get Orders BroadCast
