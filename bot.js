@@ -195,7 +195,23 @@ m.sendMessage(args)
 		
 		
 		
+		client.on('message', message => {
+		    if (message.content.startsWith("Link")) {
 		
+		  message.channel.createInvite({
+		        thing: true,
+		        maxUses: 5,
+		        maxAge: 86400
+		    }).then(invite =>
+		      message.author.sendMessage(invite.url)
+		    )
+		  message.channel.send("**:link:.its on your dms **")
+		
+		message.author.send(`**You can invite 5 members by using this link **`)
+		
+		
+		    }
+		});
 		
 		
 		
@@ -913,7 +929,7 @@ m.sendMessage(args)
 	
 	
 	client.on('message', eyad => {
-	  if (eyad.content.startsWith('!uvban')) {
+	  if (eyad.content.startsWith('#uvban')) {
 	if (!eyad.member.hasPermission("MOVE_MEMBERS")) return eyad.channel.send("**you dont have the perms to do this coomand** | ❎ ");
 	 let men = eyad.mentions.users.first()
 	 let mas = eyad.author
@@ -949,7 +965,7 @@ m.sendMessage(args)
 	}) // نهايه كود فك الباند الفويس
 	 
 	client.on('message', eyad => {
-	  if (eyad.content.startsWith('!vban')) {
+	  if (eyad.content.startsWith('#vban')) {
 	if (!eyad.member.hasPermission("MOVE_MEMBERS")) return eyad.channel.send("❎ | **you dont have the perms to do this command**");
 	let men = eyad.mentions.users.first()
 	let mas = eyad.author
@@ -1039,20 +1055,31 @@ m.sendMessage(args)
 	      .setColor("#000000") 
 	      .setDescription(`
 		
-	          ***¯−»Help Love Bot«−¯***
-	         
-	🔔 Orders Public- Type: **__!help-public__** To Get Orders Public
-	🔐 Orders Admin- Type:  **__!help-Admin__** To Get Orders Admin
-	🎶 Orders Music- Type:  **__!help-music__**  To Get Orders Music
-	🎲 Orders Games- Type:  **__!help-games__** To Get Orders GAMES
-	📬 Orders BroadCast: Type: **__!help-bc__** To Get Orders BroadCast
-	♕ Orders Rank-Type: **__!help-Rank__** To Get Orders Rank 
-	♻ Orders important Type: **__!help-imt__** To Get Orders important
-	🖌 Orders Colors-Type: **__!help-colors__** To Get Orders Colors
-	🌈 Orders Rainbow- Type:  **__!help-R__** To Get Orders Rainbow
-	
-	**By:#- Jacob❤**
-	
+	          ***¯−»Help-list«−¯***
+	#avatar-the bot will show you or  someones avatar
+	#bc - to send a dm to everyone one the server
+	#help-colors - to get a list of the colors commands
+	#id - to get some info about you
+	#new - to get a ticket
+	#move - to move member to your call
+	#role - to give someone a role
+	#kick - to kick some one from the server with the reason	
+	#ban - to ban someone from the server with the reason	
+	#unban - to unban someone	
+	#vban - to ban someone from getting into voice call	
+	#unvban - to unban someone from getting into voice call
+	#roles - to see the server roles list
+	#clear <number> - clear the chat 
+	#date - so you can know the date
+	#vote - to send a msg to people so the can vote
+	#role - to give someone a role
+	#cv - to create a voice channel
+ 	#ct - to create a text channel
+	#owner - to dm the owner of the server
+	#mute - to mute someone
+	#unmute - to unmute someone
+	#draw - to draw what you say
+	#server - info about the server
 	          `)
 	   message.channel.sendEmbed(embed)
 	    
@@ -1076,42 +1103,6 @@ m.sendMessage(args)
 	
 	
 	
-				  
-	client.on("message", message => {
-	    if (message.author.bot) return;
-	     if (message.content === prefix + "help-music") {
-	  const embedss2 = new Discord.RichEmbed() 
-	      .setColor("RANDOM")
-	      .setThumbnail(message.author.avatarURL)
-	      .setDescription(`**
-	    
-	     Check Your DM**`)
-	
-			 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
-	  const embed = new Discord.RichEmbed() 
-	      .setColor("RANDOM")
-	      .setThumbnail(message.author.avatarURL)
-	      .setDescription(`
-	***¯ـ‗ऊ» اوامر الموسقي «ऊ‗ـ−¯***
-	***╔[❖════════════❖]╗
-	
-	!play ~لتشغيل اغنية
-	!join ~ دخول رومك الصوتي
-	!stop ~ الخروج من رومك الصوتي
-	!skip, تخطي الأغنية
-	!pause ~ ايقاف الاغنية مؤقتا
-	!resume ~ تكملة الاغنية
-	!queue ~ اظهار قائمة التشغيل
-	!np ~ اظهار الاغنية اللي انت مشغلها حاليا
-	!vol 0:150 ~ الصوت
-	•
-	╚[❖════════════❖]╝***
-	 `)
-	   message.author.sendEmbed(embed)
-	    
-	   }
-	   }); 
-	
 	
 	client.on("message", message => {
 	    if (message.author.bot) return;
@@ -1128,9 +1119,9 @@ m.sendMessage(args)
 	      .setColor("RANDOM")
 	      .setThumbnail(message.author.avatarURL)
 	      .setDescription('👑  colors👑')
-	      .addField('❖-|!colors', `👑colors list💯`)
-	      .addField('❖-|!createcolors', `☺لأنto create 133 color 💯`)
-	      .addField('❖-|!color<number>', `😊get the color that you like😉`)
+	      .addField('❖-|#colors', `👑colors list💯`)
+	      .addField('❖-|#createcolors', `☺to create 133 color 💯`)
+	      .addField('❖-|#color<number>', `😊get the color that you like😉`)
 	  message.author.send({embed});
 	      message.channel.send("")
 	 }
@@ -1141,31 +1132,7 @@ m.sendMessage(args)
 	
 	
 	
-	client.on("message", message => {
-	    if (message.author.bot) return;
-	     if (message.content === prefix + "help-bc") {
-	  const embedss2 = new Discord.RichEmbed() 
-	      .setColor("RANDOM")
-	      .setThumbnail(message.author.avatarURL)
-	      .setDescription(`**
-	    
-	     Check Your DM**`)
 	
-			 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
-	  const embed = new Discord.RichEmbed() 
-	      .setColor("RANDOM")
-	      .setThumbnail(message.author.avatarURL)
-	         .setDescription(`**Help|هيلب
-	  :e_mail: !bc | لأرسال برود كاست للكل
-	  :e_mail: !obc  |  لأرسال برود كاست للأونلاين
-	  :e_mail: !bc اكتب الرسالة عادي<by> اسم البعت الرسالة   <server> اسم السرفر <user> اسم الشخص    
-	  :e_mail: !role-bc | لأرسال برودكاست لرتبة محدده 
-	  :e_mail: !invite |  لدعوة البوت الي سيرفرك
-	  :e_mail: !support | سيرفر السبورت** `)
-	   message.author.sendEmbed(embed)
-	   
-	   }
-	   });
 	
 	
 	
@@ -1265,9 +1232,9 @@ m.sendMessage(args)
 	  if (message.content.startsWith("#close")) {
 	        if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
 	 
-	       message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`!confirm\`. This will time out in 10 seconds and be cancelled.`)
+	       message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`#confirm\`. This will time out in 10 seconds and be cancelled.`)
 	           .then((m) => {
-	               message.channel.awaitMessages(response => response.content === '!confirm', {
+	               message.channel.awaitMessages(response => response.content === '#confirm', {
 	                       max: 1,
 	                       time: 10000,
 	                       errors: ['time'],
@@ -1419,7 +1386,7 @@ m.sendMessage(args)
 	
 	///////////////////////////////////////////////////////////////////////////////////////////////////Avatar
 	client.on('message', message => {
-	    if (message.content.startsWith("!avatar")) {
+	    if (message.content.startsWith("#avatar")) {
 	        if (message.author.bot) return
 	        var mentionned = message.mentions.users.first();
 	    var omar;
@@ -1442,7 +1409,7 @@ m.sendMessage(args)
 	////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////Photo Server IMAGE 
 	client.on("message", message => {
-	    const prefix = "!"
+	    const prefix = "#"
 	              
 	          if(!message.channel.guild) return;
 	   if(message.author.bot) return;
@@ -1520,7 +1487,7 @@ m.sendMessage(args)
 	  if (message.mentions.users.size < 1) return message.reply("**mention the user**");
 	  if(!reason) return message.reply ("**add the reason**");
 	  if (!message.guild.member(user)
-	  .bannable) return message.reply("**لi cant kick this user he have higher role than me**");
+	  .bannable) return message.reply("**i cant kick this user he have higher role than me**");
 	
 	  message.guild.member(user).ban(7, user);
 	
@@ -1645,7 +1612,7 @@ m.sendMessage(args)
 	
 	///////////////-------------///////////////////////// ////////////////////// /////////--------------------------------------------------//////////Roles 
 	client.on('message', message => {
-	    if (message.content === '!roles') {
+	    if (message.content === '#roles') {
 	        var roles = message.guild.roles.map(roles => `${roles.name}, `).join(' ')
 	        const embed = new Discord.RichEmbed()
 	        .setColor('RANDOM')
@@ -1872,8 +1839,8 @@ client.on('message', msg => {
 	client.on('message' , message => {
 	  var prefix = "#";
 	  if(message.author.bot) return;
-		if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' you dont have perms to do this command ');
-	  if(message.content.startsWith(prefix + "send")) {
+		if(!message.member.hasPermission('MANAGE_MESSAGES')) ;
+	  if(message.content.startsWith(prefix + "vote")) {
 	    let args = message.content.split(" ").slice(1);
 	
 	
@@ -1948,7 +1915,7 @@ client.on('message', msg => {
 	    var command = message.content.toLowerCase().split(" ")[0]; // Mal Team
 	    var args = message.content.toLowerCase().split(" ");
 	    var userM = message.guild.member(message.mentions.users.first() || message.guild.members.find(m => m.id === args[1]));
-	    var prefix = '!'; // هنا تقدر تغير البرفكس <==================
+	    var prefix = '#'; // هنا تقدر تغير البرفكس <==================
 	   
 	    if(command == prefix + 'role') {
 	        if(!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(':no_entry: | You dont have **MANAGE_ROLES** Permission!');
@@ -2304,7 +2271,7 @@ client.on('message', msg => {
 	////////////////////////////////////////////////////////////////////////////////////////create ct and cv
 	
 	 client.on("message", (message) => {
-	if (message.content.startsWith("!ct")) {
+	if (message.content.startsWith("#ct")) {
 	            if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
 	        let args = message.content.split(" ").slice(1);
 	    message.guild.createChannel(args.join(' '), 'text');
@@ -2315,7 +2282,7 @@ client.on('message', msg => {
 	
 	//////////////////////////////////////////////////////////////cv 
 	client.on("message", (message) => {
-	if (message.content.startsWith("!cv")) {
+	if (message.content.startsWith("#cv")) {
 	            if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
 	        let args = message.content.split(" ").slice(1);
 	    message.guild.createChannel(args.join(' '), 'voice');
@@ -2328,18 +2295,7 @@ client.on('message', msg => {
 	
 	
 	//////////////////////////////////////////////////////////////////////////////// Inv bot 
-	 client.on('message' , message => {
-	
-	    if (message.content === "!inv") {
-	        if(!message.channel.guild) return message.reply('**this command for servers only**')
-	     const embed = new Discord.RichEmbed()
-	 .setColor("RANDOM")
-	 .setThumbnail(client.user.avatarURL)
-	.setTitle('Click Here To Add Bot ')
-	.setURL('https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot')
-	  message.channel.sendEmbed(embed);
-	   }
-	}); 
+
 	//////////////////////////////////////////////////// ////////////////////// /////////////////////7alet el BOT
 	
 	const adminprefix = "!";
@@ -2672,8 +2628,8 @@ client.on('message', msg => {
 	
 	
 	 client.on('message', msg => {//msg
-	    if (msg.content === '!colors') {
-	      msg.channel.send({file : "https://media.discordapp.net/attachments/495636666619396105/524141047706812416/colors.png"})
+	    if (msg.content === '#colors') {
+	      msg.channel.send({file : "https://cdn.discordapp.com/attachments/524185262977318922/526343242216767488/colors.png"})
 	    }
 	  });;
 	
@@ -3388,7 +3344,7 @@ client.on('message', msg => {
 	
 	////////////////////////////
 	client.on('message', function(msg) {
-	if(msg.content.startsWith ('!server')) {
+	if(msg.content.startsWith ('#server')) {
 	      let embed = new Discord.RichEmbed()
 	      .setColor('RANDOM')
 	      .setThumbnail(msg.guild.iconURL)
@@ -3407,7 +3363,7 @@ client.on('message', msg => {
 	  });
 	///Server
 	client.on('message', function(msg) {
-	if(msg.content.startsWith ('!Server')) {
+	if(msg.content.startsWith ('#Server')) {
 	      let embed = new Discord.RichEmbed()
 	      .setColor('RANDOM')
 	      .setThumbnail(msg.guild.iconURL)
@@ -3494,7 +3450,7 @@ client.on('message', msg => {
 	
 	client.on('message', async message => {
 	  let args = message.content.split(" ");
-	  if(message.content.startsWith(prefix + "!mute")) {
+	  if(message.content.startsWith(prefix + "#mute")) {
 	    if(!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.send('').then(msg => {
 	      msg.delete(3500);
 	      message.delete(3500);
@@ -3690,7 +3646,7 @@ client.on('message', msg => {
 	    
 	    let command = message.content.split(" ")[0];
 	    
-	    if (command === "!mute") {
+	    if (command === "#mute") {
 	          if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** you dont have perms 'Manage Roles' **").catch(console.error);
 	    let user = message.mentions.users.first();
 	    let modlog = client.channels.find('name', 'log');
@@ -3733,8 +3689,8 @@ client.on('message', msg => {
 	    
 	    let command = message.content.split(" ")[0];
 	    
-	    if (command === "!unmute") {
-	          if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لyou dont have perms 'Manage Roles' **").catch(console.error);
+	    if (command === "#unmute") {
+	          if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** you dont have perms 'Manage Roles' **").catch(console.error);
 	    let user = message.mentions.users.first();
 	    let modlog = client.channels.find('name', 'mute-log');
 	    let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
@@ -3744,10 +3700,10 @@ client.on('message', msg => {
 	      .setColor(0x00AE86)
 	      .setTimestamp()
 	      .addField('use:', 'mute/unmute')
-	      .addField('تم فك الميوت عن:', `${user.username}#${user.discriminator} (${user.id})`)
-	      .addField('بواسطة:', `${message.author.username}#${message.author.discriminator}`)
+	      .addField('unmuted:', `${user.username}#${user.discriminator} (${user.id})`)
+	      .addField('by:', `${message.author.username}#${message.author.discriminator}`)
 	  
-	    if (!message.guild.member(client.user).hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) return message.reply('** لا يوجد لدي برمشن Manage Roles **').catch(console.error);
+	    if (!message.guild.member(client.user).hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) return message.reply('**i dont have perms Manage Roles **').catch(console.error);
 	  
 	    if (message.guild.member(user).removeRole(muteRole.id)) {
 	  return message.reply("**:white_check_mark: .. Unmuted the user **").catch(console.error);
@@ -3763,7 +3719,7 @@ client.on('message', msg => {
 	/////////////////////////////
 	
 	client.on('message', message => {
-	    var prefix = "!"
+	    var prefix = "#"
 	    let command = message.content.split(" ")[0];
 	  command = command.slice(prefix.length);
 	
