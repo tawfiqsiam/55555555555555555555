@@ -75,25 +75,7 @@ m.sendMessage(args)
 	
 	
 	
-	client.on('ready', function(){    
-	    var ms = 5000 ;    
-	    var setGame = [`working on the bot`,"Update Music","Update rainbow soon ","Update All :'D","!invite","By:Jacob","!help","Waiting Please ♥"];    
-	    var i = -1;    
-	    var j = 0;    
-	    setInterval(function (){    
-	        if( i == -1 ){    
-	j = 1;    
-	       }    
-	        if( i == (setGame.length)-1 ){    
-	            j = -1;    
-	      }    
-	       i = i+j;    
-	        client.user.setGame(setGame[i],`WATCHING`);    
-	}, ms);    
-	    
-	});
-	
-	
+
 	/////////////////////////////////////////////////////////////////////
 	
 	///////////////////////////////////////////////////////////
@@ -1999,17 +1981,17 @@ client.on('message', msg => {
 	///////////////////////////////////////////////////////////////////////// ///////////////-//////////////date
 	const HeRo = new Discord.Client();
 	client.on('message', message => {
-	var prefix = "!";
+	var prefix = "#";
 	
 	    if (message.content === prefix + "date") {
 	        if (!message.channel.guild) return message.reply('** This command only for servers **');  
 	        var currentTime = new Date(),
 	            Year = currentTime.getFullYear(),
-	            Month = currentTime.getMonth() + 1,
+	            Month = currentTime.getMonth() + 3,
 	            Day = currentTime.getDate();
 	
 	            var Date15= new Discord.RichEmbed()
-	            .setTitle("**「  Date - التاريخ 」 **")
+	            .setTitle("**「  Date  」 **")
 	            .setColor('RANDOM')
 	            .setTimestamp()
 	            .setDescription( "「"+ Day + "-" + Month + "-" + Year + "」")
@@ -2031,8 +2013,8 @@ client.on('message', msg => {
 	/////////////////////////////////////////////////////////////////////////////////// ////////////////////////////My Invite
 	
 	client.on('message',message =>{
-	      var prefix = "!";
-	 if(message.content.split(' ')[0].toLowerCase() == prefix + 'myinv') {
+	      var prefix = "#";
+	 if(message.content.split(' ')[0].toLowerCase() == prefix + 'invites') {
 	let guild = message.guild
 	var codes = [""]
 	 var nul = 0
@@ -2088,8 +2070,9 @@ client.on('message', msg => {
 	////////////////-----------------------/////Send
 	
 	client.on('message' , message => {
-	  var prefix = "!";
+	  var prefix = "#";
 	  if(message.author.bot) return;
+		if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' you dont have perms to do this command ');
 	  if(message.content.startsWith(prefix + "send")) {
 	    let args = message.content.split(" ").slice(1);
 	
@@ -2128,7 +2111,7 @@ client.on('message', msg => {
 	
 	client.on('message', message => {
 	
-	    if (message.content === "!mc") {
+	    if (message.content === "#mc") {
 	                        if(!message.channel.guild) return message.reply(' this command for servers only !!');
 	
 	if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' you dont have perms to do this command ');
