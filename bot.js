@@ -1839,7 +1839,7 @@ client.on('message', msg => {
 	client.on('message' , message => {
 	  var prefix = "#";
 	  if(message.author.bot) return;
-		if(!message.member.hasPermission('MANAGE_MESSAGES')) ;
+		if(!message.member.hasPermission('MANAGE_MESSAGES'));
 	  if(message.content.startsWith(prefix + "vote")) {
 	    let args = message.content.split(" ").slice(1);
 	
