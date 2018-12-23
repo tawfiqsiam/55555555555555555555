@@ -95,48 +95,6 @@ m.sendMessage(args)
 	
 	
 	/////////////////////////////////////////////////////////////////////
-	client.on('message' , async (message) => {
-	var prefix = "!"
-	    if(message.content.startsWith(prefix + "tinv")) {
-	if(message.author.bot) return;
-	if(!message.channel.guild) return message.reply(' Error : \` Guild Command \`');
-	  var invites = await message.guild.fetchInvites();
-	    invites = invites.array();
-	    arraySort(invites, 'uses', { reverse: true });
-	    let possibleInvites = ['User Invited |  Uses '];
-	    invites.forEach(i => {
-	        if (i.uses === 0) { 
-	            return;
-	        }
-	      possibleInvites.push(['\n\ ' +'<@'+ i.inviter.id +'>' + '  :  ' +   i.uses]);
-	      if (i.uses === 10) {//يمديك تعدل رقم وصول العدد حق الانفايت الى اأقل أو أكثر
-	          message.member.addRole(message.member.guild.roles.find("name","»Member"))//هنآ أسم ألرتبه اللي تجيهه
-	.catch(RebeL =>{
-	console.log('`Error`: ' + RebeL);
-	});
-	}
-	if (i.uses === 20) {
-	message.member.addRole(message.member.guild.roles.find("name","»Member"))
-	.catch(RebeL =>{
-	console.log('`Error`: ' + RebeL);
-	});
-	}
-	if (i.uses === 30) {
-	message.member.addRole(message.member.guild.roles.find("name","»Member"))
-	.catch(RebeL =>{
-	console.log('`Error`: ' + RebeL);
-	});
-	      }//معلومه بسيطه يمديك تكرر العمليهه أكثر من مره
-	    })
-	    const embed = new Discord.RichEmbed()
-	 .setColor('#36393e')
-	    .addField("Top Invites." ,`${(possibleInvites)}`)
-	
-	    message.channel.send(embed)
-	    }
-	});
-	
-	
 	
 	///////////////////////////////////////////////////////////
 	//////////// Cry Cry /////////////////// Out Dog 
@@ -867,7 +825,7 @@ m.sendMessage(args)
 	            .setAuthor(message.author.username, message.author.avatarURL)
 	        .setFooter(`${message.guild.name} `)
 	     message.channel.send(embed500)
-	     message.author.send('` انت معاقب ميوت شاتي بسبب نشر سرفرات ان كان عن طريق الخطا من فضلك تكلم مع الادارة `');
+	     message.author.send('` plz talk to a staff `');
 	   
 	       
 	    }
@@ -974,10 +932,10 @@ m.sendMessage(args)
 	
 	client.on('message', eyad => {
 	  if (eyad.content.startsWith('!uvban')) {
-	if (!eyad.member.hasPermission("MOVE_MEMBERS")) return eyad.channel.send("**انت لا تمتلك الخاصيه المطلوبه** | ❎ ");
+	if (!eyad.member.hasPermission("MOVE_MEMBERS")) return eyad.channel.send("**you dont have the perms to do this coomand** | ❎ ");
 	 let men = eyad.mentions.users.first()
 	 let mas = eyad.author
-	 if(!men) return eyad.channel.send('`⛔| ** يجب عليك المنشن اولاً **`');
+	 if(!men) return eyad.channel.send('`⛔| **plz mention the user **`');
 	 eyad.guild.channels.forEach(c => {
 	 c.overwritePermissions(men.id, {
 	         CONNECT: true
@@ -988,9 +946,9 @@ m.sendMessage(args)
 	.setDescription(`**
 	 <@${men.id}>
 	
-	 الان يمكنك الدخول الي الرومات الصوتيه:)
+	 now you can join a voice call :)
 	
-	بواسطة : <@${eyad.author.id}> **`)
+	by : <@${eyad.author.id}> **`)
 	.setThumbnail("http://shopforclipart.com/images/green-tick/22.jpg")
 	          
 	client.users.get(men.id).sendEmbed(embed)
@@ -999,9 +957,9 @@ m.sendMessage(args)
 	.setAuthor(eyad.guild.name, eyad.guild.iconURL)
 	.setDescription(`          <@${men.id}>
 	
-	الان يمكنك الدخول الي الرومات الصوتيه
+	now you can join a voice call 
 	
-	بواسطة : <@${eyad.author.id}>
+	by : <@${eyad.author.id}>
 	`)
 	.setThumbnail("http://shopforclipart.com/images/green-tick/22.jpg")
 	eyad.channel.sendEmbed(Embed11).then(eyad => {eyad.delete(15000)})
@@ -1043,47 +1001,6 @@ m.sendMessage(args)
 	    }
 	})// نهايه كود الباند الفويس
 	/////////////////
-	client.on('message', msg => {
-	  if(!msg.guild) return;
-	    if (msg.content.startsWith(prefix +'vc')) {
-	     let args = msg.content.split(" ").slice(1);
-	    if(!msg.channel.guild) return msg.channel.send('**this command for servers only**').then(m => m.delete(5000));
-	let ra3d = new Discord.RichEmbed()
-	.setColor('RANDOM')
-	.setThumbnail(msg.author.avatarURL)
-	.setDescription(`are you sure ? \n  ✅  \n  ❌ \n  you have 60 sec`)                                                                                                                                                                       
-	msg.channel.send(ra3d).then(message => {
-	 message.react('✅').then(r=>{
-	 message.react('❌').then(r=>{           
-	 let eyadandr3d = (reaction, user) => reaction.emoji.name === '✅' && user.id === msg.author.id;
-	 let eyadandr3dd = (reaction, user) => reaction.emoji.name === '❌' && user.id === msg.author.id;
-	 let tt  = message.createReactionCollector(eyadandr3d, { time: 60000 });
-	 let er  = message.createReactionCollector(eyadandr3dd, { time: 60000 });
-	er.on("collect", r => {
-	msg.channel.send("`تم الالغاء`")
-	message.delete();
-	})
-	tt.on("collect", r => {
-	msg.guild.createChannel(args.join(' '), 'voice').then(ra3deyad => {
-	channelCreated = ra3deyad.createdAt
-	      const embed = new Discord.RichEmbed()
-	  .setColor('RANDOM')
-	  .setImage()
-	  .setThumbnail('https://cdn.discordapp.com/attachments/453024271560867853/455104628674134017/1500920527.jpg')
-	  .setURL('')
-	  .addField(`channel name`, `${ra3deyad.name}`, true)
-	  .addField(`channel id`, `${ra3deyad.id}`, true)
-	  .addField(`channel type`, `${ra3deyad.type}`, true)
-	  .addField(`created at`, `${channelCreated}`)
-	 msg.channel.send({embed})
-	    message.delete();
-	})
-	})
-	})
-	})
-	})
-	}
-	});
 	
 	
 	
@@ -1108,208 +1025,25 @@ m.sendMessage(args)
 	});
 	
 	//-----------------------------------------------------------------------------------------------------------------------------
-	client.on("guildMemberAdd", msg => {
-	  var AlphaE = new Discord.RichEmbed()
-	.setColor("RANDOM")
-	.setAuthor(msg.user.username, msg.user.avatarURL)
-	.setThumbnail(msg.user.avatarURL)
-	.setTitle(`
-	Wèlcome to Sèrver 
-	`)
-	.addField("Welcome to our server❤  ", `${msg.user.tag}`, true)
-	.addField(`↓↓↓Link Server↓↓↓ `,`https://discord.gg/spWYAfZ`, true)
-	 .setFooter(msg.user.tag, msg.user.avatarURL, true)
-	msg.user.sendMessage(AlphaE);
-	});
-	
-	
-	 
-	
-	
-	client.on('message', DEL => {//By Mahmoud-QuaStyle
-	if(DEL.content === '!bot-owner') {
-	var embed = new Discord.RichEmbed()
-	.addField('bot creater : - Jacob❤', `${client.user.tag}`, true)
-	.setColor("RANDOM")
-	DEL.channel.sendEmbed(embed);
-	
-	}
-	});
 	
 	
 	
 	
 	
 	
-	client.on("message", message => {
-	    if (message.content === "!help") {
-	     const embed = new Discord.RichEmbed() 
-	         .setColor("#00FF00")
-	         .setDescription(`**❓❔❗️❕Send us your love!❗️❕❓❔**
-	        **__1-__:books:🧐 Love bot join our server here https://discord.gg/spWYAfZ  🧐:books:
-	         __2-__:white_check_mark: :part_alternation_mark:️ easy to use :part_alternation_mark:️:white_check_mark: 
-	         __3-__:gear:️We will update the bot every day:gear:️
-	         __4-__:money_with_wings: its free! :money_with_wings:**`)
-	   message.author.sendEmbed(embed)
-	   
-	   }
-	   });
 	
 	
 	
 	
 	
 	
-	////2 
-	client.on("message", message => {
-	    if (message.author.bot) return;
-	     if (message.content === prefix + "help-Rank") {
-	  const embedss2 = new Discord.RichEmbed() 
-	      .setColor("RANDOM")
-	      .setThumbnail(message.author.avatarURL)
-	      .setDescription(`**
-	    
-	     Check Your DM**`)
 	
-			 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
-	  const embed = new Discord.RichEmbed() 
-	      .setColor("RANDOM")
-	      .setThumbnail(message.author.avatarURL)
-	      .setColor("#000000")
-	         .setDescription(`**❓❔❗️❕Add-Rank❗️❕❓❔**
-	        **:ok_hand: !CrossFire|Create Rank <CrossFire> ~ create a role with this name CrossFire 
-	:ok_hand: !Fortnite|Create Rank <Fortnite> ~  Fortnite
-	:ok_hand: !Minecraft|Create Rank <Minecraft> ~ create a role with this name Minecraft
-	:ok_hand: !BlackSquad|Create Rank <BlackSquad> ~ create a role with this name BlackSquad
-	:ok_hand: !PUBG|Create Rank <PUBG> ~ create a role with this name PUBG 
-	:ok_hand: !Brawlhalla| Create Rank <Brawlhalla> create a role with this name Brawlhalla
-	:ok_hand: !Leagueoflegends|Create Rank <Leagueoflegends> 
-	 then you can type the role anbd the bot will give it to you
-	:boom: ___Ranks In GAME'S___:boom: 
-	__to Add Rank:  CrossFire  
-	Type: !CrossFire
-	--------------------------
-	to Add Rank: PUBG 
-	Type: !PUBG
-	--------------------------
-	to Add Rank:  Fortnite 
-	Type:: !Fortnite
-	--------------------------
-	to Add Rank: Minecraft  
-	Type: !Minecraft
-	--------------------------
-	to Add Rank: BlackSquad
-	Type:  !BlackSquad
-	--------------------------
-	to Add Rank: Leagueoflegends
-	Type: !Leagueoflegends 
-	--------------------------
-	to Add Rank: Brawlhalla
-	Type: !Brawlhalla__
-	---------------------------**
-	═══════════════════════════════════════════════════════════════════════
-	!Build Rr »***the bot will build your server!*** 
-	          ↘↙ Like this
-	***1-Name: Owner
-	2- Name: Co-owner
-	3-Name:Leader
-	4-Name:Co-Leader
-	5-Name:Admin
-	6-Name:Mod
-	7-Name:VIP+
-	8-Name:VIP
-	9-Name:Support
-	10-Name:Youtuber +200
-	11-Name:Youtuber
-	12-Name:ProMember
-	13-Name:Friendly
-	14-Name:Member
-	15-Name:Bot***
-	`)
-	   message.author.sendEmbed(embed)
-	   
-	   }
-	   });
-	
-	
-	
-	//////
 	
 	
 	
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////Help
 	
-		client.on("message", message => {
-	    if (message.author.bot) return;
-	     if (message.content === prefix + "help-admin") {
-	  const embedss2 = new Discord.RichEmbed() 
-	      .setColor("RANDOM")
-	      .setThumbnail(message.author.avatarURL)
-	      .setDescription(`**
-	    
-	     Check Your DM**`)
-	
-			 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
-	  const embed = new Discord.RichEmbed() 
-	      .setColor("RANDOM")
-	      .setThumbnail(message.author.avatarURL)
-	      .setColor("#000000")
-	         .setDescription(`**❓❔❗️❕help admin❗️❕❓❔**
-	***:anger: - create a channel called  <welcome> so the bot can welcome the new members ،:anger: ***
-	***:gem: create a channel called  <log> so the bot can add the server logs
-	***:gem:!move @user 
-	to move someone to your call
-	:gem:!role @user <role>
-	to give someone a role
-	:gem:!roleremove @user <rank> 
-	to remove a role from someone
-	:gem:!role all <rank> 
-	to give a role to everyone
-	:gem:!role humans <rank> 
-	to give a role to add the humans
-	:gem:!role bots <rank>
-	to give a role too all the bots
-	:gem:!hchannel 
-	to hide a channel 
-	:gem:!schannel
-	to show a channel
-	:gem:!clear <numbr>
-	clear the chat
-	:gem:!mute @user <reason>
-	to mute a member and make sure you have a role called <Muted>
-	:gem:!unmute @user
-	to unmute someone
-	:gem:!kick @user <reason>
-	to kick someone from the server
-	:gem:!ban @user <reason>
-	to ban someone from the server
-	:gem:!mc
-	to mute a channel
-	:gem:!unmc
-	to unmute a channel
-	:gem:!dc
-	to clear all the channels
-	:gem:!dr 
-	to delete all the roles
-	:gem:!ct <name> 
-	to create a text channel
-	:gem:!cv <name>
-	to create a voice channel
-	:gem:!delet <name>
-	to delet a channel
-	:gem:!color <number>
-	to change your color <make sure you created the colors !createcolors>
-	:gem: !muteall
-	to mute everone on the server
-	:gem:!deafen
-	to voice deaden someone in the call
-	:gem:!undeafen 
-	to voice undeaden someone in the call
-	`)
-	   message.author.sendEmbed(embed)
-	   
-	   }
-	   });
+		
 	
 	
 			 
@@ -1317,7 +1051,7 @@ m.sendMessage(args)
 	
 	 
 	client.on("message", message => {
-		var prefix = "!";
+		var prefix = "#";
 	 if (message.content === "!help") {
 	  const embed = new Discord.RichEmbed()  
 	      .setColor("#000000") 
