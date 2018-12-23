@@ -838,8 +838,8 @@ m.sendMessage(args)
 	    const ei = invites[member.guild.id];
 	    const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
 	    const inviter = client.users.get(invite.inviter.id);
-	    const yumz = member.guild.channels.find("name", "chat");
-	     yumz.send(`<@${member.user.id}> تم دعوته بواسطة <@${inviter.id}>`);
+	    const yumz = member.guild.channels.find("name", "welcome");
+	     yumz.send(`<@${member.user.id}> invited by <@${inviter.id}>`);
 	   //  yumz.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
 	  }); 
 	});
@@ -1034,7 +1034,7 @@ m.sendMessage(args)
 	 
 	client.on("message", message => {
 		var prefix = "#";
-	 if (message.content === "!help") {
+	 if (message.content === "#help") {
 	  const embed = new Discord.RichEmbed()  
 	      .setColor("#000000") 
 	      .setDescription(`
@@ -1075,40 +1075,6 @@ m.sendMessage(args)
 	 
 	
 	
-	  client.on("message", message => {
-	    if (message.author.bot) return;
-	     if (message.content === prefix + "help-games") {
-	  const embedss2 = new Discord.RichEmbed() 
-	      .setColor("RANDOM")
-	      .setThumbnail(message.author.avatarURL)
-	      .setDescription(`**
-	    
-	     Check Your DM**`)
-	
-			 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
-	  const embed = new Discord.RichEmbed() 
-	      .setColor("RANDOM")
-	      .setThumbnail(message.author.avatarURL)
-	      .setDescription(`
-	***¯−ـ‗ऊ» اوامر العاب«ऊ‗ـ−¯***
-	:video_game: !rps ~ حجر ورقة مقص
-	:video_game: !speed ~ اسرع كتابة
-	:video_game: !quas ~ اسئلة عامة
-	:video_game: !نكت ~ نكت 
-	:video_game: !عبة فكك ~ فكك
-	:video_game: !عواصم عشوائية ~ عواصم
-	:video_game: !لعبة كت تويت ~ كت تويت
-	:video_game: !roll <number> ~ قرعة
-	:video_game: !لو خيروك بطريقة حلوة ~ لو خيروك
-	:video_game: !عبة مريم ~ مريم
-	:video_game: !فوائد ونصائح  ~ هل تعلم
-	:video_game: !لك عقاب قاسية ~ عقاب
-	10% تحت الصيانة `)
-	
-	   message.author.sendEmbed(embed)
-	    
-	   }
-	   }); 
 	
 				  
 	client.on("message", message => {
@@ -1207,99 +1173,13 @@ m.sendMessage(args)
 	
 	
 	
-	  
-	//////////////////////HELP 
-	client.on("message", message => {
-	    if (message.author.bot) return;
-	     if (message.content === prefix + "help-imt") {
-	  const embedss2 = new Discord.RichEmbed() 
-	      .setColor("RANDOM")
-	      .setThumbnail(message.author.avatarURL)
-	      .setDescription(`**
-	    
-	     Check Your DM**`)
 	
-			 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
-	  const embed = new Discord.RichEmbed() 
-	      .setColor("RANDOM")
-	      .setThumbnail(message.author.avatarURL)
-	      .setDescription(`**
-	╭
-	**╔[❖════════════❖]╗
-	                Important  :fire:
-	╚[❖════════════❖]╝**
-	__to enable welcome message do channel name__
-	 "welcome"
-	__to enable Suggest message do channel name__
-	"≄◉♔『≤suggestions≥』♔◉≄"
-	__to enable log message do channel name__ "log"**
-	════════════════════════════════════════════════════
-	__!Build R »البوت يعمل لك روم__ 
-	          ↘↙ بي الشكل دا
-	***('Info', 'text');
-	('Welcome', 'text');
-	('Chat', 'text');
-	('bot', 'text');
-	('bo7', 'text');
-	('pic', 'text');
-	('cut', 'text');
-	('log', 'text');
-	('admin-chat', 'text');
-	('▓▬▬▬ADMNS▬▬▬▓', 'voice');
-	('Owner ', 'voice');
-	('Co Owner', 'voice');
-	('Dev  ', 'voice');
-	('Admin ', 'voice');
-	('Mod ', 'voice');
-	('▓▬▬▬Other▬▬▬▓', 'voice');
-	('[ R E C ] 🎥', 'voice');
-	('YouTubers ', 'voice');
-	('VIP + ', 'voice');
-	('VIP ', 'voice');
-	('Friends', 'voice');
-	('▓▬▬▬WEL▬▬▬▓', 'voice');
-	('Help ', 'voice');
-	('Ξ〖ideas to share〗', 'voice');
-	('▓▬▬▬♚▬▬▬▓', 'voice');
-	('♧ Ξ〖 🎤  General📣  〗', 'voice');
-	('♢ Ξ〖 🎤 مواهب 🎵  〗', 'voice');
-	('❋ Ξ〖 🎈فعاليات 🏅 〗', 'voice');
-	('❋ Ξ〖  🕋 القرآن الكريم  〗', 'voice');
-	('▓▬▬▬♛▬▬▬▓', 'voice');
-	('☆  Ξ〖 🔞  السجن العام 🔪 〗', 'voice');
-	('▓▬▬▬Games▬▬▬▓', 'voice');
-	('Clash of Clans | كلاش أوف كلانز', 'voice');
-	('Clash Royal | كلاش رويال', 'voice');
-	('Hajwala  Online | هجولة أون لاين', 'voice');
-	('Bullet force | بولت فورس', 'voice');
-	('MTA | ام تي اي', 'voice');
-	('Ludo Star | لودو ستار', 'voice');
-	('▓▬▬▬Private▬▬▬▓', 'voice');
-	('✿Tow✿', 'voice');
-	('✿Three✿', 'voice');
-	('✿Four✿', 'voice');
-	('✿Five✿', 'voice');
-	('✿Six✿', 'voice');
-	('▓▬▬▬AFK▬▬▬▓', ***
-	════════════════════════════════════════════════════════════════════════
-	`)
-	
-	       .setTimestamp()
-	       .setFooter(message.author.username, message.author.avatarURL)
-	message.author.sendEmbed(embed)
-	
-	.catch(() => {
-	  message.channel.send('🚫الخاص مغلق');
-	});
-	
-	}
-	}); 
 	
 	
 	
 	//////////////////////////////////----------------------------/////////////////////----////////ID
 	client.on("message", msg => {
-	           var prefix = "!";
+	           var prefix = "#";
 	  if(msg.content.startsWith (prefix + "id")) {
 	    if(!msg.channel.guild) return msg.reply('**:x: this command for servers only **');
 	      const embed = new Discord.RichEmbed();
@@ -1351,7 +1231,7 @@ m.sendMessage(args)
 	////////////////////////////////////////-----------////////////////////////////////////Ticket
 	client.on("message", (message) => {
 	    /// ALPHA CODES
-	   if (message.content.startsWith("!testnew")) {     /// ALPHA CODES
+	   if (message.content.startsWith("#testnew")) {     /// ALPHA CODES
 	        const reason = message.content.split(" ").slice(1).join(" ");     /// ALPHA CODES
 	        if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(`This server doesn't have a \`Support Team\` role made, so the ticket won't be opened.\nIf you are an administrator, make one with that name exactly and give it to users that should be able to see tickets.`);
 	        if (message.guild.channels.exists("name", "ticket-${x}" + message.author)) return message.channel.send(`You already have a ticket open.`);    /// ALPHA CODES
@@ -1382,7 +1262,7 @@ m.sendMessage(args)
 	    }
 	 
 	 
-	  if (message.content.startsWith("!close")) {
+	  if (message.content.startsWith("#close")) {
 	        if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
 	 
 	       message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`!confirm\`. This will time out in 10 seconds and be cancelled.`)
@@ -1408,7 +1288,7 @@ m.sendMessage(args)
 	///////////////////
 	client.on("message", (message) => {
 	    /// Mal Mahmoud#5661
-	   if (message.content.startsWith("!new")) {     /// Mal 
+	   if (message.content.startsWith("#new")) {     /// Mal 
 	        const reason = message.content.split(" ").slice(1).join(" ");     /// Mal
 	        if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(`This server doesn't have a \`Support Team\` role made, so the ticket won't be opened.\nIf you are an administrator, make one with that name exactly and give it to users that should be able to see tickets.`);
 	        if (message.guild.channels.exists("name", "ticket-{message.author.id}" + message.author.id)) return message.channel.send(`You already have a ticket open.`);    /// ALPHA CODES
@@ -1465,7 +1345,7 @@ m.sendMessage(args)
 	//////////////////test
 	client.on("message", (message) => {
 	    /// ALPHA CODES
-	   if (message.content.startsWith("!testt")) {     /// ALPHA CODES
+	   if (message.content.startsWith("#testt")) {     /// ALPHA CODES
 	        const reason = message.content.split(" ").slice(1).join(" ");     /// ALPHA CODES
 	        if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(`This server doesn't have a \`Support Team\` role made, so the ticket won't be opened.\nIf you are an administrator, make one with that name exactly and give it to users that should be able to see tickets.`);
 	        if (message.guild.channels.exists("name", "<ticket-{message.author.id}>" + message.author.id)) return message.channel.send(`You already have a ticket open.`);    /// ALPHA CODES
@@ -1519,57 +1399,15 @@ m.sendMessage(args)
 	 
 	});
 	
-	//////////////////////////////////////////////////////////////////////Support 2 
-	client.on('message', message => {
-	     if (message.content === "!support") {
-	     let embed = new Discord.RichEmbed()
-	  .setAuthor(message.author.username)
-	  .setColor("#9B59B6")
-	  .addField(" **:small_orange_diamond: Link Server Support︾**" , "  **https://discord.gg/spWYAfZ**")
-	  .addField(" **:small_blue_diamond: Link  **" , "  **https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot**")     
-	     
-	  message.channel.sendEmbed(embed);
-	    }
-	});////////////////////////////////////By:Mahmoud-QuaStyle
-	
-	client.on('message', message => {
-	     if (message.content === "!invite") {
-	     let embed = new Discord.RichEmbed()
-	  .setAuthor(message.author.username)
-	  .setColor("#9B59B6")
-	  .addField(" **:small_orange_diamond: Link Server Support︾**" , "  **https://discord.gg/spWYAfZ**")
-	  .addField(" **:small_blue_diamond: Link ︾ **" , "  **https://discordapp.com/api/oauth2/authorize?client_id=521985606008569857&permissions=2146958839&scope=bot**")     
-	     
-	  message.channel.sendEmbed(embed);
-	    }
-	});///////////////////////////////
 	
 	
-	client.on('message', message => {
-	     if (message.content === "!help") {
-	     let embed = new Discord.RichEmbed()
-	  .setAuthor(message.author.username)
-	  .setColor("#9B59B6")
-	  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/spWYAfZ**")
-	     
-	     
-	  message.channel.sendEmbed(embed);
-	    }
-	});
+/
 	
 	
-	client.on('message', message => {
-	     if (message.content === "!link") {
-	     let embed = new Discord.RichEmbed()
-	  .setAuthor(message.author.username)
-	  .setColor("#9B59B6")
-	  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/spWYAfZ**")
-	     
-	     
-	  message.channel.sendEmbed(embed);
-	    }
-	});
+
 	
+	
+
 	
 	
 	///2
@@ -1627,7 +1465,7 @@ m.sendMessage(args)
 	
 	 
 	client.on('message', message => {
-		var prefix = "!";
+		var prefix = "#";
 	if(!message.channel.guild) return;
 	if(message.content.startsWith(prefix + 'move')) {
 	 if (message.member.hasPermission("MOVE_MEMBERS")) {
@@ -1661,7 +1499,7 @@ m.sendMessage(args)
 	
 	/////////////////////////////////////////////////--------///////////////////////////ban
 	client.on('message', message => {
-		var prefix = "!"
+		var prefix = "#"
 	  if (message.author.x5bz) return;
 	  if (!message.content.startsWith(prefix)) return;
 	
@@ -1704,7 +1542,7 @@ m.sendMessage(args)
 	
 	////////////unban
 	client.on('message' , message => {
-	    var prefix = "!";
+	    var prefix = "#";
 	    let user = message.mentions.users.first()|| client.users.get(message.content.split(' ')[1])
 	    if(message.content.startsWith(prefix + 'unban')) {
 	        if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('❌|**\`ADMINISTRATOR\`لا توجد لديك رتبة`**');
@@ -1724,7 +1562,7 @@ m.sendMessage(args)
 	
 	////////////////----------------------------------------------------------------///////////bans 
 	client.on('message', message => {
-	    if (message.content.startsWith("!bans")) {
+	    if (message.content.startsWith("#bans")) {
 	        message.guild.fetchBans()
 	        .then(bans => message.channel.send(`${bans.size} banned members count `))
 	  .catch(console.error);
@@ -1739,7 +1577,7 @@ m.sendMessage(args)
 	//////////////////////////////////////////////---------------//////////////////////////////////////// P    I   N  G 
 	
 	client.on('message', message =>{
-	    if(message.content === '!ping'){
+	    if(message.content === '#ping'){
 	let start = Date.now(); message.channel.send('pong').then(message => { 
 	message.edit(`\`\`\`js
 	Time taken: ${Date.now() - start} ms
@@ -1752,7 +1590,7 @@ m.sendMessage(args)
 	
 	
 	client.on('message', message => {
-	    if (message.content.startsWith("!idbot")) {
+	    if (message.content.startsWith("#idbot")) {
 	    message.channel.send({
 	        embed: new Discord.RichEmbed()
 	            .setAuthor(client.user.username,client.user.avatarURL)
@@ -1793,7 +1631,7 @@ m.sendMessage(args)
 	
 	//////////////////////////------//////////////////////////////////// //////////////////--------------////////////////////////BOT 
 	client.on('message', message => {
-	     if (message.content === "!bot") {
+	     if (message.content === "#bot") {
 	     let embed = new Discord.RichEmbed()
 	  .setColor("RANDOM")
 	  .addField("**Servers:**" , client.guilds.size)
@@ -1839,7 +1677,7 @@ m.sendMessage(args)
 	
 
 client.on('message', msg => {
-	var prefix = "!";
+	var prefix = "#";
   if (msg.author.bot) return;
   if (!msg.content.startsWith(prefix)) return;
   let command = msg.content.split(" ")[0];
@@ -1871,51 +1709,13 @@ client.on('message', msg => {
 	
 	
 	
-	
-	client.on('message', message => { 
-	let PREFIX = '!'
-	    if (message.content.startsWith(PREFIX + 'Emojiserverda')) {
-	
-	        const List = message.guild.emojis.map(e => e.toString()).join(" ");
-	
-	        const EmojiList = new Discord.RichEmbed()
-	            .setTitle('➠ Emojis') 
-	            .setAuthor(message.guild.name, message.guild.iconURL) 
-	            .setColor('RANDOM') 
-	            .setDescription(List) 
-	            .setFooter(message.guild.name) 
-	        message.channel.send(EmojiList) 
-	    }
-	});
+
 	
 	
 	///////////////--------/////////////////////////////////////// //////////////////////////////--------------////Rules
 	
 	
-	client.on('message', message => {
-	            if (message.content.startsWith("!rules")) {
-	     let embed = new Discord.RichEmbed()
-	.setImage('https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png')
-	.addField('**By:Jacob❤** ')
-	.setDescription(`**
-	    ممنوع نشر سير فرات بالخاص او بالعام
-	ممنوع الكلمات المسيئة (السب/الشتم)
-	ممنوع السبام
-	ممنوع طلب الرتب
-	ممنوع الزعل
-	     **`)
-	.setColor('#7d2dbe')
-	  message.channel.sendEmbed(embed);
-	    }
-	});
-	
-	
-	
-	client.on('message', msg => {//msg
-	    if (msg.content === '!rules') {
-	      msg.channel.send({file : "https://cdn.discordapp.com/attachments/512651967273893919/522020210870452231/Doneemojirules.png"})
-	    }////top
-	  });;
+
 	
 	
 	
@@ -1942,7 +1742,7 @@ client.on('message', msg => {
 	
 	client.on('message', message => {
 	          let args = message.content.split(' ').slice(1);
-	   if(message.content.split(' ')[0] == '!color'){
+	   if(message.content.split(' ')[0] == '#color'){
 	           const embedd = new Discord.RichEmbed()
 	     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
 	   .setDescription(`**THere is no color with this name ** :x: `)
@@ -2114,7 +1914,7 @@ client.on('message', msg => {
 	    if (message.content === "#mc") {
 	                        if(!message.channel.guild) return message.reply(' this command for servers only !!');
 	
-	if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' you dont have perms to do this command ');
+	if(!message.member.hasPermission('MANAGE_MESSAGES')) ;
 	           message.channel.overwritePermissions(message.guild.id, {
 	         SEND_MESSAGES: false
 	
