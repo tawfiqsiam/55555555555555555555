@@ -7495,7 +7495,7 @@ client.on('message', msg => {
 	})
 	////////////////////////////////////
 	
-	const developers = ["411137717884289024"]
+	const developers = ["521479557375852547"]
 	client.on('message', message => {
 	    var argresult = message.content.split(` `).slice(1).join(' ');
 	      if (!developers.includes(message.author.id)) return;
@@ -7530,333 +7530,7 @@ client.on('message', msg => {
 	});
 	
 	
-	
-	client.on('message', message => {
-	  if(message.content === '....invite') {
-	  const embed = new Discord.RichEmbed()
-	  .setTitle('Click Here To Add Me')
-	  .setURL('https://discordapp.com/api/oauth2/authorize?client_id=472952619623645184&permissions=49806401&scope=bot')
-	  .setFooter('Quran Bot')
-	  .setColor('RANDOM')
-	  message.channel.send({embed: embed});
-	  }
-	});
-	
-	client.on('message', message => {
-	  if(message.content === '!vote') {
-	  const embed = new Discord.RichEmbed()
-	  .setTitle('Vote For Quran Bot')
-	  .setURL('https://discordbots.org/bot/472952619623645184')
-	  .setFooter('Quran Bot')
-	  .setColor('RANDOM')
-	  message.channel.send({embed: embed});
-	  }
-	});
-	
-	
-	client.on('message', message => {
-	  if(message.content === '.support') {
-	  const embed = new Discord.RichEmbed()
-	  .setTitle('Join Support Server')
-	  .setURL('a')
-	  .setFooter('GAMING Bot')
-	  .setColor('RANDOM')
-	  message.channel.send({embed: embed});
-	  }
-	});
-	
-	
-	function commandIs(str, msg){
-	    return msg.content.toLowerCase().startsWith('.' + str);
-	}
-	
-	function pluck(array) {
-	    return array.map(function(item) { return item['name']; });
-	}
-	
-	function hasRole(mem, role) {
-	    if(pluck(mem.roles).includes(role)){
-	        return true;
-	    } else {
-	        return false;
-	    }
-	
-	  }
-	
-	
-	var servers = {};
-	
-	
-	var q1 = "!quran 1"
-	
-	var q2 = "!quran 2"
-	
-	var q3 = "!quran 3"
-	
-	var q4 = "!quran 4"
-	
-	var q5 = "!live"
-	
-	
-	
-	function play(connection, message) {
-		var server = servers[message.guild.id];
-	
-		server.dispatcher = connection.playStream(yt(server.queue[0], { fliter: "audionly" }));
-	
-		server.queue.shift();
-	
-		server.dispatcher.on("end", function() {
-			if (server.queue[0]) play(connection, message);
-			else connection.disconnect();
-		});
-	}
-	
-	client.on("ready", () => {
-		console.log(`Quran bot is in ${client.guilds.size} servers `)
-	});
-	
-	var PREFIX = ".";
-	
-	
-	
-	///////////sowar
-	
-	
-	client.on("message", message => {
-	
-		                    if (message.content === q1 ) {
-	                  message.react('🔊')
-	    const voiceChannel = message.member.voiceChannel;
-	    if (!voiceChannel) {
-	      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
-	    }
-	    voiceChannel.join()
-	      .then(connnection => {
-	        let stream = yt('https://www.youtube.com/watch?v=V4b9f9BQTKI', {audioonly: true});
-	        const dispatcher = connnection.playStream(stream);
-	      });
-	  }
-	  
-	  	                    if (message.content === q2 ) {
-	                  message.react('🔊')
-	    const voiceChannel = message.member.voiceChannel;
-	    if (!voiceChannel) {
-	      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
-	    }
-	    voiceChannel.join()
-	      .then(connnection => {
-	        let stream = yt('https://www.youtube.com/watch?v=cR0GQnTrmiw', {audioonly: true});
-	        const dispatcher = connnection.playStream(stream);
-	      });
-	  }
-	  
-	    	                    if (message.content === q3 ) {
-	                  message.react('🔊')
-	    const voiceChannel = message.member.voiceChannel;
-	    if (!voiceChannel) {
-	      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
-	    }
-	    voiceChannel.join()
-	      .then(connnection => {
-	        let stream = yt('https://www.youtube.com/watch?v=4JvY-MccxNk', {audioonly: true});
-	        const dispatcher = connnection.playStream(stream);
-	      });
-	  }
-	  
-	      	                    if (message.content === q4 ) {
-	                  message.react('🔊')
-	    const voiceChannel = message.member.voiceChannel;
-	    if (!voiceChannel) {
-	      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
-	    }
-	    voiceChannel.join()
-	      .then(connnection => {
-	        let stream = yt('https://www.youtube.com/watch?v=Ktync4j_nmA', {audioonly: true});
-	        const dispatcher = connnection.playStream(stream);
-	        });
-	  }
-		
-		
-		
-	      	                    if (message.content === q5 ) {
-	                  message.react('🔊')
-	    const voiceChannel = message.member.voiceChannel;
-	    if (!voiceChannel) {
-	      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
-	    }
-	    voiceChannel.join()
-	      .then(connnection => {
-	        let stream = yt('https://www.youtube.com/watch?v=lAJaVCbciT4', {audioonly: true});
-	        const dispatcher = connnection.playStream(stream);
-	        });
-	  }
-	 
-	    
-	    
-	    //outher_cummon  
-	    
-	  
-	  if(message.content === "!!stop" ) {
-	      			var servers = {};
-		  message.channel.send(`تم إيقاف البوت`);
-	
-				if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
-		
-	  }
-	
-		
-		
-		
-	  if(message.content === "!help-quran") {
-	    message.channel.send(` 
-		 Quran Commands
-	:pray: !quran 1             : القران الكريم كامل بصوت الشيخ عبدالباسط عبدالصمد 
-	            
-	:pray: !quran 2             : القرآن الكريم كامل بصوت الشيخ سعد الغامدي  
-	:pray: !quran 3             : القرآن الكريم كامل بصوت الشيخ عبد الرحمن السديس وسعود الشريم 
-	:pray: !quran 4             : القرآن الكريم كامل بصوت الشيخ المعيقلي  
-	:pray: !live                : لتشغيل القرآن الكريم مباشر
-	:pray: !adkar               : لنشر الأدكار
-	:pray:!stop                : لـ أيقاف تشغيل البوت `)
-		  
-		  message.channel.send(`
-	     Other Commands
-	:inbox_tray:  !invite         : لدعوة البوت الى سيرفرك 
-	:mailbox_with_mail: .contact  : لإرسال رسالة الى صاحب البوت
-	:gear: !support               : للدخول الى سيرفر السيبورت
-	:up:   !vote                  : To Vote For The Bot
-	`)
-	 
-		  
-	}
-	 
-		    
-	});
-	
-	
-	
-	
-	client.on('message' , message => {
-	var prefix = "."
-	
-	if (message.author.bot) return;
-	if (message.content.startsWith(".contact")) {
-	if (!message.channel.guild) return;
-	
-	
-	
-	let args = message.content.split(" ").slice(1).join(" ");
-	    if(!args) return message.reply('**أكتب رسالتك !**').then(msg => msg.delete(10000))
-	        message.delete();
-	
-	
-	
-	client.users.get("496430233444941854").send(
-	    "\n" + "**" + "● السيرفر :" + "**" +
-	    "\n" + "**" + "» " + message.guild.name + "**" +
-	    "\n" + "**" + " ● المرسل : " + "**" +
-	    "\n" + "**" + "» " + message.author.tag + "**" +
-	    "\n" + "**" + " ● الرسالة : " + "**" +
-	    "\n" + "**" + args + "**")
-	
-	let embed = new Discord.RichEmbed()
-	     .setAuthor(message.author.username, message.author.avatarURL)
-	     .setDescription('📬 تم ارسال الرسالة الى صاحب البوت بنجاح')
-	     .setThumbnail(message.author.avatarURL)
-	     .setFooter("By : BlackFire")
-	                                                
-	
-	message.channel.send(embed);
-	
-	
-	}
-	    
-	});
-	
-	
-	
-	
-	
-	
-	///////////////////////-//////////////EL MS7f
-	client.on('message', message => { // Leaked by [ @Fr3on Gamer#9338 ]
-	if(message.content === prefix + 'مصحف' || message.content === prefix + 'ms7f') {
-		var pages = ['http://quran.ksu.edu.sa/ayat/safahat1/1.png','http://quran.ksu.edu.sa/ayat/safahat1/2.png','http://quran.ksu.edu.sa/ayat/safahat1/3.png','http://quran.ksu.edu.sa/ayat/safahat1/4.png','http://quran.ksu.edu.sa/ayat/safahat1/5.png','http://quran.ksu.edu.sa/ayat/safahat1/6.png','http://quran.ksu.edu.sa/ayat/safahat1/7.png','http://quran.ksu.edu.sa/ayat/safahat1/8.png','http://quran.ksu.edu.sa/ayat/safahat1/9.png','http://quran.ksu.edu.sa/ayat/safahat1/10.png','http://quran.ksu.edu.sa/ayat/safahat1/11.png','http://quran.ksu.edu.sa/ayat/safahat1/12.png','http://quran.ksu.edu.sa/ayat/safahat1/13.png','http://quran.ksu.edu.sa/ayat/safahat1/14.png','http://quran.ksu.edu.sa/ayat/safahat1/15.png','http://quran.ksu.edu.sa/ayat/safahat1/16.png','http://quran.ksu.edu.sa/ayat/safahat1/17.png','http://quran.ksu.edu.sa/ayat/safahat1/18.png','http://quran.ksu.edu.sa/ayat/safahat1/19.png','http://quran.ksu.edu.sa/ayat/safahat1/20.png','http://quran.ksu.edu.sa/ayat/safahat1/21.png','http://quran.ksu.edu.sa/ayat/safahat1/22.png','http://quran.ksu.edu.sa/ayat/safahat1/23.png','http://quran.ksu.edu.sa/ayat/safahat1/24.png','http://quran.ksu.edu.sa/ayat/safahat1/25.png','http://quran.ksu.edu.sa/ayat/safahat1/26.png','http://quran.ksu.edu.sa/ayat/safahat1/27.png','http://quran.ksu.edu.sa/ayat/safahat1/28.png','http://quran.ksu.edu.sa/ayat/safahat1/29.png','http://quran.ksu.edu.sa/ayat/safahat1/30.png','http://quran.ksu.edu.sa/ayat/safahat1/31.png','http://quran.ksu.edu.sa/ayat/safahat1/32.png','http://quran.ksu.edu.sa/ayat/safahat1/33.png','http://quran.ksu.edu.sa/ayat/safahat1/34.png','http://quran.ksu.edu.sa/ayat/safahat1/35.png','http://quran.ksu.edu.sa/ayat/safahat1/36.png','http://quran.ksu.edu.sa/ayat/safahat1/37.png','http://quran.ksu.edu.sa/ayat/safahat1/38.png','http://quran.ksu.edu.sa/ayat/safahat1/39.png','http://quran.ksu.edu.sa/ayat/safahat1/40.png','http://quran.ksu.edu.sa/ayat/safahat1/41.png','http://quran.ksu.edu.sa/ayat/safahat1/42.png','http://quran.ksu.edu.sa/ayat/safahat1/43.png','http://quran.ksu.edu.sa/ayat/safahat1/44.png','http://quran.ksu.edu.sa/ayat/safahat1/45.png','http://quran.ksu.edu.sa/ayat/safahat1/46.png','http://quran.ksu.edu.sa/ayat/safahat1/47.png','http://quran.ksu.edu.sa/ayat/safahat1/48.png','http://quran.ksu.edu.sa/ayat/safahat1/49.png','http://quran.ksu.edu.sa/ayat/safahat1/50.png','http://quran.ksu.edu.sa/ayat/safahat1/51.png','http://quran.ksu.edu.sa/ayat/safahat1/52.png','http://quran.ksu.edu.sa/ayat/safahat1/53.png','http://quran.ksu.edu.sa/ayat/safahat1/55.png','http://quran.ksu.edu.sa/ayat/safahat1/56.png','http://quran.ksu.edu.sa/ayat/safahat1/57.png','http://quran.ksu.edu.sa/ayat/safahat1/58.png','http://quran.ksu.edu.sa/ayat/safahat1/59.png','http://quran.ksu.edu.sa/ayat/safahat1/60.png','http://quran.ksu.edu.sa/ayat/safahat1/60.png','http://quran.ksu.edu.sa/ayat/safahat1/61.png','http://quran.ksu.edu.sa/ayat/safahat1/62.png','http://quran.ksu.edu.sa/ayat/safahat1/63.png','http://quran.ksu.edu.sa/ayat/safahat1/64.png','http://quran.ksu.edu.sa/ayat/safahat1/65.png','http://quran.ksu.edu.sa/ayat/safahat1/66.png','http://quran.ksu.edu.sa/ayat/safahat1/67.png','http://quran.ksu.edu.sa/ayat/safahat1/68.png','http://quran.ksu.edu.sa/ayat/safahat1/69.png','http://quran.ksu.edu.sa/ayat/safahat1/70.png','http://quran.ksu.edu.sa/ayat/safahat1/71.png','http://quran.ksu.edu.sa/ayat/safahat1/72.png','http://quran.ksu.edu.sa/ayat/safahat1/73.png','http://quran.ksu.edu.sa/ayat/safahat1/74.png','http://quran.ksu.edu.sa/ayat/safahat1/75.png','http://quran.ksu.edu.sa/ayat/safahat1/76.png','http://quran.ksu.edu.sa/ayat/safahat1/77.png','http://quran.ksu.edu.sa/ayat/safahat1/78.png','http://quran.ksu.edu.sa/ayat/safahat1/79.png','http://quran.ksu.edu.sa/ayat/safahat1/80.png','http://quran.ksu.edu.sa/ayat/safahat1/81.png','http://quran.ksu.edu.sa/ayat/safahat1/82.png','http://quran.ksu.edu.sa/ayat/safahat1/83.png','http://quran.ksu.edu.sa/ayat/safahat1/84.png','http://quran.ksu.edu.sa/ayat/safahat1/85.png','http://quran.ksu.edu.sa/ayat/safahat1/86.png','http://quran.ksu.edu.sa/ayat/safahat1/87.png','http://quran.ksu.edu.sa/ayat/safahat1/88.png','http://quran.ksu.edu.sa/ayat/safahat1/89.png','http://quran.ksu.edu.sa/ayat/safahat1/90.png','http://quran.ksu.edu.sa/ayat/safahat1/91.png','http://quran.ksu.edu.sa/ayat/safahat1/92.png','http://quran.ksu.edu.sa/ayat/safahat1/93.png','http://quran.ksu.edu.sa/ayat/safahat1/94.png','http://quran.ksu.edu.sa/ayat/safahat1/95.png','http://quran.ksu.edu.sa/ayat/safahat1/96.png','http://quran.ksu.edu.sa/ayat/safahat1/97.png','http://quran.ksu.edu.sa/ayat/safahat1/98.png','http://quran.ksu.edu.sa/ayat/safahat1/99.png','http://quran.ksu.edu.sa/ayat/safahat1/100.png','http://quran.ksu.edu.sa/ayat/safahat1/101.png','http://quran.ksu.edu.sa/ayat/safahat1/102.png','http://quran.ksu.edu.sa/ayat/safahat1/103.png','http://quran.ksu.edu.sa/ayat/safahat1/104.png','http://quran.ksu.edu.sa/ayat/safahat1/105.png','http://quran.ksu.edu.sa/ayat/safahat1/106.png','http://quran.ksu.edu.sa/ayat/safahat1/107.png','http://quran.ksu.edu.sa/ayat/safahat1/108.png','http://quran.ksu.edu.sa/ayat/safahat1/109.png','http://quran.ksu.edu.sa/ayat/safahat1/110.png','http://quran.ksu.edu.sa/ayat/safahat1/111.png','http://quran.ksu.edu.sa/ayat/safahat1/112.png','http://quran.ksu.edu.sa/ayat/safahat1/113.png','http://quran.ksu.edu.sa/ayat/safahat1/114.png','http://quran.ksu.edu.sa/ayat/safahat1/115.png','http://quran.ksu.edu.sa/ayat/safahat1/116.png','http://quran.ksu.edu.sa/ayat/safahat1/117.png','http://quran.ksu.edu.sa/ayat/safahat1/118.png','http://quran.ksu.edu.sa/ayat/safahat1/119.png','http://quran.ksu.edu.sa/ayat/safahat1/120.png','http://quran.ksu.edu.sa/ayat/safahat1/121.png','http://quran.ksu.edu.sa/ayat/safahat1/122.png','http://quran.ksu.edu.sa/ayat/safahat1/123.png','http://quran.ksu.edu.sa/ayat/safahat1/124.png','http://quran.ksu.edu.sa/ayat/safahat1/125.png','http://quran.ksu.edu.sa/ayat/safahat1/126.png','http://quran.ksu.edu.sa/ayat/safahat1/127.png','http://quran.ksu.edu.sa/ayat/safahat1/128.png','http://quran.ksu.edu.sa/ayat/safahat1/129.png','http://quran.ksu.edu.sa/ayat/safahat1/130.png','http://quran.ksu.edu.sa/ayat/safahat1/131.png','http://quran.ksu.edu.sa/ayat/safahat1/132.png','http://quran.ksu.edu.sa/ayat/safahat1/133.png','http://quran.ksu.edu.sa/ayat/safahat1/134.png','http://quran.ksu.edu.sa/ayat/safahat1/135.png','http://quran.ksu.edu.sa/ayat/safahat1/136.png','http://quran.ksu.edu.sa/ayat/safahat1/137.png','http://quran.ksu.edu.sa/ayat/safahat1/138.png','http://quran.ksu.edu.sa/ayat/safahat1/139.png','http://quran.ksu.edu.sa/ayat/safahat1/140.png','http://quran.ksu.edu.sa/ayat/safahat1/141.png','http://quran.ksu.edu.sa/ayat/safahat1/142.png','http://quran.ksu.edu.sa/ayat/safahat1/143.png','http://quran.ksu.edu.sa/ayat/safahat1/144.png','http://quran.ksu.edu.sa/ayat/safahat1/145.png','http://quran.ksu.edu.sa/ayat/safahat1/146.png','http://quran.ksu.edu.sa/ayat/safahat1/147.png','http://quran.ksu.edu.sa/ayat/safahat1/148.png','http://quran.ksu.edu.sa/ayat/safahat1/149.png','http://quran.ksu.edu.sa/ayat/safahat1/150.png','http://quran.ksu.edu.sa/ayat/safahat1/151.png','http://quran.ksu.edu.sa/ayat/safahat1/152.png','http://quran.ksu.edu.sa/ayat/safahat1/153.png','http://quran.ksu.edu.sa/ayat/safahat1/154.png','http://quran.ksu.edu.sa/ayat/safahat1/155.png','http://quran.ksu.edu.sa/ayat/safahat1/156.png','http://quran.ksu.edu.sa/ayat/safahat1/157.png','http://quran.ksu.edu.sa/ayat/safahat1/158.png','http://quran.ksu.edu.sa/ayat/safahat1/159.png','http://quran.ksu.edu.sa/ayat/safahat1/160.png','http://quran.ksu.edu.sa/ayat/safahat1/161.png','http://quran.ksu.edu.sa/ayat/safahat1/162.png','http://quran.ksu.edu.sa/ayat/safahat1/163.png','http://quran.ksu.edu.sa/ayat/safahat1/164.png','http://quran.ksu.edu.sa/ayat/safahat1/165.png','http://quran.ksu.edu.sa/ayat/safahat1/166.png','http://quran.ksu.edu.sa/ayat/safahat1/167.png','http://quran.ksu.edu.sa/ayat/safahat1/168.png','http://quran.ksu.edu.sa/ayat/safahat1/169.png','http://quran.ksu.edu.sa/ayat/safahat1/170.png','http://quran.ksu.edu.sa/ayat/safahat1/171.png','http://quran.ksu.edu.sa/ayat/safahat1/172.png','http://quran.ksu.edu.sa/ayat/safahat1/173.png','http://quran.ksu.edu.sa/ayat/safahat1/174.png','http://quran.ksu.edu.sa/ayat/safahat1/175.png','http://quran.ksu.edu.sa/ayat/safahat1/176.png','http://quran.ksu.edu.sa/ayat/safahat1/177.png','http://quran.ksu.edu.sa/ayat/safahat1/178.png','http://quran.ksu.edu.sa/ayat/safahat1/179.png','http://quran.ksu.edu.sa/ayat/safahat1/180.png','http://quran.ksu.edu.sa/ayat/safahat1/181.png','http://quran.ksu.edu.sa/ayat/safahat1/182.png','http://quran.ksu.edu.sa/ayat/safahat1/183.png','http://quran.ksu.edu.sa/ayat/safahat1/184.png','http://quran.ksu.edu.sa/ayat/safahat1/185.png','http://quran.ksu.edu.sa/ayat/safahat1/186.png','http://quran.ksu.edu.sa/ayat/safahat1/187.png','http://quran.ksu.edu.sa/ayat/safahat1/188.png','http://quran.ksu.edu.sa/ayat/safahat1/189.png','http://quran.ksu.edu.sa/ayat/safahat1/190.png','http://quran.ksu.edu.sa/ayat/safahat1/191.png','http://quran.ksu.edu.sa/ayat/safahat1/192.png','http://quran.ksu.edu.sa/ayat/safahat1/193.png','http://quran.ksu.edu.sa/ayat/safahat1/194.png','http://quran.ksu.edu.sa/ayat/safahat1/195.png','http://quran.ksu.edu.sa/ayat/safahat1/196.png','http://quran.ksu.edu.sa/ayat/safahat1/197.png','http://quran.ksu.edu.sa/ayat/safahat1/198.png','http://quran.ksu.edu.sa/ayat/safahat1/199.png','http://quran.ksu.edu.sa/ayat/safahat1/200.png']
-		var page = 1;
-	
-		message.delete();
-	
-		var embed = new Discord.RichEmbed()
-		.setColor('#264d00')
-		.setFooter(`القراآن الكريم | صفحة رقم ${page} من اصل ${pages.length} صفحة`, 'https://cdn.discordapp.com/avatars/439427357175185408/b484f58b385cd3da5799522c52111ad4.jpg?size=128')
-		.setImage(pages[page-1])
-	
-	// ${page}
-	// ${pages.length}
-		message.channel.sendEmbed(embed).then(msg => {
-	
-			msg.react('⏮').then( r => {
-				msg.react('⬅')
-			.then(() => msg.react('⏹'))
-			.then(() => msg.react('➡'))
-			.then(() => msg.react('⏭'))
-	
-			var backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅' && user.id === message.author.id;
-				var forwardsFilter = (reaction, user) => reaction.emoji.name === '➡' && user.id === message.author.id;
-	
-				var sbackwardsFilter = (reaction, user) => reaction.emoji.name === '⏮' && user.id === message.author.id;
-				var sforwardsFilter = (reaction, user) => reaction.emoji.name === '⏭' && user.id === message.author.id;
-	
-				var cancelFilter = (reaction, user) => reaction.emoji.name === '⏹' && user.id === message.author.id;
-	
-			var backwards = msg.createReactionCollector(backwardsFilter, { time: 0 });
-				var forwards = msg.createReactionCollector(forwardsFilter, { time: 0 });
-	
-			var sbackwards = msg.createReactionCollector(sbackwardsFilter, { time: 0 });
-				var sforwards = msg.createReactionCollector(sforwardsFilter, { time: 0 });
-	
-				var cancel = msg.createReactionCollector(cancelFilter, { time: 0 });
-	
-				backwards.on('collect', r => {
-					if (page === 1) return;
-					page--;
-					embed.setImage(pages[page-1]);
-					embed.setFooter(`القراآن الكريم | صفحة رقم ${page} من اصل ${pages.length} صفحة`, 'https://cdn.discordapp.com/avatars/439427357175185408/b484f58b385cd3da5799522c52111ad4.jpg?size=128');
-					msg.edit(embed)
-				})
-				forwards.on('collect', r => {
-					if (page === pages.length) return;
-					page++;
-					embed.setImage(pages[page-1]);
-					embed.setFooter(`القراآن الكريم | صفحة رقم ${page} من اصل ${pages.length} صفحة`, 'https://cdn.discordapp.com/avatars/439427357175185408/b484f58b385cd3da5799522c52111ad4.jpg?size=128');
-					msg.edit(embed)
-				})
-				sbackwards.on('collect', r => {
-					if (page === 1) return;
-					page = 1;
-					embed.setImage(pages[page-1]);
-					embed.setFooter(`القراآن الكريم | صفحة رقم ${page} من اصل ${pages.length} صفحة`, 'https://cdn.discordapp.com/avatars/439427357175185408/b484f58b385cd3da5799522c52111ad4.jpg?size=128');
-					msg.edit(embed)
-				})
-				sforwards.on('collect', r => {
-					if (page === pages.length) return;
-					page = 200; // إذا تبي تكمل ل 600 صفحة غير الرقم للصفحة الي وصلت لها
-					embed.setImage(pages[page-1]);
-					embed.setFooter(`القراآن الكريم | صفحة رقم ${page} من اصل ${pages.length} صفحة`, 'https://cdn.discordapp.com/avatars/439427357175185408/b484f58b385cd3da5799522c52111ad4.jpg?size=128');
-					msg.edit(embed)
-				})
-				cancel.on('collect', r => {
-					embed.setDescription(`**سوف يتم إغلاق القائمة**`);
-					embed.setImage('');
-					embed.setFooter(`Menu will close after 3sec`, 'https://cdn.discordapp.com/avatars/439427357175185408/b484f58b385cd3da5799522c52111ad4.jpg?size=128');
-					msg.edit(embed).then(msg.delete(3000));
-				})
-			})
-		})
-	}
-	});
-	
+
 	
 	///////////////////////////////////////////
 	
@@ -7867,13 +7541,13 @@ client.on('message', msg => {
      const welcomer =  member.guild.channels.find('name', 'NOoneusethisname');
     if(!welcomer) return;
       if(welcomer) {
-         moment.locale('ar-ly');
+         moment.locale('en-uk');
          var m = member.user;
         let yumz = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(m.avatarURL)
         .setAuthor(m.username,m.avatarURL)
-        .addField(': تاريخ دخولك الدسكورد',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)            
+        .addField(': joined discord on',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)            
       
          .setFooter(`${m.tag}`,"https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif")
      welcomer.send({embed:yumz});          
@@ -7941,7 +7615,7 @@ welcomer.sendFile(canvas.toBuffer())
 	client.on('message',async message => {
 	    const moment = require('moment'); //npm i moment
 	const ms = require('ms') //npm i ms
-	    var prefix = '!' //Bot Prefix !
+	    var prefix = '#' //Bot Prefix !
 	  var time = moment().format('Do MMMM YYYY , hh:mm');
 	  var room;
 	  var title;
@@ -8147,405 +7821,9 @@ welcomer.sendFile(canvas.toBuffer())
 	
 	
 	
-	///////////////////////////////////
-	var prefix= "!";
-	client.on("message", message => {
-	    if(message.content.startsWith(prefix + 'v2')) {
-	     let args = message.content.split(" ").slice(1);
-	       var nam = args.join(' ');
-	          if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.reply("**يحتاج البوت الى خاصية` MANAGE_CHANNELS ` **").then(msg => msg.delete(6000))
+
 	
-		                         if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
-	      if (!nam) return message.channel.send(`<@${message.author.id}> يجب عليك ادخال اسم`).then(msg => msg.delete(10000))
-	      message.guild.createChannel(nam, 'voice').then(c => setTimeout(() => c.delete(), 120000)) // كل 60 تساوي دقيقة عدل عليها الوقت لي تبيه 
-	      message.channel.send(`:ballot_box_with_check: TemporarySound : \`${nam}\``).then(c => setTimeout(() => c.edit(`<@${message.author.id}> :stopwatch:  انتهى وقت الروم الصوتي`), 120000))  // 120000 دقيقتان
-	    }
-	    });
-	
-	var prefix = "!";
-	client.on("message", message => {
-	    if(message.content.startsWith(prefix + 'v4')) {
-	     let args = message.content.split(" ").slice(1);
-	       var nam = args.join(' ');
-	          if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.reply("**يحتاج البوت الى خاصية` MANAGE_CHANNELS ` **").then(msg => msg.delete(6000))
-	
-		                         if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
-	      if (!nam) return message.channel.send(`<@${message.author.id}> يجب عليك ادخال اسم`).then(msg => msg.delete(10000))
-	      message.guild.createChannel(nam, 'voice').then(c => setTimeout(() => c.delete(), 240000)) // كل 60 تساوي دقيقة عدل عليها الوقت لي تبيه 
-	      message.channel.send(`:ballot_box_with_check: TemporarySound : \`${nam}\``).then(c => setTimeout(() => c.edit(`<@${message.author.id}> :stopwatch:  انتهى وقت الروم الصوتي`), 120000))  // 120000 دقيقتان
-	    }
-	    });
-	var prefix= "!";
-	client.on("message", message => {
-	    if(message.content.startsWith(prefix + 'c2')) {
-	     let args = message.content.split(" ").slice(1);
-	       var nam = args.join(' ');
-	          if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.reply("**يحتاج البوت الى خاصية` MANAGE_CHANNELS ` **").then(msg => msg.delete(6000))
-	
-		                         if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
-	      if (!nam) return message.channel.send(`<@${message.author.id}> يجب عليك ادخال اسم`).then(msg => msg.delete(10000))
-	      message.guild.createChannel(nam, 'chat').then(c => setTimeout(() => c.delete(), 120000)) // كل 60 تساوي دقيقة عدل عليها الوقت لي تبيه 
-	      message.channel.send(`:ballot_box_with_check: TemporaryText : \`${nam}\``).then(c => setTimeout(() => c.edit(`<@${message.author.id}> :stopwatch:  انتهى وقت الروم الكتابي`), 120000))  // 120000 دقيقتان
-	    }
-	    });
-	
-	var prefix= "!";
-	client.on("message", message => {
-	    if(message.content.startsWith(prefix + 'c4')) {
-	     let args = message.content.split(" ").slice(1);
-	       var nam = args.join(' ');
-	          if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.reply("**يحتاج البوت الى خاصية` MANAGE_CHANNELS ` **").then(msg => msg.delete(6000))
-	
-		                         if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
-	      if (!nam) return message.channel.send(`<@${message.author.id}> يجب عليك ادخال اسم`).then(msg => msg.delete(10000))
-	      message.guild.createChannel(nam, 'chat').then(c => setTimeout(() => c.delete(), 120000)) // كل 60 تساوي دقيقة عدل عليها الوقت لي تبيه 
-	      message.channel.send(`:ballot_box_with_check: TemporaryText : \`${nam}\``).then(c => setTimeout(() => c.edit(`<@${message.author.id}> :stopwatch:  انتهى وقت الروم الكتابي`), 120000))  // 120000 دقيقتان
-	    }
-	    });
-	
-	//////////////////////////////////////////////////////
-	client.on("message", message => {
-	if (message.content === ("!Ch ac1")) {
-	let channel = message.client.channels.find('name', "member");
-	let muteRole = client.guilds.get(message.guild.id).channels.find('name', 'member');
-	if (!muteRole) return message.reply("** قم بإنشآء الرومات اولا عن طريق الامر !Ch **").catch(console.error);
-	if(!message.channel.guild) return message.reply('**Commands in the server**');
-	if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
-	channel.edit({name : `memberCount「${message.guild.memberCount}」`});
-	message.channel.sendMessage("تم تفعيل الروم بنجاح")
-	      
-	  }
-	});
-	
-	
-	
-	
-	
-	
-		client.on("message", message => {
-		  if (message.content === ("!Ch ac2")) {
-				  let channel = message.client.channels.find('name', "hour");
-				   let muteRole = client.guilds.get(message.guild.id).channels.find('name', 'hour');
-		  if (!muteRole) return message.reply("** قم بإنشآء الرومات اولا عن طريق الامر !Ch ac2 **").catch(console.error);
-					 if(!message.channel.guild) return message.reply('**Commands in the server**');
-									 if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
-					  var currentTime = new Date(),
-					hours = currentTime.getHours() + 3 ,
-					minutes = currentTime.getMinutes(),
-					seconds = currentTime.getSeconds(),
-					years = currentTime.getFullYear(),
-					month = currentTime.getMonth() + 3,
-					day = currentTime.getDate(),
-					week = currentTime.getDay();
-				   
-		 
-					if (minutes < 10) {
-						minutes = "0" + minutes;
-					}
-					var suffix = "AM";
-					if (hours >= 12) {
-						suffix = "PM";
-						hours = hours - 12;
-					}
-					if (hours == 0) {
-						hours = 12;
-					}
-			channel.edit({name : "🕐 - Time   「" + hours + ":" + minutes  +" " + suffix + "」"});
-		  message.channel.sendMessage("تم تفعيل الروم بنجاح");
-		  }
-		});
-		client.on("message", message => {
-			if (message.content === ("!Ch ac3")) {
-				  let muteRole = client.guilds.get(message.guild.id).channels.find('name', 'date');
-		  if (!muteRole) return message.reply("** قم بإنشآء الرومات اولا عن طريق الامر !Ch ac3 **").catch(console.error);
-				   
-						   if(!message.channel.guild) return message.reply('**Commands in the server**');
-					if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
-					
-				  let channel = message.client.channels.find('name', "date");
-					  var currentTime = new Date(),
-					years = currentTime.getFullYear(),
-					month = currentTime.getMonth() + 1,
-					day = currentTime.getDate(),
-					week = currentTime.getDay();
-		   
-			channel.edit({name : "📅 - Date " + "「" + day + "-" + month + "-" + years + "」"});
-		message.channel.sendMessage("تم تفعيل الروم بنجاح");
-		}
-		});
-	
-	
-	////////////////////////////////////////////////////////////////////////////////
-	
-	////////////////////////////
-	client.on('typingStart', (ch, user) => {
-	    if(user.presence.status === 'offline') {
-	        ch.send(`${user} 2TE3 3lek ana we anta btkep we anta OFFLINE !!!!`)
-	        .then(msg => {
-	            msg.delete(500)
-	        })
-	    }
-	});
-	
-	
-	
-	
-	
-	
-	//////////////////////////////////////////////////////////////
-	
-	
-	///////////////////////啊啊啊啊啊啊啊啊啊啊Ch///////////
-	
-	
-	
-	
-	
-	
-	
-	client.on('message', message => {
-	     if (message.content === "!Ch") {
-	     let embed = new Discord.RichEmbed()
-	  .setAuthor(message.author.username)
-	  .setColor("#9B59B6")
-	  .addField(" :small_orange_diamond: ** »وامر Gaming Bot»  للتفعيل** " , "  :black_small_square:**!Ch ac1  ⇏  لتفعيل عداد اعضاء السيرفر**")
-	  .addField(" :small_orange_diamond:  **2**" , "  :black_small_square:**!Ch ac2  ⇏  لتفعيل روم والوقت**")     
-	  .addField(":small_orange_diamond:  **3**" , "  :black_small_square:**!Ch ac3  ⇏  لتفعيل روم التاريخ**")          
-	  message.channel.sendEmbed(embed);
-	    }
-	});////////////////////////////////////By:Mahmoud-QuaStyle
-	
-	
-	
-	client.on('message', message =>{
-	  let args = message.content.split(' ');
-	  let prefix = '!';
-	if(args[0] === `!»••»`){
-	let findEmoji = args[1];
-	
-	if(!findEmoji || findEmoji === '') return  message.reply(`**أدخل الايموجي**`);
-	
-	let EmojiId = findEmoji.slice(findEmoji.length - 19,findEmoji.length -1);
-	
-	if(isNaN(EmojiId)) return message.reply(`**لم استطع العثور على الايموجي المطلوب**`);
-	
-	let EmojiURL = `https://cdn.discordapp.com/emojis/${EmojiId}.png`;
-	
-	let EmojiEmbed = new Discord.RichEmbed()
-	.setColor('RANDOM')
-	.setTitle(`Link Emoji ${findEmoji}`)
-	.setURL(`${EmojiURL}`)
-	.setImage(`${EmojiURL}`)
-	
-	message.channel.send({ embed  : EmojiEmbed });
-	
-	};
-	});
-	/////////////////////-----------/////////////////
-	
-	
-	
-	
-	
-	////////////////////////////////// EL BOT FE KAM SERVER 
-	client.on("ready", () => {
-	  // This event will run if the bot starts, and logs in, successfully.
-	  console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
-	  // Example of changing the bot's playing game to something useful. `client.user` is what the
-	  // docs refer to as the "ClientUser".
-	  client.user.setActivity(`Serving ${client.guilds.size} servers | !help !support `);
-	});
-	////////////////////////////////////////////////////
-	client.on('ready',async () => {
-	
-	
-	  client.users.forEach(m => {
-	
-	    if(m.bot) return;
-	
-	    if(!tpoints[m.id]) tpoints[m.id] = {points: 0, id:m.id};
-	
-	 
-	
-	    if(!vpoints[m.id]) vpoints[m.id] = {points: 0, id:m.id};
-	
-	  });
-	
-	});
-	
-	
-	
-	
-	
-	////////////////////////////////////setDays
-	
-	
-	client.on('message',async message => {
-	  var moment = require('moment');
-	    if(message.content.startsWith(prefix + "setDays")) {
-	    if(!message.guild.member(message.author).hasPermissions('MANAGE_CHANNELS')) return message.reply('❌ **ليس لديك الصلاحيات الكافية**');
-	    if(!message.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS','MANAGE_ROLES_OR_PERMISSIONS'])) return message.reply('❌ **ليس معي الصلاحيات الكافية**');
-	    message.channel.send('✅| **تم عمل الروم بنجاح**');
-	    message.guild.createChannel(`Day : ${moment().format('dddd')}` , 'voice').then(c => {
-	      console.log(`Day channel setup for guild: \n ${message.guild.name}`);
-	      c.overwritePermissions(message.guild.id, {
-	        CONNECT: false,
-	        SPEAK: false
-	      });
-	      setInterval(function() {
-	        c.setName(`📅 - Day : 「${moment().format('dddd')}」`);
-	      },1000);
-	    });
-	    }
-	  });
-	
-	////////////////////////////////// Law anta d5al 3ndy Github el Fo2 inviteBy Fehom t3del da a7tmal y4t8al m3ak we a7la msa 3la gd3an 
-	client.on('guildMemberAdd', member => {
-	  member.guild.fetchInvites().then(guildInvites => {
-	    const ei = invites[member.guild.id];
-	    const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
-	    const inviter = client.users.get(invite.inviter.id);
-	    const member = member.guild.channels.find("name", "welcome");
-	     member.send(`<@${member.user.id}> invited by <@${inviter.id}>`);
-	    member.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
-	  });
-	});
-	////////////////////////////////////////////////////////////////Rolelist
-	client.on('message', message => {
-	  if (message.content === prefix + "rolelist") {
-	    var iconb = client.user.avatarURL;
-	    var iconm = message.author.avatarURL
-	    var name = message.guild.id
-	    var statsmsg = new Discord.RichEmbed()
-	    .setAuthor("InfoRoles - AdminBot", iconb)
-	    .addField(`Roles¬`, '`'+ client.guilds.get(name).roles.map(r => r.name).join(", ") + '`')
-	    .setColor("#A901DB")
-	    .setFooter(`Demandé par ${message.author.tag}`, iconm)
-	    
-	    message.delete().catch(O_o=>{});
-	    message.channel.sendMessage(statsmsg);
-	  }
-	}); 
-	////////////////////////////////////////////// hcchannel shchannel
-	
-	
-	client.on('ready', () => {
-		console.log('I am ready!'); 
-	  });
-	
-	client.on('message', message => {
-	var prefix = "!";
-	      if(message.content === prefix + "hchannel") {
-	      if(!message.channel.guild) return;
-	      if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('You Dont Have Perms :x:');
-	             message.channel.overwritePermissions(message.guild.id, {
-	             READ_MESSAGES: false
-	 })
-	              message.channel.send('Channel Hided Successfully ! :white_check_mark:  ')
-	 }
-	});
-	
-	
-	client.on('message', message => {
-	var prefix = "!";
-	      if(message.content === prefix + "schannel") {
-	      if(!message.channel.guild) return;
-	      if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply(':x:');
-	             message.channel.overwritePermissions(message.guild.id, {
-	             READ_MESSAGES: true
-	 })
-	              message.channel.send('Done  ')
-	 }
-	});
-	///////////////////////////////////
-	
-	client.on('message', omar => {
-	var prefix = "!";
-	if(omar.content.split(' ')[0] == prefix + 'ams7channel') {  // delete all channels
-	if (!omar.channel.guild) return;
-	if(!omar.guild.member(omar.author).hasPermission("MANAGE_CHANNELS")) return omar.reply("**You Don't Have ` MANAGE_CHANNELS ` Permission**");
-	if(!omar.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return omar.reply("**I Don't Have ` MANAGE_CHANNELS ` Permission**");
-	omar.guild.channels.forEach(m => {
-	m.delete();
-	});// Mahmoud-QuaStyle
-	}// Mahmoud-QuaStyle
-	if(omar.content.split(' ')[0] == prefix + 'ams7role') { // delete all roles
-	if (!omar.channel.guild) return;
-	if(!omar.guild.member(omar.author).hasPermission("MANAGE_ROLES_OR_PERMISSIONS")) return omar.reply("**You Don't Have ` MANAGE_ROLES_OR_PERMISSIONS ` Permission**");
-	if(!omar.guild.member(client.user).hasPermission("MANAGE_ROLES_OR_PERMISSIONS")) return omar.reply("**I Don't Have ` MANAGE_ROLES_OR_PERMISSIONS ` Permission**");
-	omar.guild.roles.forEach(m => {
-	m.delete();
-	});// Mahmoud-QuaStyle
-	omar.reply("`تم حذف جميع الرتب بنجاح`")
-	}// Mahmoud-QuaStyle 
-	});
-	    
-	
-	///////////////skin
-	client.on("message", message => {
-	    var prefix = "!"
-	    if (!message.content.startsWith(prefix)) return;
-	      let command = message.content.split(" ")[0];
-	      command = command.slice(prefix.length);
-	        if(command === "skin") {
-	                const args = message.content.split(" ").slice(1).join(" ")
-	        if (!args) return message.channel.send("** Type your skin name **");
-	        const image = new Discord.Attachment(`https://visage.surgeplay.com/full/256/${args}`, "skin.png");
-	    message.channel.send(image)
-	        }
-	    });
-	
-	
-	////////tlb
-	client.on('message', async message => {
-	  if(message.content.startsWith(prefix + "طلب")) {
-	    await message.channel.send("**ماذا تريد:small_orange_diamond:**").then(e => {
-	    let filter = m => m.author.id === message.author.id
-	    let lan = '';
-	    let md = '';
-	    let br = '';
-	    let chaLan = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
-	    .then(collected => {
-	      lan = collected.first().content
-	      collected.first().delete()
-	e.delete();
-	     message.channel.send('**كم تدفع :small_blue_diamond:**').then(m => {
-	let chaMd = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
-	.then(co => {
-	  md = co.first().content
-	        co.first().delete()
-	        m.delete();
-	message.channel.send('**من الذي تشتري منه:shopping_cart:**').then(ms => {
-	let br = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
-	.then(col => {
-	  br = col.first().content
-	        col.first().delete()
-	
-	ms.delete()
-	
-	 message.channel.send('** انتظر..**').then(b => {
-	        setTimeout(() => {
-	  b.edit(`**تم التقديم وسيتم الرد فـ اقرب وقت:white_check_mark:**`)
-	        },2000);
-	var gg = message.guild.channels.find('name','orders')
-	if(!gg) return;
-	if(gg) {
-	gg.send({embed : new Discord.RichEmbed()
-	.setDescription(`**ماذا تريد:scroll: » \n ${lan}\nكم تدفع :moneybag: » \n ${md} \n من الذي تشتري منه :round_pushpin: » \n ${br}  \n تم التقديم بوسطة :top: » <@${message.author.id}> **`)  
-	          .setFooter(`Love Shop♥`)
-	.setTimestamp()
-	});
-	}        
-	})
-	})
-	})
-	})
-	})
-	})
-	})
-	 }
-	})
-	
+
 	
 	////////////////Code AUto colors nar 
 	const reply = JSON.parse(fs.readFileSync('./replys.json' , 'utf8'));
@@ -8561,7 +7839,7 @@ welcomer.sendFile(canvas.toBuffer())
 	       message.delete(4500);
 	    });
 	    
-	    message.channel.send(':pencil: **| من فضلك اكتب الرساله الان... :pencil2: **').then(msg => {
+	    message.channel.send(':pencil: **| say what is the msg... :pencil2: **').then(msg => {
 	
 	        message.channel.awaitMessages(filter, {
 	          max: 1,
@@ -8572,7 +7850,7 @@ welcomer.sendFile(canvas.toBuffer())
 	            collected.first().delete();
 	            thisMessage = collected.first().content;
 	            let boi;
-	            msg.edit(':scroll: **| من فضلك اكتب الرد الان... :pencil2: **').then(msg => {
+	            msg.edit(':scroll: **| add the reply... :pencil2: **').then(msg => {
 	      
 	                message.channel.awaitMessages(filter, {
 	                  max: 1,
@@ -8614,13 +7892,13 @@ welcomer.sendFile(canvas.toBuffer())
 	////set////////////By:Mal-Mahmoud-QuaStyle////////////By:Mal-Mahmoud-QuaStyle
 	client.on('message', message => {
 	    if(!message.channel.guild) return;
-	if(message.content.startsWith('!bc')) {
+	if(message.content.startsWith('#bc')) {
 	if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-	if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
+	if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**sorry you  dont have perms** `ADMINISTRATOR`' );
 	let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-	let copy = "- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼";
+	let copy = "- ⫷⫸Doͥctͣeͫℝ-S▀█▀ℝANGE⫷⫸";
 	let request = `Requested By ${message.author.username}`;
-	if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
+	if (!args) return message.reply('**you have to say something**');message.channel.send(`**are you sure \n yes or no:** \` ${args}\``).then(msg => {
 	msg.react('✅')
 	.then(() => msg.react('❌'))
 	.then(() =>msg.react('✅'))
@@ -8630,7 +7908,7 @@ welcomer.sendFile(canvas.toBuffer())
 	let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 	let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 	reaction1.on("collect", r => {
-	message.channel.send(`**☑ |   ${message.guild.members.size} يتم ارسال البرودكاست الى عضو **`).then(m => m.delete(5000));
+	message.channel.send(`**☑ |   ${message.guild.members.size}sending to  **`).then(m => m.delete(5000));
 	message.guild.members.forEach(m => {
 	var bc = new
 	Discord.RichEmbed()
@@ -8639,7 +7917,7 @@ welcomer.sendFile(canvas.toBuffer())
 	.addField(':rose: Server', message.guild.name)
 	.addField(':speaking_head: Sender', message.author.username)
 	.addField(':love_letter: Message', args)
-	.setThumbnail('https://cdn.pg.sa/hjDfaHOwgb.png')
+	.setThumbnail('https://cdn.discordapp.com/avatars/486060277046181888/d53899e417f9da02c33907b03ec4c50a.png?size=2048')
 	.setFooter(copy, client.user.avatarURL);
 	m.send({ embed: bc })
 	msg.delete();
