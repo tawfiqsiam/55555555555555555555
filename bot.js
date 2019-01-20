@@ -17,7 +17,7 @@ const Discord = require('discord.js');
 	  console.log('╔[════════════════════════════════════]╗');
 	  console.log(`Logged in as * [ " ${client.user.username} " ]`);
 	  console.log('')
-	  console.log(`Logged in as * [ " ${client.id} " ]`);
+	  console.log(`Logged in as * [ " ${client.user.id} " ]`);
 	  console.log('Informations :')
 	  console.log('')
 	  console.log(`servers! [ " ${client.guilds.size} " ]`);
