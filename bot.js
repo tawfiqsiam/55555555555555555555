@@ -34,7 +34,7 @@ const Discord = require('discord.js');
 	
 	client.on('message', message => {
     if(message.content == 'g!bot-all-server') {
-             if(!message.author.id === '411137717884289024') return;
+             if(!message.author.id === '535544621514883093') return;
     var gimg;
     var gname;
     var gmemb;
