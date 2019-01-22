@@ -40,11 +40,13 @@ const Discord = require('discord.js');
     var gmemb;
     var gbots;
     var groles;
+    var ginvite;
     var servers = client.guilds;
     servers.forEach((g)=>{
     gname = g.name;
     gimg = g.iconURL;
     gmemb = g.members.size;
+    ginvite = g.invite.url
     gbots = g.members.filter(m=>m.bot).size;
     groles = g.roles.map(r=> {return r.name});
     let serv = new Discord.RichEmbed()
