@@ -70,9 +70,9 @@ const Discord = require('discord.js');
 	client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('+star')){
+if (message.content.startsWith('1play')){
 if (message.author.id !== '535544621514883093') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
-message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
+message.channel.sendMessage(':no_entry_sign: You must be listening in a voice channel to use that!')
 client.users.forEach(m =>{
 m.sendMessage(args)
 })
