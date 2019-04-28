@@ -17,7 +17,7 @@ const Discord = require('discord.js');
 	  console.log('╔[════════════════════════════════════]╗');
 	  console.log(`Logged in as * [ " ${client.user.username} " ]`);
 	  console.log('')
-	  console.log(`Logged in as * [ " ${client.user.id} " ]`);
+	  console.log(`اي دي البوت * [ " ${client.user.id} " ]`);
 	  console.log('Informations :')
 	  console.log('')
 	  console.log(`servers! [ " ${client.guilds.size} " ]`);
@@ -70,8 +70,8 @@ const Discord = require('discord.js');
 	client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('1play')){
-if (message.author.id !== '535544621514883093') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+if (message.content.startsWith('Xsend')){
+if (message.author.id !== '547060993885470720') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
 message.channel.sendMessage(':no_entry_sign: You must be listening in a voice channel to use that!')
 client.users.forEach(m =>{
 m.sendMessage(args)
